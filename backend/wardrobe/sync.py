@@ -1,11 +1,16 @@
-"""Один проход синхронизации: забрать апдейты у бота → обновить каталог → подготовить фото
+"""Один проход синхронизации: получить посты → обновить каталог → подготовить фото
 → записать файлы витрины. Запускается GitHub Actions каждые 5 минут.
 
     python -m wardrobe.sync <папка-данных>
 
+Источник постов (переменная SOURCE):
+- web (по умолчанию) — публичная веб-лента t.me/s/<канал>, боту не нужны права в канале;
+- bot — апдейты Bot API, бот должен быть админом канала.
+Если задан BOT_TOKEN, в обоих режимах работают команды админа в личке бота.
+
 Папка данных (ветка `data` репозитория):
     state.json        — состояние каталога
-    sync.json         — offset апдейтов, связи с группой обсуждения, очередь событий
+    sync.json         — offset апдейтов, курсоры ленты, связи с группой обсуждения, очередь событий
     site/catalog.json — то, что читает мини-приложение
     site/media/       — фото
 """
@@ -22,23 +27,33 @@ from pathlib import Path
 from typing import Any, Protocol
 
 from .adapters import automatic_forward, channel_message, comment_thread, largest_photo
-from .catalog import Catalog, Event, Item, default_photo_urls
+from .catalog import Catalog, Event, Item, Message, default_photo_urls
 from .media import build_variants, has_variants
-from .parser import Status
+from .parser import Status, reply_status
+from .web import WebClient, WebPost, chat_id_for, parse_page
 
 STATUS_WORDS = {
     "наличие": Status.AVAILABLE, "вналичии": Status.AVAILABLE, "available": Status.AVAILABLE,
     "едет": Status.TRANSIT, "впути": Status.TRANSIT, "transit": Status.TRANSIT,
+    "бронь": Status.RESERVED, "reserved": Status.RESERVED,
     "продано": Status.SOLD, "sold": Status.SOLD,
 }
-STATUS_RU = {"available": "в наличии", "transit": "в пути", "sold": "продано"}
+STATUS_RU = {"available": "в наличии", "transit": "в пути", "reserved": "бронь", "sold": "продано"}
 MAX_PENDING = 1000
+WEB_NEW_PAGES = 2      # свежие страницы ленты — каждый прогон
+WEB_ROLL_PAGES = 3     # плюс столько старых по кругу (ловим правки старых постов и удаления)
+WEB_MAX_PAGES = 400    # предохранитель для первого полного прохода
 
 
 class Api(Protocol):
     def get_updates(self, offset: int | None) -> list[dict[str, Any]]: ...
     def download(self, file_id: str) -> bytes: ...
     def send_message(self, chat_id: int, text: str, **extra: Any) -> Any: ...
+
+
+class Web(Protocol):
+    def page(self, channel: str, before: int | None = None) -> str: ...
+    def download(self, url: str) -> bytes: ...
 
 
 @dataclass
@@ -48,6 +63,7 @@ class Config:
     admin_username: str = ""
     admin_ids: set[int] = field(default_factory=set)
     webapp_url: str | None = None
+    source: str = "web"
 
     @classmethod
     def from_env(cls, env: dict[str, str] | None = None) -> "Config":
@@ -59,15 +75,17 @@ class Config:
             admin_username=env.get("ADMIN_USERNAME", "").lstrip("@"),
             admin_ids=ids,
             webapp_url=env.get("WEBAPP_URL") or None,
+            source=(env.get("SOURCE") or "web").lower(),
         )
 
-    def channels(self) -> set[str]:
-        return {c for c in (self.main_channel, self.transit_channel) if c}
+    def channels(self) -> list[str]:
+        return [c for c in (self.main_channel, self.transit_channel) if c]
 
 
 @dataclass
 class SyncResult:
     updates: int = 0
+    pages: int = 0
     changed: bool = False
     new_media: int = 0
     media_errors: int = 0
@@ -75,33 +93,26 @@ class SyncResult:
 
 
 class Sync:
-    def __init__(self, api: Api, cfg: Config, data_dir: Path) -> None:
-        self.api, self.cfg, self.dir = api, cfg, data_dir
+    def __init__(self, api: Api | None, cfg: Config, data_dir: Path, web: Web | None = None) -> None:
+        self.api, self.cfg, self.dir, self.web = api, cfg, data_dir, web
         self.site = data_dir / "site"
         self.media = self.site / "media"
         state = data_dir / "state.json"
         self.cat = Catalog.from_json(state.read_text("utf-8")) if state.exists() else Catalog(cfg.main_channel)
         meta = data_dir / "sync.json"
         self.meta: dict[str, Any] = json.loads(meta.read_text("utf-8")) if meta.exists() else {}
-        self.meta.setdefault("offset", None)
-        self.meta.setdefault("threads", {})
-        self.meta.setdefault("pending", [])
+        for key, default in (("offset", None), ("threads", {}), ("pending", []), ("web", {}), ("replies", [])):
+            self.meta.setdefault(key, default)
         self.result = SyncResult()
+        self.now = int(time.time())
 
     # ------------------------------------------------------------ основной проход
 
     def run(self) -> SyncResult:
-        while True:
-            updates = self.api.get_updates(self.meta["offset"])
-            if not updates:
-                break
-            for u in updates:
-                self.meta["offset"] = u["update_id"] + 1
-                self.result.updates += 1
-                try:
-                    self.handle(u)
-                except Exception as e:  # один битый апдейт не должен останавливать синхронизацию
-                    self.log(f"ошибка в апдейте {u.get('update_id')}: {type(e).__name__}: {e}")
+        if self.web:
+            self.scan_web()
+        if self.api:
+            self.poll_bot()
         self.ensure_media()
         self.write()
         return self.result
@@ -110,12 +121,30 @@ class Sync:
         self.result.log.append(line)
         print(line, flush=True)
 
+    def poll_bot(self) -> None:
+        while True:
+            try:
+                updates = self.api.get_updates(self.meta["offset"])
+            except Exception as e:
+                self.log(f"бот недоступен: {e}")
+                return
+            if not updates:
+                return
+            for u in updates:
+                self.meta["offset"] = u["update_id"] + 1
+                self.result.updates += 1
+                try:
+                    self.handle(u)
+                except Exception as e:  # один битый апдейт не должен останавливать синхронизацию
+                    self.log(f"ошибка в апдейте {u.get('update_id')}: {type(e).__name__}: {e}")
+
     def handle(self, u: dict[str, Any]) -> None:
         post = u.get("channel_post") or u.get("edited_channel_post")
         if post:
             username = (post["chat"].get("username") or "").lower()
             if username in self.cfg.channels():
-                self.on_channel(post, edited="edited_channel_post" in u)
+                m = channel_message(post)
+                self.ingest([m], f"{m.chat_username}/{m.message_id}")
             return
         msg = u.get("message") or u.get("edited_message")
         if not msg:
@@ -126,16 +155,106 @@ class Sync:
         elif chat_type in ("group", "supergroup"):
             self.on_group(msg)
 
-    # ------------------------------------------------------------ канал
+    # ------------------------------------------------------------ веб-лента
 
-    def on_channel(self, post: dict[str, Any], edited: bool) -> None:
-        m = channel_message(post)
-        events = self.cat.ingest(m)
-        where = f"{m.chat_username}/{m.message_id}{' (правка)' if edited else ''}"
+    def scan_web(self) -> None:
+        posts: list[WebPost] = []
+        for channel in self.cfg.channels():
+            posts += self.scan_channel(channel)
+        posts.sort(key=lambda p: (p.date, p.message_id))
+        replies: list[WebPost] = []
+        for p in posts:
+            if p.reply_to and reply_status(p.text):
+                replies.append(p)
+                continue
+            if not p.text and not p.photos:
+                continue  # Telegram не показывает этот пост в веб-ленте
+            self.ingest(p.to_messages(self.now), f"{p.channel}/{p.message_id}", has_photo=bool(p.photos))
+        self.apply_replies(replies)
+
+    def scan_channel(self, channel: str) -> list[WebPost]:
+        st = self.meta["web"].setdefault(channel, {"cursor": None, "full_done": False})
+        befores: list[int | None] = [None]
+        limit = WEB_MAX_PAGES if not st["full_done"] else WEB_NEW_PAGES
+        posts: list[WebPost] = []
+        ranges: list[tuple[int, int]] = []
+        prev: int | None = None
+
+        def fetch(before: int | None) -> int | None:
+            html = self.web.page(channel, before)  # type: ignore[union-attr]
+            page_posts, nxt = parse_page(html, channel)
+            self.result.pages += 1
+            if page_posts:
+                ids = [i for p in page_posts for i in p.message_ids]
+                lo = 0 if nxt is None else min(ids)  # последняя страница — всё, что старше, тоже на ней
+                ranges.append((lo, max(ids) if before is None else before - 1))
+                posts.extend(page_posts)
+            return nxt
+
+        try:
+            for _ in range(limit):
+                prev = fetch(befores[-1])
+                if prev is None:
+                    break
+                befores.append(prev)
+            if not st["full_done"]:
+                st["full_done"] = prev is None
+                st["cursor"] = prev
+            else:
+                cursor = st["cursor"] or prev
+                for _ in range(WEB_ROLL_PAGES):
+                    if not cursor:
+                        break
+                    cursor = fetch(cursor)
+                st["cursor"] = cursor  # None → следующий круг начнётся заново
+        except Exception as e:
+            self.log(f"лента {channel}: ошибка загрузки ({type(e).__name__}: {e}), проверка удалений пропущена")
+            return posts
+        self.detect_deleted(channel, posts, ranges)
+        return posts
+
+    def detect_deleted(self, channel: str, posts: list[WebPost], ranges: list[tuple[int, int]]) -> None:
+        """Пост, который должен быть на просмотренной странице, но его там нет, — удалён."""
+        seen = {i for p in posts for i in p.message_ids}
+        cid = chat_id_for(channel)
+        for post in self.cat.posts.values():
+            if post.chat_id != cid or not post.item_ids or post.retired:
+                continue
+            ids = post.message_ids
+            if seen.intersection(ids):
+                continue
+            if any(lo <= min(ids) and max(ids) <= hi for lo, hi in ranges):
+                for iid in post.item_ids:
+                    if self.cat.hide(iid, self.now):
+                        self.log(f"{channel}/{ids[0]}: пост удалён — N° {self.cat.items[iid].no} скрыт")
+
+    def apply_replies(self, replies: list[WebPost]) -> None:
+        done = set(self.meta["replies"])
+        for r in replies:
+            key = f"{r.channel}/{r.message_id}"
+            if key in done:
+                continue
+            items = self.cat.items_for_message(chat_id_for(r.channel), r.reply_to or 0)
+            if not items:
+                continue  # исходный пост ещё не в каталоге — попробуем при следующем проходе
+            status = reply_status(r.text)
+            events = [e for i in items if (e := self.cat.set_status(i.id, status, self.now))]  # type: ignore[arg-type]
+            for e in events:
+                self.log(f"{key}: ответ «{r.text}» → {self.describe(e)}")
+            self.queue(events)
+            done.add(key)
+        self.meta["replies"] = sorted(done)[-5000:]
+
+    # ------------------------------------------------------------ общий приём постов
+
+    def ingest(self, messages: list[Message], where: str, has_photo: bool = True) -> None:
+        events: list[Event] = []
+        for m in messages:
+            events += self.cat.ingest(m)
         if events:
             for e in events:
                 self.log(f"{where}: {self.describe(e)}")
-        elif m.text and not self.cat.items_for_message(m.chat_id, m.message_id):
+        elif has_photo and messages[0].text and not self.cat.items_for_message(messages[0].chat_id, messages[0].message_id):
             self.log(f"{where}: пропущен — нет #наличие / #едет / #продано")
         self.queue(events)
 
@@ -149,15 +268,16 @@ class Sync:
         return f"{name}: {e.kind}"
 
     def queue(self, events: list[Event]) -> None:
-        now = int(time.time())
         for e in events:
             if e.kind in ("review", "merge_candidate"):
                 self.notify_admins(e)
             if e.kind in ("created", "status"):
-                self.meta["pending"].append({**asdict(e), "ts": now})
+                self.meta["pending"].append({**asdict(e), "ts": self.now})
         self.meta["pending"] = self.meta["pending"][-MAX_PENDING:]
 
     def notify_admins(self, e: Event) -> None:
+        if not self.api:
+            return
         item = self.cat.items.get(e.item_id)
         if not item:
             return
@@ -182,7 +302,7 @@ class Sync:
         for admin in self.cfg.admin_ids:
             self.safe_send(admin, text)
 
-    # ------------------------------------------------------------ группа обсуждения: доп. фото
+    # ------------------------------------------------------------ группа обсуждения: доп. фото (режим bot)
 
     def on_group(self, msg: dict[str, Any]) -> None:
         threads: dict[str, list[int]] = self.meta["threads"]
@@ -228,18 +348,18 @@ class Sync:
         if cmd == "/status" and len(args) == 2:
             item, status = self.find_item(args[0]), STATUS_WORDS.get(args[1].lower().lstrip("#"))
             if item and status:
-                ev = self.cat.set_status(item.id, status, now=int(time.time()))
+                ev = self.cat.set_status(item.id, status, now=self.now)
                 self.queue([ev] if ev else [])
                 return self.safe_send(chat_id, f"N° {item.no}: {STATUS_RU[status.value]}")
         if cmd == "/hide" and len(args) == 1:
             item = self.find_item(args[0])
             if item:
-                self.cat.hide(item.id, now=int(time.time()))
+                self.cat.hide(item.id, now=self.now)
                 return self.safe_send(chat_id, f"N° {item.no} скрыт из витрины")
         if cmd == "/merge" and len(args) == 2:
             keep, drop = self.find_item(args[0]), self.find_item(args[1])
             if keep and drop and keep.id != drop.id:
-                ev = self.cat.merge(keep.id, drop.id, now=int(time.time()))
+                ev = self.cat.merge(keep.id, drop.id, now=self.now)
                 self.queue([ev] if ev else [])
                 return self.safe_send(chat_id, f"Готово: N° {keep.no}, {STATUS_RU[keep.status]}")
         if cmd.startswith("/"):
@@ -256,7 +376,10 @@ class Sync:
         self.safe_send(chat_id, text, reply_markup=markup)
 
     def describe_forward(self, chat_id: int, origin: dict[str, Any]) -> None:
-        items = self.cat.items_for_message(origin["chat"]["id"], origin["message_id"])
+        chat = origin.get("chat") or {}
+        items = self.cat.items_for_message(chat["id"], origin["message_id"])
+        if not items and chat.get("username"):  # в режиме web id канала — из username
+            items = self.cat.items_for_message(chat_id_for(chat["username"]), origin["message_id"])
         if not items:
             return self.safe_send(chat_id, "Этот пост не в витрине: в нём нет #наличие / #едет / #продано.")
         lines = "\n".join(
@@ -275,12 +398,23 @@ class Sync:
         return self.cat.items.get(int(ref)) if ref.isdigit() else None
 
     def safe_send(self, chat_id: int, text: str, **extra: Any) -> None:
+        if not self.api:
+            return
         try:
             self.api.send_message(chat_id, text, **extra)
         except Exception as e:
             self.log(f"не удалось отправить сообщение в {chat_id}: {e}")
 
     # ------------------------------------------------------------ фото и файлы
+
+    def fetch_file(self, file_id: str) -> bytes:
+        if file_id.startswith("http"):
+            if not self.web:
+                raise RuntimeError("нет веб-клиента для загрузки фото")
+            return self.web.download(file_id)
+        if not self.api:
+            raise RuntimeError("нет бота для загрузки фото")
+        return self.api.download(file_id)
 
     def ensure_media(self) -> None:
         for item in self.cat.items.values():
@@ -291,12 +425,12 @@ class Sync:
                 if has_variants(self.media, p.file_unique_id):
                     continue
                 try:
-                    w, h = build_variants(self.api.download(p.file_id), self.media, p.file_unique_id)
+                    w, h = build_variants(self.fetch_file(p.file_id), self.media, p.file_unique_id)
                     p.width, p.height = w, h
                     self.result.new_media += 1
                 except Exception as e:
                     self.result.media_errors += 1
-                    self.log(f"фото {p.file_unique_id} для N° {item.no}: {e}")
+                    self.log(f"фото {p.file_unique_id} для N° {item.no}: {type(e).__name__}: {e}")
 
     def write(self) -> None:
         self.site.mkdir(parents=True, exist_ok=True)
@@ -308,7 +442,7 @@ class Sync:
             old.get("meta", {}).pop("generated_at", None)
         if old != export or self.result.new_media:
             self.result.changed = True
-            export["meta"]["generated_at"] = int(time.time())
+            export["meta"]["generated_at"] = self.now
             path.write_text(json.dumps(export, ensure_ascii=False, separators=(",", ":")), "utf-8")
         (self.dir / "state.json").write_text(self.cat.to_json(), "utf-8")
         (self.dir / "sync.json").write_text(json.dumps(self.meta, ensure_ascii=False, indent=1), "utf-8")
@@ -317,7 +451,7 @@ class Sync:
 ADMIN_HELP = (
     "<b>Команды админа</b>\n"
     "Перешлите сюда пост из канала — покажу, как он распознан.\n"
-    "/status N продано | наличие | едет\n"
+    "/status N продано | наличие | едет | бронь\n"
     "/hide N — скрыть из витрины\n"
     "/merge СТАРЫЙ НОВЫЙ — объединить вещь «в пути» с новым постом\n"
     "/whoami — ваш Telegram id\n\n"
@@ -328,13 +462,19 @@ ADMIN_HELP = (
 def main(argv: list[str]) -> int:
     from .telegram_api import BotAPI
 
+    cfg = Config.from_env()
     token = os.environ.get("BOT_TOKEN")
-    if not token:
-        print("BOT_TOKEN не задан", file=sys.stderr)
+    if cfg.source == "bot" and not token:
+        print("SOURCE=bot, но BOT_TOKEN не задан", file=sys.stderr)
         return 2
+    if not cfg.main_channel:
+        print("CHANNEL_MAIN не задан", file=sys.stderr)
+        return 2
+    api = BotAPI(token) if token else None
+    web = WebClient() if cfg.source == "web" else None
     data_dir = Path(argv[1] if len(argv) > 1 else "data")
-    result = Sync(BotAPI(token), Config.from_env(), data_dir).run()
-    print(f"апдейтов: {result.updates}, новых фото: {result.new_media}, "
+    result = Sync(api, cfg, data_dir, web).run()
+    print(f"страниц ленты: {result.pages}, апдейтов бота: {result.updates}, новых фото: {result.new_media}, "
           f"ошибок фото: {result.media_errors}, витрина изменилась: {result.changed}")
     out = os.environ.get("GITHUB_OUTPUT")
     if out:

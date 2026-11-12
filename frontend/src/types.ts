@@ -1,4 +1,4 @@
-export type Status = "available" | "transit" | "sold";
+export type Status = "available" | "transit" | "reserved" | "sold";
 
 export interface PhotoRef {
   thumb: string;

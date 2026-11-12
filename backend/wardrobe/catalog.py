@@ -43,6 +43,7 @@ class Message:
     media_group_id: str | None = None
     chat_username: str | None = None
     forward_from: tuple[int, int] | None = None  # (chat_id, message_id) исходного поста
+    edit_date: int | None = None                 # время правки / когда увидели изменение
 
 
 @dataclass
@@ -151,16 +152,19 @@ class Catalog:
             post.text, post.entities = "", []
 
         if m.photo:
-            photo = Photo(**{**asdict(m.photo), "message_id": m.message_id})
-            post.photos = [p for p in post.photos if p.message_id != m.message_id] + [photo]
-            post.photos.sort(key=lambda p: p.message_id)
+            same = next((p for p in post.photos if p.message_id == m.message_id), None)
+            # То же фото (ссылка из веб-ленты могла смениться) — оставляем как есть.
+            if not same or same.file_unique_id != m.photo.file_unique_id:
+                photo = Photo(**{**asdict(m.photo), "message_id": m.message_id})
+                post.photos = [p for p in post.photos if p.message_id != m.message_id] + [photo]
+                post.photos.sort(key=lambda p: p.message_id)
 
         if m.forward_from and post.alias_of is None:
             origin = self.msg_index.get(f"{m.forward_from[0]}:{m.forward_from[1]}")
             if origin and origin != pkey:
                 post.alias_of = origin
 
-        return self._evaluate(post, now=m.date)
+        return self._evaluate(post, now=m.edit_date or m.date)
 
     def add_extra_photo(self, chat_id: int, message_id: int, photo: Photo) -> bool:
         """Доп. фото из комментариев к посту (только от админов — проверяет бот)."""

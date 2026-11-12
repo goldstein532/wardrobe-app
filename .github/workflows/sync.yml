@@ -21,7 +21,7 @@ concurrency:
 jobs:
   sync:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 40  # первый прогон читает всю историю канала и скачивает все фото
     outputs:
       deploy: ${{ steps.need.outputs.deploy }}
     steps:
@@ -51,6 +51,9 @@ jobs:
         id: sync
         working-directory: backend
         env:
+          # SOURCE: web (по умолчанию) — читаем публичную ленту t.me/s/, боту не нужны права в канале;
+          #         bot — апдейты Bot API (бот должен быть админом канала).
+          SOURCE: ${{ vars.SOURCE }}
           BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
           ADMIN_IDS: ${{ secrets.ADMIN_IDS }}
           CHANNEL_MAIN: ${{ vars.CHANNEL_MAIN }}

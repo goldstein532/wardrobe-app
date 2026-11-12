@@ -25,7 +25,8 @@ def channel_message(post: dict[str, Any]) -> Message:
     return Message(
         chat_id=post["chat"]["id"],
         message_id=post["message_id"],
-        date=post.get("edit_date") or post["date"],
+        date=post["date"],
+        edit_date=post.get("edit_date"),
         text=text,
         entities=list(entities or []),
         photo=largest_photo(post.get("photo")),

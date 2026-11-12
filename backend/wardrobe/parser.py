@@ -22,6 +22,7 @@ from .brands import match_brand_prefix
 class Status(str, Enum):
     AVAILABLE = "available"
     TRANSIT = "transit"
+    RESERVED = "reserved"
     SOLD = "sold"
 
 
@@ -33,9 +34,32 @@ STATUS_TAGS: dict[str, Status] = {
     "едет": Status.TRANSIT,
     "впути": Status.TRANSIT,
     "в_пути": Status.TRANSIT,
+    "бронь": Status.RESERVED,
+    "забронировано": Status.RESERVED,
+    "reserved": Status.RESERVED,
     "продано": Status.SOLD,
     "sold": Status.SOLD,
 }
+
+# Короткий ответ на пост, меняющий статус: «SOLD», «бронь», «снова в наличии».
+_REPLY_STATUS = [
+    (re.compile(r"^(?:sold|продан[оаы]?)$", re.IGNORECASE), Status.SOLD),
+    (re.compile(r"^(?:бронь|забронирован[оаы]?|reserved)$", re.IGNORECASE), Status.RESERVED),
+    (re.compile(r"^(?:снова\s+)?(?:в\s+)?наличи[еи]|^бронь\s+снята$", re.IGNORECASE), Status.AVAILABLE),
+    (re.compile(r"^(?:едет|в\s+пути)$", re.IGNORECASE), Status.TRANSIT),
+]
+
+
+def reply_status(text: str | None) -> Status | None:
+    """Статус из короткого ответа на пост. Длинные ответы не считаются."""
+    clean = re.sub(r"[^\w\s]", " ", (text or "").lower().replace("#", " "))
+    clean = re.sub(r"\s+", " ", clean).strip()
+    if not clean or len(clean) > 30:
+        return None
+    for rx, status in _REPLY_STATUS:
+        if rx.search(clean):
+            return status
+    return None
 
 _HASHTAG_RE = re.compile(r"#(\w+)")
 # «SOLD», «продано», «продана», но не «не продано».
@@ -216,6 +240,8 @@ def resolve_status(hashtags: Iterable[str], text: str, known_item: bool = False)
         return Status.SOLD
     if (tagged or known_item) and _SOLD_WORD_RE.search(text):
         return Status.SOLD
+    if Status.RESERVED in tagged:
+        return Status.RESERVED
     if Status.AVAILABLE in tagged:
         return Status.AVAILABLE
     if Status.TRANSIT in tagged:

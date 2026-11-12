@@ -60,7 +60,7 @@ export function CatalogScreen({
     const q = query.trim().toLowerCase();
     const list = items.filter(
       (i) =>
-        (status === "all" || i.status === status) &&
+        (status === "all" || i.status === status || (status === "available" && i.status === "reserved")) &&
         (!category || i.category === category) &&
         (!brand || i.brand === brand) &&
         (!size || i.size === size) &&

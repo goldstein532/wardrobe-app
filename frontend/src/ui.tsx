@@ -43,7 +43,7 @@ export function Tile({ item, onOpen, muted }: { item: Item; onOpen: (id: number)
       <div className="label">
         <div className="n mono">
           <span>N° {item.no}</span>
-          <span>{sold ? "Продано" : transit ? "— В пути" : item.size}</span>
+          <span>{sold ? "Продано" : transit ? "— В пути" : item.status === "reserved" ? "— Бронь" : item.size}</span>
         </div>
         <div className="t">
           {item.brand && <b>{item.brand}</b>}
@@ -52,7 +52,7 @@ export function Tile({ item, onOpen, muted }: { item: Item; onOpen: (id: number)
         {!sold && (
           <div className="p">
             {price(item.price)}
-            {transit && item.size ? ` · ${item.size}` : ""}
+            {(transit || item.status === "reserved") && item.size ? ` · ${item.size}` : ""}
           </div>
         )}
       </div>

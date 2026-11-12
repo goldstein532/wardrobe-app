@@ -169,13 +169,18 @@ export function ItemScreen({
         <div className="info">
           <div className="mono row">
             <span>N° {item.no}</span>
-            <span>{sold ? "Продано" : item.status === "transit" ? "— В пути" : "В наличии"}</span>
+            <span>
+              {sold ? "Продано" : item.status === "transit" ? "— В пути" : item.status === "reserved" ? "— Бронь" : "В наличии"}
+            </span>
           </div>
           {item.brand && <h3>{item.brand}</h3>}
           <h1 className="name">{item.name ?? item.title}</h1>
           {!sold && <div className="price">{price(item.price)}</div>}
           {item.status === "transit" && (
             <p className="note mono">Вещь едет в магазин. Можно забронировать заранее.</p>
+          )}
+          {item.status === "reserved" && (
+            <p className="note mono">Вещь забронирована. Напишите, чтобы встать в очередь — если бронь снимут, она ваша.</p>
           )}
 
           {!sold && (
@@ -214,7 +219,19 @@ export function ItemScreen({
       </div>
 
       <BottomButtons
-        main={sold ? null : { text: item.status === "transit" ? "Забронировать / вопрос" : "Купить / задать вопрос", onClick: buy }}
+        main={
+          sold
+            ? null
+            : {
+                text:
+                  item.status === "transit"
+                    ? "Забронировать / вопрос"
+                    : item.status === "reserved"
+                      ? "Встать в очередь"
+                      : "Купить / задать вопрос",
+                onClick: buy,
+              }
+        }
         colors={colors}
       />
     </div>
