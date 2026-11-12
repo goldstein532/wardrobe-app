@@ -1,0 +1,276 @@
+{
+ "items": [
+  {
+   "id": 6,
+   "no": "006",
+   "status": "available",
+   "brand": "Maison Margiela",
+   "name": "Evolution Low",
+   "title": "Maison Margiela Evolution Low",
+   "size": "40",
+   "category": "Обувь",
+   "photos": [
+    {
+     "thumb": "demo/margiela-1.jpg",
+     "full": "demo/margiela-1.jpg",
+     "w": 127,
+     "h": 176
+    },
+    {
+     "thumb": "demo/margiela-2.jpg",
+     "full": "demo/margiela-2.jpg",
+     "w": 127,
+     "h": 176
+    },
+    {
+     "thumb": "demo/margiela-3.jpg",
+     "full": "demo/margiela-3.jpg",
+     "w": 137,
+     "h": 184
+    }
+   ],
+   "post_url": "https://t.me/nasonchikh_wardrobe/110",
+   "season": null,
+   "description": "Эти кеды воплощают в себе знаковую для бренда эстетику деконструкции и интеллектуального хаоса, ставшую его самым узнаваемым визуальным кодом. Сочетание плотной фактурной парусины теплого песочного оттенка и наслоений гладкой кожи с нарочито необработанными, «сырыми» краями создает ощущение вещи с историей, словно пару собирали вручную в концептуальной парижской мастерской",
+   "size_note": "40-41",
+   "condition": "10/10",
+   "condition_note": "NEW, КП С БУТИКА",
+   "price": 30900,
+   "currency": "RUB",
+   "authentic": true,
+   "delivery": "СПБ/ДОСТАВКА",
+   "buy_url": "https://t.me/nasonchikh_mngr",
+   "extra_photos": [
+    {
+     "thumb": "demo/drop.jpg",
+     "full": "demo/drop.jpg",
+     "w": 462,
+     "h": 470
+    }
+   ],
+   "created_at": 1731070000,
+   "status_changed_at": 1731070000
+  },
+  {
+   "id": 5,
+   "no": "005",
+   "status": "available",
+   "brand": "Saint Laurent",
+   "name": "“Savage Zebra” Textured Sweatshirt",
+   "title": "Saint Laurent Paris “Savage Zebra” SS14 Textured Sweatshirt",
+   "size": "M",
+   "category": "Верх",
+   "photos": [
+    {
+     "thumb": "demo/slp-1.jpg",
+     "full": "demo/slp-1.jpg",
+     "w": 137,
+     "h": 184
+    },
+    {
+     "thumb": "demo/slp-2.jpg",
+     "full": "demo/slp-2.jpg",
+     "w": 127,
+     "h": 174
+    },
+    {
+     "thumb": "demo/slp-3.jpg",
+     "full": "demo/slp-3.jpg",
+     "w": 136,
+     "h": 184
+    }
+   ],
+   "post_url": "https://t.me/nasonchikh_wardrobe/107",
+   "season": "SS14",
+   "description": "SAINT LAURENT PARIS- рок-н-ролльная эстетика в минималистичной форме.\nГлавный акцент этого свитшота- графика с зебровым принтом, которая добавляет привычной спортивной форме немного дикости и панковского настроения. Анималистичный мотив здесь работает не как декоративный элемент, а как часть характерной эстетики Слимана: контрастной, немного провокационной и вдохновлённой рок-культурой.",
+   "size_note": null,
+   "condition": "9.9/10",
+   "condition_note": null,
+   "price": 17900,
+   "currency": "RUB",
+   "authentic": true,
+   "delivery": "СПБ/ДОСТАВКА",
+   "buy_url": null,
+   "extra_photos": [],
+   "created_at": 1731060000,
+   "status_changed_at": 1731060000
+  },
+  {
+   "id": 4,
+   "no": "004",
+   "status": "available",
+   "brand": "Givenchy",
+   "name": "Lock Ankle Boots",
+   "title": "Givenchy Lock Ankle Boots",
+   "size": "41",
+   "category": "Обувь",
+   "photos": [
+    {
+     "thumb": "demo/givenchy-1.jpg",
+     "full": "demo/givenchy-1.jpg",
+     "w": 137,
+     "h": 184
+    },
+    {
+     "thumb": "demo/givenchy-2.jpg",
+     "full": "demo/givenchy-2.jpg",
+     "w": 136,
+     "h": 184
+    },
+    {
+     "thumb": "demo/givenchy-3.jpg",
+     "full": "demo/givenchy-3.jpg",
+     "w": 137,
+     "h": 184
+    }
+   ],
+   "post_url": "https://t.me/nasonchikh_wardrobe/104",
+   "season": null,
+   "description": "Givenchy Lock Ankle Boots представляют собой яркое воплощение утилитарного люкса, где классический силуэт искусно соединён с узнаваемым индустриальным акцентом. Дизайн этой пары строится вокруг массивного серебристого замка-падлока с гравировкой модного дома-элемента, который мгновенно превращает базовую обувь в концептуальный арт-объект. Модель выполнена из безупречно гладкой, матовой чёрной телячьей кожи высокой прочности",
+   "size_note": "41-42",
+   "condition": "9/10",
+   "condition_note": null,
+   "price": 27900,
+   "currency": "RUB",
+   "authentic": true,
+   "delivery": "СПБ/ДОСТАВКА",
+   "buy_url": null,
+   "extra_photos": [],
+   "created_at": 1731050000,
+   "status_changed_at": 1731050000
+  },
+  {
+   "id": 2,
+   "no": "002",
+   "status": "transit",
+   "brand": "Saint Laurent",
+   "name": "Jeans by HEDI SLIMANE",
+   "title": "Saint Laurent Paris Jeans by HEDI SLIMANE",
+   "size": "31",
+   "category": "Низ",
+   "photos": [
+    {
+     "thumb": "demo/jeans-1.jpg",
+     "full": "demo/jeans-1.jpg",
+     "w": 230,
+     "h": 231
+    }
+   ],
+   "post_url": "https://t.me/nasonchikh_express/102",
+   "season": null,
+   "description": null,
+   "size_note": null,
+   "condition": "9/10",
+   "condition_note": null,
+   "price": 13900,
+   "currency": "RUB",
+   "authentic": false,
+   "delivery": null,
+   "buy_url": "https://t.me/nasonchikh_mngr",
+   "extra_photos": [],
+   "created_at": 1730900000,
+   "status_changed_at": 1730900000
+  },
+  {
+   "id": 3,
+   "no": "003",
+   "status": "transit",
+   "brand": "Saint Laurent",
+   "name": "Jeans by HEDI SLIMANE",
+   "title": "Saint Laurent Paris Jeans by HEDI SLIMANE",
+   "size": "32",
+   "category": "Низ",
+   "photos": [
+    {
+     "thumb": "demo/jeans-2.jpg",
+     "full": "demo/jeans-2.jpg",
+     "w": 231,
+     "h": 231
+    }
+   ],
+   "post_url": "https://t.me/nasonchikh_express/102",
+   "season": null,
+   "description": null,
+   "size_note": null,
+   "condition": "9/10",
+   "condition_note": null,
+   "price": 13900,
+   "currency": "RUB",
+   "authentic": false,
+   "delivery": null,
+   "buy_url": "https://t.me/nasonchikh_mngr",
+   "extra_photos": [],
+   "created_at": 1730900000,
+   "status_changed_at": 1730900000
+  }
+ ],
+ "archive": [
+  {
+   "id": 1,
+   "no": "001",
+   "status": "sold",
+   "brand": "No/Faith Studios",
+   "name": "Fencing Bomber Jacket",
+   "title": "NO/FAITH STUDIOS Fencing Bomber Jacket",
+   "size": "XL",
+   "category": "Верхняя одежда",
+   "photos": [
+    {
+     "thumb": "demo/nofaith-1.jpg",
+     "full": "demo/nofaith-1.jpg",
+     "w": 134,
+     "h": 184
+    }
+   ],
+   "post_url": "https://t.me/nasonchikh_wardrobe/100"
+  }
+ ],
+ "posts": {
+  "nasonchikh_wardrobe/100": [
+   1
+  ],
+  "nasonchikh_wardrobe/101": [
+   1
+  ],
+  "nasonchikh_express/102": [
+   2,
+   3
+  ],
+  "nasonchikh_express/103": [
+   2,
+   3
+  ],
+  "nasonchikh_wardrobe/104": [
+   4
+  ],
+  "nasonchikh_wardrobe/105": [
+   4
+  ],
+  "nasonchikh_wardrobe/106": [
+   4
+  ],
+  "nasonchikh_wardrobe/107": [
+   5
+  ],
+  "nasonchikh_wardrobe/108": [
+   5
+  ],
+  "nasonchikh_wardrobe/109": [
+   5
+  ],
+  "nasonchikh_wardrobe/110": [
+   6
+  ],
+  "nasonchikh_wardrobe/111": [
+   6
+  ],
+  "nasonchikh_wardrobe/112": [
+   6
+  ]
+ },
+ "meta": {
+  "channel": "nasonchikh_wardrobe",
+  "admin_username": "nasonchikh_mngr",
+  "generated_at": 1731100000
+ }
+}

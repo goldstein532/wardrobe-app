@@ -1,0 +1,107 @@
+# Каждые 5 минут: забрать новые посты у бота → обновить каталог и фото → опубликовать витрину.
+# Данные (state.json, catalog.json, фото) живут в отдельной ветке `data`, чтобы не засорять код.
+name: sync
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    outputs:
+      deploy: ${{ steps.need.outputs.deploy }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Ветка с данными
+        run: |
+          git config user.name "wardrobe-sync"
+          git config user.email "wardrobe-sync@users.noreply.github.com"
+          if git ls-remote --exit-code --heads origin data >/dev/null; then
+            git fetch --depth=1 origin data
+            git worktree add data FETCH_HEAD
+            git -C data switch -c data
+          else
+            git worktree add --orphan -b data data
+          fi
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: backend/requirements.txt
+
+      - run: pip install -r backend/requirements.txt
+
+      - name: Синхронизация с Telegram
+        id: sync
+        working-directory: backend
+        env:
+          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
+          ADMIN_IDS: ${{ secrets.ADMIN_IDS }}
+          CHANNEL_MAIN: ${{ vars.CHANNEL_MAIN }}
+          CHANNEL_TRANSIT: ${{ vars.CHANNEL_TRANSIT }}
+          ADMIN_USERNAME: ${{ vars.ADMIN_USERNAME }}
+          WEBAPP_URL: ${{ vars.WEBAPP_URL }}
+        run: python -m wardrobe.sync ../data
+
+      - name: Сохранить данные
+        run: |
+          git -C data add -A
+          if ! git -C data diff --cached --quiet; then
+            git -C data commit -q -m "sync $(date -u +%Y-%m-%dT%H:%MZ)"
+            git -C data push -q origin data
+          fi
+
+      - name: Нужно ли публиковать
+        id: need
+        run: |
+          if [ "${{ steps.sync.outputs.changed }}" = "true" ] || [ "${{ github.event_name }}" != "schedule" ]; then
+            echo "deploy=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/setup-node@v4
+        if: steps.need.outputs.deploy == 'true'
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+
+      - name: Сборка витрины
+        if: steps.need.outputs.deploy == 'true'
+        working-directory: frontend
+        run: |
+          npm ci
+          npm run build
+          cp -r ../data/site/. dist/
+
+      - uses: actions/upload-pages-artifact@v3
+        if: steps.need.outputs.deploy == 'true'
+        with:
+          path: frontend/dist
+
+  # Отдельная задача, чтобы «пустые» прогоны не создавали записей о публикации.
+  deploy:
+    needs: sync
+    if: needs.sync.outputs.deploy == 'true'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - id: deploy
+        uses: actions/deploy-pages@v4

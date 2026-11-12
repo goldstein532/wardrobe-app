@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Витрина — концепции</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Manrope:wght@300;400;500;600&family=PT+Mono&family=Onest:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root { --page:#e9e8e4; --ink:#141414; --muted:#6b6a66; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--page); color:var(--ink); font-family:"Inter Tight",system-ui,sans-serif; -webkit-font-smoothing:antialiased; }
+  img { display:block; width:100%; height:100%; object-fit:cover; }
+  .doc { max-width:1180px; margin:0 auto; padding:56px 16px 96px; }
+  .doc > header { margin-bottom:56px; }
+  .doc > header p { font:400 12px/1.6 "IBM Plex Mono",monospace; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); }
+  .doc > header h1 { font-weight:400; font-size:40px; letter-spacing:-.02em; margin-top:10px; }
+  .concept { display:grid; grid-template-columns:280px 1fr; gap:40px; padding:48px 0; border-top:1px solid #cfcdc7; }
+  .meta .num { font:500 12px "IBM Plex Mono",monospace; letter-spacing:.1em; color:var(--muted); }
+  .meta h2 { font-weight:400; font-size:32px; letter-spacing:-.02em; margin:8px 0 14px; }
+  .meta p { font-size:14px; line-height:1.55; color:#3a3936; margin-bottom:12px; }
+  .meta dl { margin-top:20px; font:400 12px/1.5 "IBM Plex Mono",monospace; }
+  .meta dt { color:var(--muted); text-transform:uppercase; letter-spacing:.08em; margin-top:12px; }
+  .sw { display:flex; gap:6px; margin-top:6px; }
+  .sw i { width:28px; height:28px; border:1px solid rgba(0,0,0,.15); border-radius:50%; }
+  .phones { display:flex; gap:28px; flex-wrap:wrap; }
+  .phone { width:360px; height:740px; border-radius:44px; background:#000; padding:10px; box-shadow:0 30px 60px -30px rgba(0,0,0,.45); flex:none; }
+  .screen { width:100%; height:100%; border-radius:35px; overflow:hidden; position:relative; display:flex; flex-direction:column; }
+  .scroll { flex:1; overflow-y:auto; scrollbar-width:none; }
+  .scroll::-webkit-scrollbar { display:none; }
+  .tg { height:52px; flex:none; display:flex; align-items:center; justify-content:space-between; padding:14px 18px 0; font:500 14px system-ui,sans-serif; }
+  .tg .x { opacity:.7; }
+  .mainbtn { flex:none; margin:8px 14px 18px; height:50px; border-radius:12px; display:flex; align-items:center; justify-content:center; font:600 15px system-ui,sans-serif; }
+  @media (max-width:860px) { .concept { grid-template-columns:1fr; } .phone { width:100%; max-width:360px; } }
+
+  /* ============ A · БИРКА ============ */
+  .a .screen { background:#fff; color:#000; font-family:"Inter Tight",sans-serif; }
+  .a .tg { color:#000; }
+  .a .mono { font-family:"IBM Plex Mono",monospace; font-size:10px; letter-spacing:.08em; text-transform:uppercase; }
+  .a .brandbar { padding:18px 18px 14px; display:flex; justify-content:space-between; align-items:baseline; border-bottom:1px solid #000; }
+  .a .brandbar b { font-weight:500; font-size:15px; letter-spacing:.14em; text-transform:uppercase; }
+  .a .filters { display:flex; gap:16px; padding:12px 18px; overflow:hidden; white-space:nowrap; border-bottom:1px solid #e6e6e6; }
+  .a .filters span { color:#9a9a9a; } .a .filters .on { color:#000; text-decoration:underline; text-underline-offset:4px; }
+  .a .grid { display:grid; grid-template-columns:1fr 1fr; gap:1px; background:#e6e6e6; }
+  .a .tile { background:#fff; padding-bottom:14px; }
+  .a .tile .ph { aspect-ratio:3/4; background:#f2f2f2; }
+  .a .label { position:relative; margin:10px 10px 0; padding:8px 9px 9px; border:1px solid #e3e3e3; }
+  .a .label::before { content:""; position:absolute; inset:3px; pointer-events:none;
+    background:
+      linear-gradient(#bbb,#bbb) left top/1px 5px no-repeat, linear-gradient(#bbb,#bbb) right top/1px 5px no-repeat,
+      linear-gradient(#bbb,#bbb) left bottom/1px 5px no-repeat, linear-gradient(#bbb,#bbb) right bottom/1px 5px no-repeat; }
+  .a .label .n { display:flex; justify-content:space-between; color:#000; }
+  .a .label .t { font-size:12px; line-height:1.3; margin-top:6px; }
+  .a .label .t b { font-weight:500; display:block; }
+  .a .label .p { margin-top:6px; font-size:12px; }
+  .a .transit { color:#000; } .a .transit::before { content:"— "; }
+  .a .det .hero { aspect-ratio:3/4; background:#f2f2f2; position:relative; }
+  .a .det .dots { position:absolute; bottom:12px; left:0; right:0; display:flex; justify-content:center; gap:5px; }
+  .a .det .dots i { width:18px; height:1px; background:rgba(0,0,0,.25); } .a .det .dots .on { background:#000; }
+  .a .det .thumbs { display:flex; gap:1px; background:#e6e6e6; } .a .det .thumbs div { flex:1; aspect-ratio:1; }
+  .a .det .info { padding:18px; }
+  .a .det h3 { font-weight:500; font-size:13px; letter-spacing:.14em; text-transform:uppercase; margin-top:14px; }
+  .a .det .name { font-weight:300; font-size:26px; letter-spacing:-.02em; line-height:1.1; margin-top:4px; }
+  .a .det .price { font-size:18px; margin-top:14px; }
+  .a .spec { margin-top:18px; border-top:1px solid #000; }
+  .a .spec div { display:flex; justify-content:space-between; padding:9px 0; border-bottom:1px solid #e6e6e6; font-size:13px; }
+  .a .spec div span:first-child { font-family:"IBM Plex Mono",monospace; font-size:10px; letter-spacing:.08em; text-transform:uppercase; color:#8a8a8a; padding-top:2px; }
+  .a .desc { font-size:13px; line-height:1.55; color:#333; margin-top:16px; }
+  .a .mainbtn { background:#000; color:#fff; border-radius:0; letter-spacing:.12em; text-transform:uppercase; font:500 12px "Inter Tight",sans-serif; }
+
+  /* ============ B · ГАЛЕРЕЯ ============ */
+  .b .screen { background:#f3f1ec; color:#161514; font-family:"Manrope",sans-serif; }
+  .b .serif { font-family:"Cormorant Garamond",serif; }
+  .b .hero-head { padding:8px 22px 18px; }
+  .b .hero-head small { font-size:10px; letter-spacing:.22em; text-transform:uppercase; color:#8c877f; }
+  .b .hero-head h1 { font-family:"Cormorant Garamond",serif; font-weight:400; font-size:42px; line-height:.95; letter-spacing:-.01em; margin-top:8px; }
+  .b .hero-head h1 em { font-style:italic; }
+  .b .chips { display:flex; gap:8px; padding:0 22px 18px; overflow:hidden; white-space:nowrap; }
+  .b .chips span { font-size:12px; padding:7px 13px; border-radius:99px; border:1px solid #d9d5cc; color:#5c5852; }
+  .b .chips .on { background:#161514; color:#f3f1ec; border-color:#161514; }
+  .b .cover { margin:0 22px 26px; aspect-ratio:1; border-radius:4px; overflow:hidden; position:relative; }
+  .b .cover span { position:absolute; left:14px; bottom:12px; color:#fff; font:italic 400 22px "Cormorant Garamond",serif; text-shadow:0 1px 12px rgba(0,0,0,.3); }
+  .b .item { padding:0 22px 30px; }
+  .b .item .ph { aspect-ratio:4/5; border-radius:4px; overflow:hidden; background:#e6e2da; }
+  .b .item .row { display:flex; justify-content:space-between; align-items:baseline; margin-top:12px; }
+  .b .item .br { font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:#8c877f; }
+  .b .item .nm { font:italic 400 22px/1.15 "Cormorant Garamond",serif; margin-top:3px; }
+  .b .item .pr { font-size:13px; }
+  .b .item .sz { font-size:12px; color:#8c877f; margin-top:4px; }
+  .b .transit { font:italic 400 14px "Cormorant Garamond",serif; color:#7a1f1f; }
+  .b .det .ph { aspect-ratio:4/5; margin:0 0 0; position:relative; }
+  .b .det .count { position:absolute; right:14px; bottom:12px; background:rgba(243,241,236,.85); backdrop-filter:blur(10px); font-size:11px; padding:4px 9px; border-radius:99px; }
+  .b .det .body { padding:22px; }
+  .b .det .br { font-size:10px; letter-spacing:.22em; text-transform:uppercase; color:#8c877f; }
+  .b .det h2 { font:italic 400 34px/1.02 "Cormorant Garamond",serif; margin-top:6px; }
+  .b .det .pr { font-size:20px; margin-top:12px; font-weight:500; }
+  .b .facts { display:grid; grid-template-columns:1fr 1fr; gap:14px 10px; margin-top:20px; padding:16px 0; border-top:1px solid #dcd8cf; border-bottom:1px solid #dcd8cf; }
+  .b .facts small { display:block; font-size:10px; letter-spacing:.18em; text-transform:uppercase; color:#8c877f; margin-bottom:3px; }
+  .b .facts div { font-size:13px; }
+  .b .det p { font:400 17px/1.45 "Cormorant Garamond",serif; margin-top:16px; color:#2c2a27; }
+  .b .mainbtn { background:#161514; color:#f3f1ec; border-radius:99px; font:500 14px "Manrope",sans-serif; }
+
+  /* ============ C · КАРТОТЕКА ============ */
+  .c .screen { background:#0d0d0c; color:#e9e6df; font-family:"Onest",sans-serif; }
+  .c .mono { font-family:"PT Mono",monospace; }
+  .c .tg { color:#e9e6df; }
+  .c .head { padding:6px 18px 16px; }
+  .c .head .mono { font-size:11px; color:#6f6c66; letter-spacing:.06em; }
+  .c .head h1 { font-weight:300; font-size:30px; letter-spacing:-.02em; margin-top:6px; }
+  .c .head h1 span { color:#6f6c66; }
+  .c .search { margin:0 18px 12px; border:1px solid #2a2927; padding:10px 12px; font:12px "PT Mono",monospace; color:#6f6c66; }
+  .c .tabs { display:flex; margin:0 18px 6px; border:1px solid #2a2927; }
+  .c .tabs span { flex:1; text-align:center; padding:8px 0; font:11px "PT Mono",monospace; text-transform:uppercase; color:#6f6c66; }
+  .c .tabs .on { background:#e9e6df; color:#0d0d0c; }
+  .c .cols { display:grid; grid-template-columns:44px 1fr 46px; gap:10px; padding:10px 18px 6px; font:10px "PT Mono",monospace; color:#4f4d49; text-transform:uppercase; }
+  .c .row { display:grid; grid-template-columns:44px 1fr 46px; gap:10px; padding:12px 18px; border-top:1px solid #1e1d1b; align-items:start; }
+  .c .row .n { font:12px "PT Mono",monospace; color:#6f6c66; padding-top:2px; }
+  .c .row .ph { width:100%; aspect-ratio:3/4; background:#1a1918; margin-bottom:10px; overflow:hidden; }
+  .c .row .br { font:11px "PT Mono",monospace; text-transform:uppercase; color:#a8a49c; }
+  .c .row .nm { font-size:15px; font-weight:400; margin-top:2px; line-height:1.25; }
+  .c .row .pr { font:12px "PT Mono",monospace; margin-top:6px; }
+  .c .row .sz { font:13px "PT Mono",monospace; text-align:right; padding-top:2px; }
+  .c .row .st { font:10px "PT Mono",monospace; text-transform:uppercase; margin-top:6px; color:#c9b79c; }
+  .c .row.sold { opacity:.38; } .c .row.sold .nm { text-decoration:line-through; text-decoration-thickness:1px; }
+  .c .det .ph { aspect-ratio:3/4; position:relative; }
+  .c .det .strip { display:grid; grid-template-columns:repeat(4,1fr); gap:2px; margin-top:2px; } .c .det .strip div { aspect-ratio:1; overflow:hidden; }
+  .c .card { margin:16px 18px; border:1px solid #2a2927; }
+  .c .card .top { display:flex; justify-content:space-between; padding:10px 12px; border-bottom:1px solid #2a2927; font:11px "PT Mono",monospace; color:#6f6c66; text-transform:uppercase; }
+  .c .card h2 { font-weight:300; font-size:26px; letter-spacing:-.01em; padding:12px 12px 2px; }
+  .c .card .br { font:11px "PT Mono",monospace; text-transform:uppercase; color:#a8a49c; padding:0 12px; }
+  .c .card table { width:100%; border-collapse:collapse; margin-top:12px; font:12px "PT Mono",monospace; }
+  .c .card td { padding:8px 12px; border-top:1px solid #2a2927; } .c .card td:first-child { color:#6f6c66; text-transform:uppercase; width:42%; }
+  .c .det p { font-size:13px; line-height:1.55; color:#bdb9b1; margin:0 18px 18px; }
+  .c .mainbtn { background:#e9e6df; color:#0d0d0c; border-radius:0; font:400 13px "PT Mono",monospace; text-transform:uppercase; letter-spacing:.06em; }
+</style>
+</head>
+<body>
+<div class="doc">
+  <header>
+    <p>nasonchikh wardrobe · mini app · 12.11.2026</p>
+    <h1>Три концепции витрины</h1>
+  </header>
+
+  <!-- ===================== A ===================== -->
+  <section class="concept a">
+    <div class="meta">
+      <div class="num">01</div>
+      <h2>Бирка</h2>
+      <p>Самая близкая к духу модного дома. Чистый белый фон, чёрная линия, строгий гротеск. Каждый товар подписан «биркой» с архивным номером и четырьмя стежками по углам.</p>
+      <p>«В пути» обозначено тире и словом, без цветных плашек. Цветов, кроме чёрного и белого, нет совсем.</p>
+      <dl>
+        <dt>Шрифты</dt><dd>Inter Tight · IBM Plex Mono</dd>
+        <dt>Палитра</dt><dd><div class="sw"><i style="background:#fff"></i><i style="background:#000"></i><i style="background:#f2f2f2"></i><i style="background:#8a8a8a"></i></div></dd>
+        <dt>Сетка</dt><dd>2 колонки, фото 3:4</dd>
+      </dl>
+    </div>
+    <div class="phones">
+      <div class="phone"><div class="screen">
+        <div class="tg"><span class="x">✕ Закрыть</span><span>wardrobe</span><span class="x">⋯</span></div>
+        <div class="scroll">
+          <div class="brandbar"><b>Nasonchikh</b><span class="mono">Архив · 05 шт.</span></div>
+          <div class="filters mono"><span class="on">Все</span><span>В наличии</span><span>В пути</span><span>Обувь</span><span>Верх</span><span>Низ</span></div>
+          <div class="grid">
+            <div class="tile"><div class="ph"><img src="img/margiela-1.jpg" alt=""></div>
+              <div class="label"><div class="n mono"><span>N° 001</span><span>40</span></div><div class="t"><b>Maison Margiela</b>Evolution Low</div><div class="p">30 900 ₽</div></div></div>
+            <div class="tile"><div class="ph"><img src="img/slp-1.jpg" alt=""></div>
+              <div class="label"><div class="n mono"><span>N° 002</span><span>M</span></div><div class="t"><b>Saint Laurent</b>“Savage Zebra” SS14</div><div class="p">17 900 ₽</div></div></div>
+            <div class="tile"><div class="ph"><img src="img/givenchy-1.jpg" alt=""></div>
+              <div class="label"><div class="n mono"><span>N° 003</span><span>41</span></div><div class="t"><b>Givenchy</b>Lock Ankle Boots</div><div class="p">27 900 ₽</div></div></div>
+            <div class="tile"><div class="ph"><img src="img/jeans-1.jpg" alt="" style="object-fit:contain;background:#fff"></div>
+              <div class="label"><div class="n mono"><span>N° 004</span><span class="transit">В пути</span></div><div class="t"><b>Saint Laurent</b>Jeans by Hedi Slimane</div><div class="p">13 900 ₽ · 31</div></div></div>
+            <div class="tile"><div class="ph"><img src="img/jeans-2.jpg" alt="" style="object-fit:contain;background:#fff"></div>
+              <div class="label"><div class="n mono"><span>N° 005</span><span class="transit">В пути</span></div><div class="t"><b>Saint Laurent</b>Jeans by Hedi Slimane</div><div class="p">13 900 ₽ · 32</div></div></div>
+            <div class="tile"><div class="ph"><img src="img/drop.jpg" alt=""></div>
+              <div class="label"><div class="n mono"><span>Архив</span><span>→</span></div><div class="t"><b>Проданное</b>12 вещей</div><div class="p">&nbsp;</div></div></div>
+          </div>
+        </div>
+      </div></div>
+
+      <div class="phone"><div class="screen">
+        <div class="tg"><span class="x">‹ Назад</span><span>wardrobe</span><span class="x">⋯</span></div>
+        <div class="scroll det">
+          <div class="hero"><img src="img/margiela-1.jpg" alt=""><div class="dots"><i class="on"></i><i></i><i></i><i></i></div></div>
+          <div class="thumbs"><div><img src="img/margiela-2.jpg" alt=""></div><div><img src="img/margiela-3.jpg" alt=""></div><div><img src="img/margiela-1.jpg" alt=""></div></div>
+          <div class="info">
+            <div class="mono" style="display:flex;justify-content:space-between"><span>N° 001</span><span>В наличии</span></div>
+            <h3>Maison Margiela</h3>
+            <div class="name">Evolution Low</div>
+            <div class="price">30 900 ₽</div>
+            <div class="spec">
+              <div><span>Размер</span><span>40 (40–41)</span></div>
+              <div><span>Состояние</span><span>10/10 · New, КП с бутика</span></div>
+              <div><span>Подлинность</span><span>Оригинал, любые проверки</span></div>
+              <div><span>Получение</span><span>СПб / доставка</span></div>
+            </div>
+            <p class="desc">Эти кеды воплощают в себе знаковую для бренда эстетику деконструкции и интеллектуального хаоса, ставшую его самым узнаваемым визуальным кодом…</p>
+          </div>
+        </div>
+        <div class="mainbtn">Купить / задать вопрос</div>
+      </div></div>
+    </div>
+  </section>
+
+  <!-- ===================== B ===================== -->
+  <section class="concept b">
+    <div class="meta">
+      <div class="num">02</div>
+      <h2>Галерея</h2>
+      <p>Журнальная подача. Тёплый бумажный фон, курсивная антиква в названиях, одна вещь на экран, как в выставочном каталоге. По мягкости ближе всего к Apple.</p>
+      <p>Единственный акцент — приглушённый бордовый. Он отмечает только «в пути».</p>
+      <dl>
+        <dt>Шрифты</dt><dd>Cormorant Garamond · Manrope</dd>
+        <dt>Палитра</dt><dd><div class="sw"><i style="background:#f3f1ec"></i><i style="background:#161514"></i><i style="background:#8c877f"></i><i style="background:#7a1f1f"></i></div></dd>
+        <dt>Сетка</dt><dd>1 колонка, фото 4:5</dd>
+      </dl>
+    </div>
+    <div class="phones">
+      <div class="phone"><div class="screen">
+        <div class="tg"><span class="x">✕ Закрыть</span><span>wardrobe</span><span class="x">⋯</span></div>
+        <div class="scroll">
+          <div class="hero-head"><small>Nasonchikh · Wardrobe</small><h1>Архив <em>в наличии</em></h1></div>
+          <div class="chips"><span class="on">Все</span><span>Saint Laurent</span><span>Margiela</span><span>Givenchy</span><span>Размер</span></div>
+          <div class="cover"><img src="img/drop.jpg" alt=""><span>New drop — 8 ноября</span></div>
+          <div class="item"><div class="ph"><img src="img/slp-1.jpg" alt=""></div>
+            <div class="row"><div><div class="br">Saint Laurent · SS14</div><div class="nm">“Savage Zebra” Sweatshirt</div><div class="sz">Размер M</div></div><div class="pr">17 900 ₽</div></div></div>
+          <div class="item"><div class="ph"><img src="img/jeans-1.jpg" alt="" style="object-fit:contain;background:#fff"></div>
+            <div class="row"><div><div class="br">Saint Laurent</div><div class="nm">Jeans by Hedi Slimane</div><div class="sz">Размер 31 · <span class="transit">в пути</span></div></div><div class="pr">13 900 ₽</div></div></div>
+        </div>
+      </div></div>
+
+      <div class="phone"><div class="screen">
+        <div class="tg"><span class="x">‹ Назад</span><span>wardrobe</span><span class="x">♡</span></div>
+        <div class="scroll det">
+          <div class="ph"><img src="img/givenchy-1.jpg" alt=""><span class="count">1 / 6</span></div>
+          <div class="body">
+            <div class="br">Givenchy · N° 003</div>
+            <h2>Lock Ankle Boots</h2>
+            <div class="pr">27 900 ₽</div>
+            <div class="facts">
+              <div><small>Размер</small>41 (41–42)</div>
+              <div><small>Состояние</small>9 / 10</div>
+              <div><small>Подлинность</small>Оригинал</div>
+              <div><small>Получение</small>СПб, доставка</div>
+            </div>
+            <p>Яркое воплощение утилитарного люкса: классический силуэт и массивный серебристый замок-падлок, превращающий базовую обувь в концептуальный арт-объект.</p>
+          </div>
+        </div>
+        <div class="mainbtn">Купить или задать вопрос</div>
+      </div></div>
+    </div>
+  </section>
+
+  <!-- ===================== C ===================== -->
+  <section class="concept c">
+    <div class="meta">
+      <div class="num">03</div>
+      <h2>Картотека</h2>
+      <p>Тёмная тема по умолчанию. Витрина устроена как инвентарная опись архива: номер, бренд, размер, цена. Машинописный шрифт отвечает за все служебные данные.</p>
+      <p>Проданные вещи видны, но приглушены и перечёркнуты: они работают как портфолио. Акцент — песочный, им отмечено «в пути».</p>
+      <dl>
+        <dt>Шрифты</dt><dd>Onest · PT Mono</dd>
+        <dt>Палитра</dt><dd><div class="sw"><i style="background:#0d0d0c"></i><i style="background:#e9e6df"></i><i style="background:#6f6c66"></i><i style="background:#c9b79c"></i></div></dd>
+        <dt>Сетка</dt><dd>Опись: строка на вещь</dd>
+      </dl>
+    </div>
+    <div class="phones">
+      <div class="phone"><div class="screen">
+        <div class="tg"><span class="x">✕ Закрыть</span><span>wardrobe</span><span class="x">⋯</span></div>
+        <div class="scroll">
+          <div class="head"><div class="mono">ОПИСЬ · 12.11.2026</div><h1>Nasonchikh <span>/ архив</span></h1></div>
+          <div class="search">⌕ Бренд, вещь, размер…</div>
+          <div class="tabs"><span class="on">Наличие</span><span>В пути</span><span>Архив</span></div>
+          <div class="cols"><span>N°</span><span>Вещь</span><span style="text-align:right">Разм.</span></div>
+          <div class="row"><span class="n">001</span><div><div class="ph"><img src="img/margiela-2.jpg" alt=""></div><div class="br">Maison Margiela</div><div class="nm">Evolution Low</div><div class="pr">30 900 ₽</div></div><span class="sz">40</span></div>
+          <div class="row"><span class="n">003</span><div><div class="ph"><img src="img/givenchy-2.jpg" alt=""></div><div class="br">Givenchy</div><div class="nm">Lock Ankle Boots</div><div class="pr">27 900 ₽</div></div><span class="sz">41</span></div>
+          <div class="row"><span class="n">004</span><div><div class="br">Saint Laurent</div><div class="nm">Jeans by Hedi Slimane</div><div class="pr">13 900 ₽</div><div class="st">● В пути</div></div><span class="sz">31</span></div>
+          <div class="row sold"><span class="n">000</span><div><div class="br">No/Faith Studios</div><div class="nm">Fencing Bomber Jacket</div><div class="pr">Продано</div></div><span class="sz">XL</span></div>
+        </div>
+      </div></div>
+
+      <div class="phone"><div class="screen">
+        <div class="tg"><span class="x">‹ Назад</span><span>wardrobe</span><span class="x">♡</span></div>
+        <div class="scroll det">
+          <div class="ph"><img src="img/slp-1.jpg" alt=""></div>
+          <div class="strip"><div><img src="img/slp-2.jpg" alt=""></div><div><img src="img/slp-3.jpg" alt=""></div><div><img src="img/slp-1.jpg" alt=""></div><div><img src="img/drop.jpg" alt=""></div></div>
+          <div class="card">
+            <div class="top"><span>N° 002</span><span>В наличии</span></div>
+            <h2>“Savage Zebra” Sweatshirt</h2>
+            <div class="br">Saint Laurent · SS14</div>
+            <table>
+              <tr><td>Размер</td><td>M</td></tr>
+              <tr><td>Состояние</td><td>9.9 / 10</td></tr>
+              <tr><td>Подлинность</td><td>Оригинал</td></tr>
+              <tr><td>Цена</td><td>17 900 ₽</td></tr>
+            </table>
+          </div>
+          <p>Рок-н-ролльная эстетика в минималистичной форме. Главный акцент — графика с зебровым принтом, часть характерной эстетики Слимана.</p>
+        </div>
+        <div class="mainbtn">Купить / вопрос</div>
+      </div></div>
+    </div>
+  </section>
+</div>
+</body>
+</html>
