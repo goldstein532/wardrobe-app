@@ -1,6 +1,6 @@
 {
  "version": 1,
- "next_id": 133,
+ "next_id": 135,
  "main_username": "nasonchikh_wardrobe",
  "posts": [
   {
@@ -12909,7 +12909,7 @@
    "message_ids": [
     6
    ],
-   "text": "Всем привет!  \n \n•В данном канале  вы можете заказать  исключительно оригинальные брендовые вещи ПОД ЗАКАЗ\n\n•Все дополнительные фоторграфии и замеры готов предоставить в личные сообщения 💬\n\n•ДОСТАВКА ОПЛАЧИВАЕТСЯ ИСКЛЮЧИТЕЛЬНО ПОКУПАТЕЛЕМ📭\n\n•ВОЗВРАТА НЕТУ❌\n\n•Вопросы и заказ ➡️ @nasonchikh_mngr \n\n•ОСНОВНОЙ КАНАЛ 🤩\n\n•ОТЗЫВЫ⭐️",
+   "text": "Всем привет!  \n \n•В данном канале  вы можете заказать  исключительно оригинальные брендовые вещи ПОД ЗАКАЗ\n\n•Все дополнительные фоторграфии и замеры готов предоставить в личные сообщения 💬\n\n•ДОСТАВКА ОПЛАЧИВАЕТСЯ ИСКЛЮЧИТЕЛЬНО ПОКУПАТЕЛЕМ📭\n\n• НА ТОВАРАХ #едет ЦЕНА УКАЗАНА БЕЗ ДОСТАВКИ ДО РФ\n\n•ВОЗВРАТА НЕТУ❌\n\n•Вопросы и заказ ➡️ @nasonchikh_mngr \n\n•ОСНОВНОЙ КАНАЛ 🤩\n\n•ОТЗЫВЫ⭐️",
    "entities": [
     {
      "type": "text_link",
@@ -12925,25 +12925,25 @@
     },
     {
      "type": "text_link",
-     "offset": 280,
+     "offset": 332,
      "length": 16,
      "url": "https://t.me/nasonchikh_mngr"
     },
     {
      "type": "text_link",
-     "offset": 300,
+     "offset": 352,
      "length": 14,
      "url": "https://t.me/nasonchikh_wardrobe"
     },
     {
      "type": "text_link",
-     "offset": 320,
+     "offset": 372,
      "length": 6,
      "url": "https://t.me/nasonchikh_feedback"
     },
     {
      "type": "text_link",
-     "offset": 327,
+     "offset": 379,
      "length": 1,
      "url": "https://t.me/garage_feedback"
     }
@@ -12951,8 +12951,10 @@
    "text_message_id": 6,
    "photos": [],
    "alias_of": null,
-   "item_ids": [],
-   "last_status": null,
+   "item_ids": [
+    133
+   ],
+   "last_status": "transit",
    "retired": false
   },
   {
@@ -12963,7 +12965,7 @@
    "message_ids": [
     7
    ],
-   "text": "nasonchikh express pinned «Всем привет!     •В данном канале  вы можете заказать  исключительно оригинальные брендовые вещи ПОД ЗАКАЗ  •Все дополнительные фоторграфии и замеры готов предоставить в личные сообщения 💬  •ДОСТАВКА ОПЛАЧИВАЕТСЯ ИСКЛЮЧИТЕЛЬНО ПОКУПАТЕЛЕМ📭  •ВОЗВРАТА НЕТУ❌…»",
+   "text": "nasonchikh express pinned «Всем привет!     •В данном канале  вы можете заказать  исключительно оригинальные брендовые вещи ПОД ЗАКАЗ  •Все дополнительные фоторграфии и замеры готов предоставить в личные сообщения 💬  •ДОСТАВКА ОПЛАЧИВАЕТСЯ ИСКЛЮЧИТЕЛЬНО ПОКУПАТЕЛЕМ📭  • НА ТОВАРАХ #едет…»",
    "entities": [
     {
      "type": "text_link",
@@ -12975,8 +12977,10 @@
    "text_message_id": 7,
    "photos": [],
    "alias_of": null,
-   "item_ids": [],
-   "last_status": null,
+   "item_ids": [
+    134
+   ],
+   "last_status": "transit",
    "retired": false
   },
   {
@@ -14346,10 +14350,226 @@
    "message_ids": [
     1610
    ],
-   "text": "К сожалению, дроп переносимся из за задержки со стороны транспортной компании(",
+   "text": "К сожалению, дроп переносится из за задержки со стороны транспортной компании(",
    "entities": [],
    "text_message_id": 1610,
    "photos": [],
+   "alias_of": null,
+   "item_ids": [],
+   "last_status": null,
+   "retired": false
+  },
+  {
+   "key": "-3867956109:m21",
+   "chat_id": -3867956109,
+   "chat_username": "nasoncikh_express",
+   "date": 1794566799,
+   "message_ids": [
+    21
+   ],
+   "text": "Сегодня дроп вещей #подзаказ, раз в основе не сложилось",
+   "entities": [],
+   "text_message_id": 21,
+   "photos": [],
+   "alias_of": null,
+   "item_ids": [],
+   "last_status": null,
+   "retired": false
+  },
+  {
+   "key": "-3867956109:m22",
+   "chat_id": -3867956109,
+   "chat_username": "nasoncikh_express",
+   "date": 1794566996,
+   "message_ids": [
+    22
+   ],
+   "text": "Найду любую вещь, пишите\n@nasonchikh_mngr",
+   "entities": [
+    {
+     "type": "text_link",
+     "offset": 25,
+     "length": 16,
+     "url": "https://t.me/nasonchikh_mngr"
+    }
+   ],
+   "text_message_id": 22,
+   "photos": [],
+   "alias_of": null,
+   "item_ids": [],
+   "last_status": null,
+   "retired": false
+  },
+  {
+   "key": "-3867956109:m23",
+   "chat_id": -3867956109,
+   "chat_username": "nasoncikh_express",
+   "date": 1794571800,
+   "message_ids": [
+    23
+   ],
+   "text": "Начинаю",
+   "entities": [],
+   "text_message_id": 23,
+   "photos": [],
+   "alias_of": null,
+   "item_ids": [],
+   "last_status": null,
+   "retired": false
+  },
+  {
+   "key": "-3867956109:m29",
+   "chat_id": -3867956109,
+   "chat_username": "nasoncikh_express",
+   "date": 1794571859,
+   "message_ids": [
+    29
+   ],
+   "text": "Очень лоу",
+   "entities": [],
+   "text_message_id": 29,
+   "photos": [],
+   "alias_of": null,
+   "item_ids": [],
+   "last_status": null,
+   "retired": false
+  },
+  {
+   "key": "-3867956109:m31",
+   "chat_id": -3867956109,
+   "chat_username": "nasoncikh_express",
+   "date": 1794572173,
+   "message_ids": [
+    31
+   ],
+   "text": "Можете листать фотки все, а то не все знают, что так можно\n\nНу почти все",
+   "entities": [],
+   "text_message_id": 31,
+   "photos": [],
+   "alias_of": null,
+   "item_ids": [],
+   "last_status": null,
+   "retired": false
+  },
+  {
+   "key": "-3867956109:m32",
+   "chat_id": -3867956109,
+   "chat_username": "nasoncikh_express",
+   "date": 1794578018,
+   "message_ids": [
+    32
+   ],
+   "text": "бронь на 1 день",
+   "entities": [],
+   "text_message_id": 32,
+   "photos": [],
+   "alias_of": null,
+   "item_ids": [],
+   "last_status": null,
+   "retired": false
+  },
+  {
+   "key": "-1184099784:gw1618",
+   "chat_id": -1184099784,
+   "chat_username": "nasonchikh_wardrobe",
+   "date": 1794578238,
+   "message_ids": [
+    1618,
+    1619
+   ],
+   "text": "Vivienne Westwood “Too Fast To Live Too Young Too Die” Watches SUPER RARE\nOne Size\n9/10\n15.900₽\n#Предзаказ \n\nInfo/Buy @airflora",
+   "entities": [
+    {
+     "type": "blockquote",
+     "offset": 74,
+     "length": 21
+    },
+    {
+     "type": "text_link",
+     "offset": 118,
+     "length": 9,
+     "url": "https://t.me/airflora"
+    }
+   ],
+   "text_message_id": 1618,
+   "photos": [
+    {
+     "file_id": "https://cdn4.telesco.pe/file/k1V3FMzGFEMfkH7cvXwJJSd9W6xMFsUzPSzJqQN15PMIfIUOvTVLmy0yEWqZxRurIKA8ZpXDIZQ0ezsb0PLdd7y7w2NmdVZEPBS9PLOgY0aWWc6bU5QJ17QcCJabOG-D5cRQ20HAMxcNjhBFhhIYTZUU8k5nB1wOcevUUJ0ojw4KrtX1-mzvDe4Yvl5c1ruOiHdjNNXtCMW8tmBSqVQp5wTnJTOF4rBJc-my3vATSvS1olAtoj_U2YGoUm_EiJlKH9G607fQTRXDrcgwnMsB2Kt3-RHIwWyznmDCyUWs-JtiJGEU8DokG92UhIKguhph6n9B5rSQwa0KrnaBTjrTFQ.jpg",
+     "file_unique_id": "nasonchikh_wardrobe-1618",
+     "width": 0,
+     "height": 0,
+     "message_id": 1618
+    },
+    {
+     "file_id": "https://cdn4.telesco.pe/file/L_zjhtLElfScKbrKAKF-zdpSwFyPSpOqRO8HHXjfyWDjxWMoLhrc36Vzq_3_74xF-uD4olHY6chLSReVN6uELMIeJU3NK2WHcKYQy4SSxdMaiCoScJHsVeJMQC2s636x9-ESlMR1M9KM6tWmoKN5ZY_aqiLRcOmE3DzQm-bGuMgwnhfa_ZQhDMJduLruvm_O6vLA4J59SIRQzqmrBg32KEcVHaGuMeoc4HfssXGs2sWHEKFRENMo3u7X36DtgKpZkzO4kok9jsqEkm5P_I7SrVt9TvjZeq7IMu0hNvi8r6tRWnmqyeMTz93OG0Mff-Qc6OEKYytiPd3vD3RbIaYhuA.jpg",
+     "file_unique_id": "nasonchikh_wardrobe-1619",
+     "width": 0,
+     "height": 0,
+     "message_id": 1619
+    }
+   ],
+   "alias_of": null,
+   "item_ids": [],
+   "last_status": null,
+   "retired": false
+  },
+  {
+   "key": "-1184099784:m1620",
+   "chat_id": -1184099784,
+   "chat_username": "nasonchikh_wardrobe",
+   "date": 1794578246,
+   "message_ids": [
+    1620
+   ],
+   "text": "СУПЕР РЕДКИЕ, БЕРИТЕ\n\n+ ЦЕНА НА ОБЫЧНЫЕ ЧАСЫ ВВ В РФ 20",
+   "entities": [],
+   "text_message_id": 1620,
+   "photos": [],
+   "alias_of": null,
+   "item_ids": [],
+   "last_status": null,
+   "retired": false
+  },
+  {
+   "key": "-3867956109:gw33",
+   "chat_id": -3867956109,
+   "chat_username": "nasoncikh_express",
+   "date": 1794578299,
+   "message_ids": [
+    33,
+    34
+   ],
+   "text": "Vivienne Westwood “Too Fast To Live Too Young Too Die” Watches SUPER RARE\nOne Size\n9/10\n15.900₽\n#Предзаказ \n\nInfo/Buy @airflora",
+   "entities": [
+    {
+     "type": "blockquote",
+     "offset": 74,
+     "length": 21
+    },
+    {
+     "type": "text_link",
+     "offset": 118,
+     "length": 9,
+     "url": "https://t.me/airflora"
+    }
+   ],
+   "text_message_id": 33,
+   "photos": [
+    {
+     "file_id": "https://cdn4.telesco.pe/file/KxQ_gC9uPyLYZoi-rIyv6FpTB4yIfXmB_zxrimxgnVBp86ckm-qk20LZ0xaWVYeDzREMxcrifNfuFqsAwoBcOVXoBeMjvcm5IHUJ3h-k88HgOAWurIoHj2JxuihwrWC_pFDDsnesFBUEBWMLtqvjbe-DWR1dtYuULUiunjwpLiGrXCRsWMqkX9yTp_SO-jNMiI-VsYlFwSe2GnSj4yZaB2HkI5PZFT_ri4P4fizyCcNlaNLDmhqPxyrSjjJEHg0S_yHElRa-HJykpV1kts7cXitHvLcAg7YW_lvwA2L6tx5rk2TaOpbG59ZT8y1NkmmSIdiax3w9h9HFoFYV7FIBhA.jpg",
+     "file_unique_id": "nasoncikh_express-33",
+     "width": 0,
+     "height": 0,
+     "message_id": 33
+    },
+    {
+     "file_id": "https://cdn4.telesco.pe/file/JLvoAuxEXLJkvmhNOc7Z31p9oj1C9G6MxDLv2yYb7xkG7LBJwZnyFPt3lirTxOhEYmiQv7O8lo1FTc8Vmb_yKd0PzY_OSvgoGFj4vJgQK-WWzZUcE42-1kDq_y5Q5paEbdSNriXIJwjAW8pADp81cQ80vzo8buvlhFkudFV1Okh7ReoWmsw7yZEVsKbZ9WNyXJ6FRNRpEpjcfg56h7WbizRwm9wzjdtndmmai5KBB6NFhlRZeoDnUbjtZZLqeY3EFQ4U4m3HxBsGiLJPcquc_0CY_UR6PttQgCqfa1OKB6jd1ukAB7cTW6qDS4mWKre-JF1QjfFHfk1aBYNV3LfHTg.jpg",
+     "file_unique_id": "nasoncikh_express-34",
+     "width": 0,
+     "height": 0,
+     "message_id": 34
+    }
+   ],
    "alias_of": null,
    "item_ids": [],
    "last_status": null,
@@ -15250,7 +15470,18 @@
   "-1184099784:1600": "-1184099784:m1600",
   "-3867956109:18": "-3867956109:m18",
   "-1184099784:1606": "-1184099784:m1606",
-  "-1184099784:1610": "-1184099784:m1610"
+  "-1184099784:1610": "-1184099784:m1610",
+  "-3867956109:21": "-3867956109:m21",
+  "-3867956109:22": "-3867956109:m22",
+  "-3867956109:23": "-3867956109:m23",
+  "-3867956109:29": "-3867956109:m29",
+  "-3867956109:31": "-3867956109:m31",
+  "-3867956109:32": "-3867956109:m32",
+  "-1184099784:1618": "-1184099784:gw1618",
+  "-1184099784:1619": "-1184099784:gw1618",
+  "-1184099784:1620": "-1184099784:m1620",
+  "-3867956109:33": "-3867956109:gw33",
+  "-3867956109:34": "-3867956109:gw33"
  },
  "items": [
   {
@@ -22050,9 +22281,9 @@
    "id": 106,
    "post_key": "-1184099784:gw1266",
    "part": 0,
-   "status": "available",
+   "status": "reserved",
    "created_at": 1788726014,
-   "updated_at": 1794516233,
+   "updated_at": 1794584226,
    "hidden": false,
    "title": "Saint Laurent Court Classic SL",
    "brand": "Saint Laurent",
@@ -22120,7 +22351,7 @@
      1266
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794584226
   },
   {
    "id": 107,
@@ -24054,6 +24285,72 @@
     ]
    ],
    "status_changed_at": 1794516233
+  },
+  {
+   "id": 133,
+   "post_key": "-3867956109:m6",
+   "part": 0,
+   "status": "transit",
+   "created_at": 1790512924,
+   "updated_at": 1794584226,
+   "hidden": false,
+   "title": "Всем привет!",
+   "brand": null,
+   "name": "Всем привет!",
+   "season": null,
+   "category": null,
+   "description": null,
+   "size": null,
+   "size_note": null,
+   "condition": null,
+   "condition_note": null,
+   "price": null,
+   "currency": "RUB",
+   "authentic": true,
+   "delivery": "ДОСТАВКА ОПЛАЧИВАЕТСЯ ИСКЛЮЧИТЕЛЬНО ПОКУПАТЕЛЕМ",
+   "buy_link": "https://t.me/nasoncikh_express",
+   "photos": [],
+   "extra_photos": [],
+   "refs": [
+    [
+     "nasoncikh_express",
+     6
+    ]
+   ],
+   "status_changed_at": 1794584226
+  },
+  {
+   "id": 134,
+   "post_key": "-3867956109:m7",
+   "part": 0,
+   "status": "transit",
+   "created_at": 1790513088,
+   "updated_at": 1794584226,
+   "hidden": false,
+   "title": "nasonchikh express pinned «Всем привет! •В данном канале вы можете заказать исключительно оригинальные брендовые вещи ПОД ЗАКАЗ •Все дополнительные фоторграфии и замеры готов предоставить в личные сообщения 💬 •ДОСТАВКА ОПЛАЧИВАЕТСЯ ИСКЛЮЧИТЕЛЬНО ПОКУПАТЕЛЕМ📭 • НА ТОВАРАХ #едет…»",
+   "brand": null,
+   "name": "nasonchikh express pinned «Всем привет! •В данном канале вы можете заказать исключительно оригинальные брендовые вещи ПОД ЗАКАЗ •Все дополнительные фоторграфии и замеры готов предоставить в личные сообщения 💬 •ДОСТАВКА ОПЛАЧИВАЕТСЯ ИСКЛЮЧИТЕЛЬНО ПОКУПАТЕЛЕМ📭 • НА ТОВАРАХ #едет…»",
+   "season": null,
+   "category": null,
+   "description": null,
+   "size": null,
+   "size_note": null,
+   "condition": null,
+   "condition_note": null,
+   "price": null,
+   "currency": "RUB",
+   "authentic": false,
+   "delivery": null,
+   "buy_link": "https://t.me/nasoncikh_express",
+   "photos": [],
+   "extra_photos": [],
+   "refs": [
+    [
+     "nasoncikh_express",
+     7
+    ]
+   ],
+   "status_changed_at": 1794584226
   }
  ]
 }

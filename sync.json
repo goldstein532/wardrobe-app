@@ -1,5 +1,5 @@
 {
- "offset": 196436303,
+ "offset": 196436304,
  "threads": {},
  "pending": [
   {
@@ -1121,11 +1121,35 @@
    "prev_status": "available",
    "other_id": null,
    "ts": 1794516233
+  },
+  {
+   "kind": "created",
+   "item_id": 133,
+   "status": "transit",
+   "prev_status": null,
+   "other_id": null,
+   "ts": 1794584226
+  },
+  {
+   "kind": "created",
+   "item_id": 134,
+   "status": "transit",
+   "prev_status": null,
+   "other_id": null,
+   "ts": 1794584226
+  },
+  {
+   "kind": "status",
+   "item_id": 106,
+   "status": "reserved",
+   "prev_status": "available",
+   "other_id": null,
+   "ts": 1794584226
   }
  ],
  "web": {
   "nasonchikh_wardrobe": {
-   "cursor": 1312,
+   "cursor": 1194,
    "full_done": true
   },
   "nasoncikh_express": {
@@ -1162,6 +1186,7 @@
   "nasonchikh_wardrobe/1607",
   "nasonchikh_wardrobe/1608",
   "nasonchikh_wardrobe/1609",
+  "nasonchikh_wardrobe/1612",
   "nasonchikh_wardrobe/181",
   "nasonchikh_wardrobe/182",
   "nasonchikh_wardrobe/249",
