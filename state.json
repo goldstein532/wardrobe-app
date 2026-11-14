@@ -14574,6 +14574,63 @@
    "item_ids": [],
    "last_status": null,
    "retired": false
+  },
+  {
+   "key": "-3867956109:m36",
+   "chat_id": -3867956109,
+   "chat_username": "nasoncikh_express",
+   "date": 1794687392,
+   "message_ids": [
+    36
+   ],
+   "text": "Завтра дроп еще вещей под заказ\n\n10 РЕАКЦИЙ",
+   "entities": [],
+   "text_message_id": 36,
+   "photos": [],
+   "alias_of": null,
+   "item_ids": [],
+   "last_status": null,
+   "retired": false
+  },
+  {
+   "key": "-1184099784:m1622",
+   "chat_id": -1184099784,
+   "chat_username": "nasonchikh_wardrobe",
+   "date": 1794687400,
+   "message_ids": [
+    1622
+   ],
+   "text": "Завтра дроп еще вещей под заказ\n\n10 РЕАКЦИЙ",
+   "entities": [],
+   "text_message_id": 1622,
+   "photos": [],
+   "alias_of": "-3867956109:m36",
+   "item_ids": [],
+   "last_status": null,
+   "retired": false
+  },
+  {
+   "key": "-1184099784:m1623",
+   "chat_id": -1184099784,
+   "chat_username": "nasonchikh_wardrobe",
+   "date": 1794688734,
+   "message_ids": [
+    1623
+   ],
+   "text": "Добейте там 10 реакций и 40 подписчиков \n\nРеально интересные вещи выкладываю по очень хорошим ценам, наценку делаю минимальную, все для народа",
+   "entities": [
+    {
+     "type": "blockquote",
+     "offset": 42,
+     "length": 100
+    }
+   ],
+   "text_message_id": 1623,
+   "photos": [],
+   "alias_of": null,
+   "item_ids": [],
+   "last_status": null,
+   "retired": false
   }
  ],
  "msg_index": {
@@ -15481,7 +15538,10 @@
   "-1184099784:1619": "-1184099784:gw1618",
   "-1184099784:1620": "-1184099784:m1620",
   "-3867956109:33": "-3867956109:gw33",
-  "-3867956109:34": "-3867956109:gw33"
+  "-3867956109:34": "-3867956109:gw33",
+  "-3867956109:36": "-3867956109:m36",
+  "-1184099784:1622": "-1184099784:m1622",
+  "-1184099784:1623": "-1184099784:m1623"
  },
  "items": [
   {
