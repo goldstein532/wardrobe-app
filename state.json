@@ -14665,6 +14665,73 @@
    "item_ids": [],
    "last_status": null,
    "retired": false
+  },
+  {
+   "key": "-3867956109:m50",
+   "chat_id": -3867956109,
+   "chat_username": "nasoncikh_express",
+   "date": 1794756169,
+   "message_ids": [
+    50
+   ],
+   "text": "АБСОЛЮТНО НОВЫЕ С ПОЛНЫМ КП, ОГРОМНАЯ РЕДКОСТЬ",
+   "entities": [],
+   "text_message_id": 50,
+   "photos": [],
+   "alias_of": null,
+   "item_ids": [],
+   "last_status": null,
+   "retired": false
+  },
+  {
+   "key": "-1184099784:m1627",
+   "chat_id": -1184099784,
+   "chat_username": "nasonchikh_wardrobe",
+   "date": 1794760554,
+   "message_ids": [
+    1627
+   ],
+   "text": "111 Reactions - Drop\n\n@nullformm  \n       @nullformm\n                @nullformm \n                         @nullformm",
+   "entities": [
+    {
+     "type": "text_link",
+     "offset": 22,
+     "length": 10,
+     "url": "https://t.me/nullformm"
+    },
+    {
+     "type": "text_link",
+     "offset": 42,
+     "length": 10,
+     "url": "https://t.me/nullformm"
+    },
+    {
+     "type": "text_link",
+     "offset": 69,
+     "length": 10,
+     "url": "https://t.me/nullformm"
+    },
+    {
+     "type": "text_link",
+     "offset": 106,
+     "length": 10,
+     "url": "https://t.me/nullformm"
+    }
+   ],
+   "text_message_id": 1627,
+   "photos": [
+    {
+     "file_id": "https://cdn4.telesco.pe/file/CpFPkTBwm2lLhn5TyBwT7h1ifPWhyAXOHAJrOFRIHaMpRkpRwYhuzgOOzGs783MTLoGevKqv1X8JkFZ03_a4jhx5EkgQEJ9v8i0g5xEwhaEZRK3s1AOZ4t9v9Kdv_1534Z945lw_rOGrwH8LZJx352buAgs5MK4xv4ogdm1pjUB2URJiC6Bm89Kepz-rHgQQZeWLicNiCvJa_DpOBrOXYGr1sj4Aj98wWA8RHwqhu9e9YzvWKDGGpp-kAfZRulfEiabvrgzgI_SIcgbPtibeZ_MYvCXjm34CF6LdB3KRbGZfVL9S4T9dm8zZ_LSMYDMqurD2HTIz-vmajlZdTMtcQg.jpg",
+     "file_unique_id": "nasonchikh_wardrobe-1627",
+     "width": 0,
+     "height": 0,
+     "message_id": 1627
+    }
+   ],
+   "alias_of": null,
+   "item_ids": [],
+   "last_status": null,
+   "retired": false
   }
  ],
  "msg_index": {
@@ -15577,7 +15644,9 @@
   "-1184099784:1622": "-1184099784:m1622",
   "-1184099784:1623": "-1184099784:m1623",
   "-3867956109:37": "-3867956109:m37",
-  "-3867956109:44": "-3867956109:m44"
+  "-3867956109:44": "-3867956109:m44",
+  "-3867956109:50": "-3867956109:m50",
+  "-1184099784:1627": "-1184099784:m1627"
  },
  "items": [
   {
