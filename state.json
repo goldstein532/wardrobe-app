@@ -14631,6 +14631,40 @@
    "item_ids": [],
    "last_status": null,
    "retired": false
+  },
+  {
+   "key": "-3867956109:m37",
+   "chat_id": -3867956109,
+   "chat_username": "nasoncikh_express",
+   "date": 1794737523,
+   "message_ids": [
+    37
+   ],
+   "text": "Так, ну начинаем",
+   "entities": [],
+   "text_message_id": 37,
+   "photos": [],
+   "alias_of": null,
+   "item_ids": [],
+   "last_status": null,
+   "retired": false
+  },
+  {
+   "key": "-3867956109:m44",
+   "chat_id": -3867956109,
+   "chat_username": "nasoncikh_express",
+   "date": 1794737594,
+   "message_ids": [
+    44
+   ],
+   "text": "У самого такие, очень крутые, советую",
+   "entities": [],
+   "text_message_id": 44,
+   "photos": [],
+   "alias_of": null,
+   "item_ids": [],
+   "last_status": null,
+   "retired": false
   }
  ],
  "msg_index": {
@@ -15541,7 +15575,9 @@
   "-3867956109:34": "-3867956109:gw33",
   "-3867956109:36": "-3867956109:m36",
   "-1184099784:1622": "-1184099784:m1622",
-  "-1184099784:1623": "-1184099784:m1623"
+  "-1184099784:1623": "-1184099784:m1623",
+  "-3867956109:37": "-3867956109:m37",
+  "-3867956109:44": "-3867956109:m44"
  },
  "items": [
   {
