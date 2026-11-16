@@ -723,11 +723,11 @@
     46,
     47
    ],
-   "text": "Issey Miyake 80s Zip hoodie🤩\n\n•Size: S\n•Cond: 9/10\n•ОРИГИНАЛ, любые проверки✅\n\nPrice: 12.222₽\nСПБ/ДОСТАВКА\n\nКУПИТЬ/ЗАДАТЬ ВОПРОС\n\n#наличие\nДоп фото👇",
+   "text": "Issey Miyake 80s Zip hoodie🤩\n\n•Size: S\n•Cond: 9/10\n•ОРИГИНАЛ, любые проверки✅\n\n❗️SOLD ❗️\n\nPrice: 12.222₽\nСПБ/ДОСТАВКА\n\nКУПИТЬ/ЗАДАТЬ ВОПРОС\n\n#продано\nДоп фото👇",
    "entities": [
     {
      "type": "text_link",
-     "offset": 109,
+     "offset": 120,
      "length": 20,
      "url": "https://t.me/Grg_manager"
     }
@@ -760,7 +760,7 @@
    "item_ids": [
     9
    ],
-   "last_status": "available",
+   "last_status": "sold",
    "retired": false
   },
   {
@@ -16071,9 +16071,9 @@
    "id": 9,
    "post_key": "-1184099784:gw45",
    "part": 0,
-   "status": "available",
+   "status": "sold",
    "created_at": 1754476853,
-   "updated_at": 1794516233,
+   "updated_at": 1794794239,
    "hidden": false,
    "title": "Issey Miyake 80s Zip hoodie",
    "brand": "Issey Miyake",
@@ -16120,7 +16120,7 @@
      45
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794794239
   },
   {
    "id": 10,

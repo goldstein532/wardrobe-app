@@ -1145,11 +1145,19 @@
    "prev_status": "available",
    "other_id": null,
    "ts": 1794584226
+  },
+  {
+   "kind": "status",
+   "item_id": 9,
+   "status": "sold",
+   "prev_status": "available",
+   "other_id": null,
+   "ts": 1794794239
   }
  ],
  "web": {
   "nasonchikh_wardrobe": {
-   "cursor": 126,
+   "cursor": 44,
    "full_done": true
   },
   "nasoncikh_express": {
