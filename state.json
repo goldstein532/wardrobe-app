@@ -13431,7 +13431,7 @@
     1490,
     1491
    ],
-   "text": "Saint Laurent Paris “Love 1981”SS21 by Anthony Vaccarello➕\n\nПлакаты LOVE-  самая личная и самая узнаваемая графическая серия Сен-Лорана: с 1970-го он от руки собирал коллаж-открытку и рассылал клиентам и близким. Оригиналы висят в музеях, репринты уходят на аукционах- и вот один из них на футболке\n\n\n•Size: M (S-M)\n•Cond: 8/10 \n•ОРИГИНАЛ, любые проверки✅\n\n•Price: 7.900₽\nСПБ/ДОСТАВКА\n\n КУПИТЬ/ЗАДАТЬ ВОПРОС\n\n#наличие\nДоп фото👇",
+   "text": "Saint Laurent Paris “Love 1981”SS21 by Anthony Vaccarello➕\n\nПлакаты LOVE-  самая личная и самая узнаваемая графическая серия Сен-Лорана: с 1970-го он от руки собирал коллаж-открытку и рассылал клиентам и близким. Оригиналы висят в музеях, репринты уходят на аукционах- и вот один из них на футболке\n\n❗️SOLD ❗️\n\n•Size: M (S-M)\n•Cond: 8/10 \n•ОРИГИНАЛ, любые проверки✅\n\n•Price: 5.900₽\nСПБ/ДОСТАВКА\n\n КУПИТЬ/ЗАДАТЬ ВОПРОС\n\n#продано\nДоп фото👇",
    "entities": [
     {
      "type": "blockquote",
@@ -13440,7 +13440,7 @@
     },
     {
      "type": "text_link",
-     "offset": 386,
+     "offset": 396,
      "length": 21,
      "url": "https://t.me/nasonchikh_mngr"
     }
@@ -13494,7 +13494,7 @@
    "item_ids": [
     122
    ],
-   "last_status": "available",
+   "last_status": "sold",
    "retired": false
   },
   {
@@ -14732,6 +14732,30 @@
    "item_ids": [],
    "last_status": null,
    "retired": false
+  },
+  {
+   "key": "-1184099784:m1628",
+   "chat_id": -1184099784,
+   "chat_username": "nasonchikh_wardrobe",
+   "date": 1794826356,
+   "message_ids": [
+    1628
+   ],
+   "text": "СНОВА В ПРОДАЖЕ\n КОМУ БЫЛА ИНТЕРЕСНА: @nasonchikh_mngr",
+   "entities": [
+    {
+     "type": "text_link",
+     "offset": 38,
+     "length": 16,
+     "url": "https://t.me/nasonchikh_mngr"
+    }
+   ],
+   "text_message_id": 1628,
+   "photos": [],
+   "alias_of": null,
+   "item_ids": [],
+   "last_status": null,
+   "retired": false
   }
  ],
  "msg_index": {
@@ -15646,7 +15670,8 @@
   "-3867956109:37": "-3867956109:m37",
   "-3867956109:44": "-3867956109:m44",
   "-3867956109:50": "-3867956109:m50",
-  "-1184099784:1627": "-1184099784:m1627"
+  "-1184099784:1627": "-1184099784:m1627",
+  "-1184099784:1628": "-1184099784:m1628"
  },
  "items": [
   {
@@ -22446,9 +22471,9 @@
    "id": 106,
    "post_key": "-1184099784:gw1266",
    "part": 0,
-   "status": "reserved",
+   "status": "sold",
    "created_at": 1788726014,
-   "updated_at": 1794584226,
+   "updated_at": 1794858401,
    "hidden": false,
    "title": "Saint Laurent Court Classic SL",
    "brand": "Saint Laurent",
@@ -22516,7 +22541,7 @@
      1266
     ]
    ],
-   "status_changed_at": 1794584226
+   "status_changed_at": 1794858401
   },
   {
    "id": 107,
@@ -22978,9 +23003,9 @@
    "id": 113,
    "post_key": "-1184099784:gw1375",
    "part": 0,
-   "status": "reserved",
+   "status": "sold",
    "created_at": 1790445455,
-   "updated_at": 1794516233,
+   "updated_at": 1794858401,
    "hidden": false,
    "title": "Saint Laurent Paris “Love 1981”SS21 by Anthony Vaccarello",
    "brand": "Saint Laurent",
@@ -23048,7 +23073,7 @@
      1375
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794858401
   },
   {
    "id": 114,
@@ -23662,9 +23687,9 @@
    "id": 122,
    "post_key": "-1184099784:gw1486",
    "part": 0,
-   "status": "reserved",
+   "status": "sold",
    "created_at": 1792853347,
-   "updated_at": 1794530947,
+   "updated_at": 1794858401,
    "hidden": false,
    "title": "Saint Laurent Paris “Love 1981”SS21 by Anthony Vaccarello",
    "brand": "Saint Laurent",
@@ -23676,7 +23701,7 @@
    "size_note": "S-M",
    "condition": "8/10",
    "condition_note": null,
-   "price": 7900,
+   "price": 5900,
    "currency": "RUB",
    "authentic": true,
    "delivery": "СПБ/ДОСТАВКА",
@@ -23732,7 +23757,7 @@
      1486
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794858401
   },
   {
    "id": 123,
