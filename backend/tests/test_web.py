@@ -63,6 +63,10 @@ def test_real_page_replies_and_forwards():
     ("снова в наличии", Status.AVAILABLE), ("бронь снята", Status.AVAILABLE),
     ("По секрету, в пятницу дроп", None), ("", None),
     ("очень длинный ответ про то что вещь продано уже давно", None),
+    # реальные ответы админа из канала
+    ("SOLD ПО ПРЕДОПЛАТЕ", Status.SOLD), ("#продано", Status.SOLD), ("Продано!", Status.SOLD),
+    ("СНОВА В ПРОДАЖЕ\n КОМУ БЫЛА ИНТЕРЕСНА: @nasonchikh_mngr", Status.AVAILABLE),
+    ("не продано", None), ("28.900₽….", None),
 ])
 def test_reply_status(text, status):
     assert reply_status(text) is status
@@ -204,3 +208,46 @@ def test_web_errors_do_not_hide_items(setup, monkeypatch):
     r = Sync(None, cfg, d, web).run()
     assert len(cat_json(d)["items"]) == 3 and not r.changed
     assert any("ошибка загрузки" in line for line in r.log)
+
+
+# ------------------------------------------------------------ «продано» в реальных формулировках админа
+
+def test_sold_reply_with_explanation(setup):
+    """Ответ «SOLD ПО ПРЕДОПЛАТЕ» на пост — вещь уходит из витрины."""
+    web, _, d = setup
+    web.blocks[18] = block(18, "SOLD ПО ПРЕДОПЛАТЕ", reply_to=17)
+    Sync(None, Config(main_channel="shop"), d, web).run()
+    assert "Jeans" not in {i["name"] for i in cat_json(d)["items"]}
+
+
+@pytest.mark.parametrize("tail", ["SOLD", "#продано", "❗️SOLD❗️\n#продано"])
+def test_sold_written_into_edited_post(setup, tail):
+    """Админ правит пост и дописывает SOLD (хэштег #наличие может остаться) или #продано."""
+    web, _, d = setup
+    Sync(None, Config(main_channel="shop"), d, web).run()
+    web.blocks[17] = block(17, product("Helmut Lang Jeans", "9.900") + "\n" + tail, photos=[17])
+    Sync(None, Config(main_channel="shop"), d, web).run()
+    assert "Jeans" not in {i["name"] for i in cat_json(d)["items"]}
+
+
+def test_old_state_is_rescanned_once(setup):
+    """После обновления разбора вся лента перечитывается один раз — старые «SOLD ПО ПРЕДОПЛАТЕ» применяются."""
+    web, cfg, d = setup
+    web.per_page = 2
+    Sync(None, cfg, d, web).run()
+    meta = json.loads((d / "sync.json").read_text("utf-8"))
+    meta.pop("rescan")  # состояние от прошлой версии
+    (d / "sync.json").write_text(json.dumps(meta), "utf-8")
+    web.calls.clear()
+    Sync(None, cfg, d, web).run()
+    assert len(web.calls) == 3  # вся лента, а не только свежие страницы
+    web.calls.clear()
+    Sync(None, cfg, d, web).run()
+    assert web.calls[0] is None and len(web.calls) <= 1 + 2 + 10
+
+
+def test_older_reply_does_not_override_newer(setup):
+    web, cfg, d = setup
+    web.blocks[20] = block(20, "снова в наличии", reply_to=12)  # 20 → 5 ноября, SOLD (16) → 1 ноября
+    Sync(None, cfg, d, web).run()
+    assert {i["name"]: i["status"] for i in cat_json(d)["items"]}["Geobasket"] == "available"

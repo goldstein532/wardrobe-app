@@ -41,7 +41,9 @@ STATUS_WORDS = {
 STATUS_RU = {"available": "в наличии", "transit": "в пути", "reserved": "бронь", "sold": "продано"}
 MAX_PENDING = 1000
 WEB_NEW_PAGES = 2      # свежие страницы ленты — каждый прогон
-WEB_ROLL_PAGES = 3     # плюс столько старых по кругу (ловим правки старых постов и удаления)
+WEB_ROLL_PAGES = 10    # плюс столько старых по кругу (ловим правки старых постов и удаления)
+# Сменился разбор постов или ответов → один раз перечитываем всю ленту, чтобы применить его к истории.
+RESCAN_VERSION = 2
 WEB_MAX_PAGES = 400    # предохранитель для первого полного прохода
 
 
@@ -103,8 +105,13 @@ class Sync:
         self.cat = Catalog.from_json(state.read_text("utf-8")) if state.exists() else Catalog(cfg.main_channel)
         meta = data_dir / "sync.json"
         self.meta: dict[str, Any] = json.loads(meta.read_text("utf-8")) if meta.exists() else {}
-        for key, default in (("offset", None), ("threads", {}), ("pending", []), ("web", {}), ("replies", [])):
+        for key, default in (("offset", None), ("threads", {}), ("pending", []), ("web", {}), ("replies", []),
+                             ("reply_dates", {})):
             self.meta.setdefault(key, default)
+        if self.meta.get("rescan") != RESCAN_VERSION:
+            for st in self.meta["web"].values():
+                st["full_done"], st["cursor"] = False, None
+            self.meta["rescan"] = RESCAN_VERSION
         self.result = SyncResult()
         self.now = int(time.time())
 
@@ -240,7 +247,12 @@ class Sync:
             if not items:
                 continue  # исходный пост ещё не в каталоге — попробуем при следующем проходе
             status = reply_status(r.text)
-            events = [e for i in items if (e := self.cat.set_status(i.id, status, self.now))]  # type: ignore[arg-type]
+            # Ответы применяем по порядку: старый «SOLD», найденный позже, не перебивает более новый «снова в наличии».
+            dates = self.meta["reply_dates"]
+            fresh = [i for i in items if r.date >= dates.get(str(i.id), 0)]
+            for i in fresh:
+                dates[str(i.id)] = r.date
+            events = [e for i in fresh if (e := self.cat.set_status(i.id, status, self.now))]  # type: ignore[arg-type]
             for e in events:
                 self.log(f"{key}: ответ «{r.text}» → {self.describe(e)}")
             self.queue(events)

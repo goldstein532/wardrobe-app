@@ -43,16 +43,18 @@ STATUS_TAGS: dict[str, Status] = {
 
 # Короткий ответ на пост, меняющий статус: «SOLD», «бронь», «снова в наличии».
 _REPLY_STATUS = [
-    (re.compile(r"^(?:sold|продан[оаы]?)$", re.IGNORECASE), Status.SOLD),
+    # «SOLD», «SOLD ПО ПРЕДОПЛАТЕ», «#продано» — продано, даже если дальше есть пояснение.
+    (re.compile(r"^(?:sold|продан[оаы]?)(?:\s|$)", re.IGNORECASE), Status.SOLD),
     (re.compile(r"^(?:бронь|забронирован[оаы]?|reserved)$", re.IGNORECASE), Status.RESERVED),
-    (re.compile(r"^(?:снова\s+)?(?:в\s+)?наличи[еи]|^бронь\s+снята$", re.IGNORECASE), Status.AVAILABLE),
+    (re.compile(r"^(?:снова\s+)?(?:в\s+)?наличи[еи]|^снова\s+в\s+продаже|^бронь\s+снята$", re.IGNORECASE), Status.AVAILABLE),
     (re.compile(r"^(?:едет|в\s+пути)$", re.IGNORECASE), Status.TRANSIT),
 ]
 
 
 def reply_status(text: str | None) -> Status | None:
-    """Статус из короткого ответа на пост. Длинные ответы не считаются."""
-    clean = re.sub(r"[^\w\s]", " ", (text or "").lower().replace("#", " "))
+    """Статус из короткого ответа на пост. Смотрим первую строку; длинные ответы не считаются."""
+    first = next((l for l in (text or "").splitlines() if l.strip()), "")
+    clean = re.sub(r"[^\w\s]", " ", first.lower().replace("#", " "))
     clean = re.sub(r"\s+", " ", clean).strip()
     if not clean or len(clean) > 30:
         return None
