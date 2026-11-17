@@ -1,0 +1,75 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>NSN logo</title>
+<style>
+@font-face { font-family: Mono; src: url(fonts/mono.woff2) format("woff2"); font-weight: 500; }
+html, body { margin: 0; background: #ddd; }
+body { display: flex; flex-wrap: wrap; gap: 24px; padding: 24px; }
+body.one { padding: 0; gap: 0; }
+svg { width: 640px; height: 640px; display: block; }
+text { font-family: Mono, monospace; font-weight: 500; }
+</style>
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <!-- (NSN): тонкая моно-линия, узкие высокие буквы — как в исходном лого, но без объёма и цвета -->
+    <g id="mark" fill="none" stroke-width="7" stroke-linecap="butt" stroke-linejoin="miter">
+      <path d="M-124 -100 C-142 -100 -146 -90 -146 -74 L-146 74 C-146 90 -142 100 -124 100"/>
+      <path d="M-104 100 L-104 -100 L-48 100 L-48 -100"/>
+      <path transform="translate(-26 0)" d="M50 -72 C50 -92 40 -100 26 -100 C12 -100 2 -92 2 -72 L2 -50 C2 -10 50 10 50 50 L50 72 C50 92 40 100 26 100 C12 100 2 92 2 72"/>
+      <path d="M48 100 L48 -100 L104 100 L104 -100"/>
+      <path d="M124 -100 C142 -100 146 -90 146 -74 L146 74 C146 90 142 100 124 100"/>
+    </g>
+    <!-- бирка: рамка и четыре стежка-биссектрисы в углах, как на карточках витрины -->
+    <g id="label" fill="none">
+      <rect x="130" y="90" width="380" height="460" stroke-width="2.5"/>
+      <g stroke-width="3">
+        <path d="M141 101 L155 115"/><path d="M499 101 L485 115"/>
+        <path d="M499 539 L485 525"/><path d="M141 539 L155 525"/>
+      </g>
+    </g>
+  </defs>
+</svg>
+
+<!-- A: светлая бирка -->
+<svg id="a" viewBox="0 0 640 640">
+  <rect width="640" height="640" fill="#f3f1ec"/>
+  <g stroke="#161616"><use href="#label"/></g>
+  <g stroke="#161616" transform="translate(320 270) scale(.88)"><use href="#mark"/></g>
+  <g fill="#161616" font-size="21" text-anchor="middle" letter-spacing="9">
+    <text x="324" y="428">NASONCHIKH</text>
+    <text x="324" y="462">WARDROBE</text>
+  </g>
+</svg>
+
+<!-- B: тёмная бирка -->
+<svg id="b" viewBox="0 0 640 640">
+  <rect width="640" height="640" fill="#121212"/>
+  <g stroke="#efece6"><use href="#label"/></g>
+  <g stroke="#efece6" transform="translate(320 270) scale(.88)"><use href="#mark"/></g>
+  <g fill="#efece6" font-size="21" text-anchor="middle" letter-spacing="9">
+    <text x="324" y="428">NASONCHIKH</text>
+    <text x="324" y="462">WARDROBE</text>
+  </g>
+</svg>
+
+<!-- C: исходная композиция в круге, плоско и монохромно -->
+<svg id="c" viewBox="0 0 640 640">
+  <rect width="640" height="640" fill="#f3f1ec"/>
+  <g fill="none" stroke="#161616">
+    <circle cx="320" cy="320" r="292" stroke-width="2.5"/>
+    <path d="M78 484 L562 484" stroke-width="2.5"/>
+  </g>
+  <g stroke="#161616" transform="translate(320 286) scale(1.05)"><use href="#mark"/></g>
+  <g fill="#161616" font-size="19" text-anchor="middle" letter-spacing="8">
+    <text x="324" y="530">NASONCHIKH</text>
+    <text x="324" y="560">WARDROBE</text>
+  </g>
+</svg>
+
+<script>
+  const v = new URLSearchParams(location.search).get("v");
+  if (v) {
+    document.body.className = "one";
+    document.querySelectorAll("svg[id]").forEach((s) => s.id !== v && s.remove());
+  }
+</script>
