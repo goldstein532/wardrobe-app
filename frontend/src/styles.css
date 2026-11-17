@@ -6,7 +6,7 @@
   --line: #e6e6e6;
   --ph: #f2f2f2;
   --label: #e3e3e3;
-  --stitch: #bbbbbb;
+  --stitch: #8f8f8f;
   --sans: "Inter Tight", system-ui, -apple-system, "Segoe UI", sans-serif;
   --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
   --ease: cubic-bezier(.2, .8, .2, 1);
@@ -20,7 +20,7 @@
   --line: #1e1e1e;
   --ph: #161616;
   --label: #262626;
-  --stitch: #4a4a4a;
+  --stitch: #6a6a6a;
   color-scheme: dark;
 }
 
@@ -97,10 +97,11 @@ input { font: inherit; color: inherit; }
 .label::before {
   content: ""; position: absolute; inset: 3px; pointer-events: none;
   background:
-    linear-gradient(var(--stitch), var(--stitch)) left top / 1px 5px no-repeat,
-    linear-gradient(var(--stitch), var(--stitch)) right top / 1px 5px no-repeat,
-    linear-gradient(var(--stitch), var(--stitch)) left bottom / 1px 5px no-repeat,
-    linear-gradient(var(--stitch), var(--stitch)) right bottom / 1px 5px no-repeat;
+    /* порядок — по часовой стрелке: так их «прошивает» анимация */
+    linear-gradient(var(--stitch), var(--stitch)) left top / 1px 7px no-repeat,
+    linear-gradient(var(--stitch), var(--stitch)) right top / 1px 7px no-repeat,
+    linear-gradient(var(--stitch), var(--stitch)) right bottom / 1px 7px no-repeat,
+    linear-gradient(var(--stitch), var(--stitch)) left bottom / 1px 7px no-repeat;
 }
 .label .n { display: flex; justify-content: space-between; gap: 6px; }
 .label .t {
@@ -213,8 +214,16 @@ input { font: inherit; color: inherit; }
 /* бирка: рамка проявляется, стежки «прошиваются» после фото */
 .tile .label { transition: border-color .8s var(--ease) calc(var(--d, 0ms) + 250ms); }
 .tile:not(.in):not(.skel) .label { border-color: transparent; }
-.tile .label::before { transition: background-size .45s var(--ease) calc(var(--d, 0ms) + 650ms); }
 .tile:not(.in):not(.skel) .label::before { background-size: 1px 0, 1px 0, 1px 0, 1px 0; }
+/* стежки прошиваются по одному, по часовой стрелке, как иголкой */
+.tile.in .label::before { animation: sew 1.2s cubic-bezier(.6, 0, .3, 1) calc(var(--d, 0ms) + 500ms) both; }
+@keyframes sew {
+  0%   { background-size: 1px 0, 1px 0, 1px 0, 1px 0; }
+  25%  { background-size: 1px 7px, 1px 0, 1px 0, 1px 0; }
+  50%  { background-size: 1px 7px, 1px 7px, 1px 0, 1px 0; }
+  75%  { background-size: 1px 7px, 1px 7px, 1px 7px, 1px 0; }
+  100% { background-size: 1px 7px, 1px 7px, 1px 7px, 1px 7px; }
+}
 
 /* фото: проявляется из лёгкого увеличения */
 .img { transform: scale(1.06); transition: opacity .8s var(--ease), transform 1.6s var(--ease); }
