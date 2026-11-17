@@ -12354,7 +12354,7 @@
     1342,
     1343
    ],
-   "text": "Rick Owen’s DRKSHDW Vintage High \n\nСилуэт вдохновлен классической винтажной скейт-обувью, но переосмыслен в фирменной эстетике Рика\nСамые крутые рики в очень редкой разцветке\n\n•Size: 44 (44-45)\n•Cond: 9/10 (есть коробка)\n•ОРИГИНАЛ, любые проверки✅\n\n•Price: 34.900₽\nСПБ/ДОСТАВКА\n\n КУПИТЬ/ЗАДАТЬ ВОПРОС\n\n#наличие\nДоп фото👇",
+   "text": "Rick Owen’s DRKSHDW Vintage High \n\nСилуэт вдохновлен классической винтажной скейт-обувью, но переосмыслен в фирменной эстетике Рика\nСамые крутые рики в очень редкой разцветке\n\n•Size: 44 (44-45)\n•Cond: 9/10 (есть коробка)\n•ОРИГИНАЛ, любые проверки✅\n\n❗️SOLD ❗️\n\n•Price: 28.900₽\nСПБ/ДОСТАВКА\n\n КУПИТЬ/ЗАДАТЬ ВОПРОС\n\n#продано\nДоп фото👇",
    "entities": [
     {
      "type": "blockquote",
@@ -12363,7 +12363,7 @@
     },
     {
      "type": "text_link",
-     "offset": 279,
+     "offset": 290,
      "length": 21,
      "url": "https://t.me/nasonchikh_mngr"
     }
@@ -12417,7 +12417,7 @@
    "item_ids": [
     112
    ],
-   "last_status": "available",
+   "last_status": "sold",
    "retired": false
   },
   {
@@ -22952,9 +22952,9 @@
    "id": 112,
    "post_key": "-1184099784:gw1338",
    "part": 0,
-   "status": "available",
+   "status": "sold",
    "created_at": 1789584445,
-   "updated_at": 1794516233,
+   "updated_at": 1794942245,
    "hidden": false,
    "title": "Rick Owen’s DRKSHDW Vintage High",
    "brand": null,
@@ -22966,7 +22966,7 @@
    "size_note": "44-45",
    "condition": "9/10",
    "condition_note": "есть коробка",
-   "price": 34900,
+   "price": 28900,
    "currency": "RUB",
    "authentic": true,
    "delivery": "СПБ/ДОСТАВКА",
@@ -23022,7 +23022,7 @@
      1338
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794942245
   },
   {
    "id": 113,
