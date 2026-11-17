@@ -92,16 +92,17 @@ input { font: inherit; color: inherit; }
 .tile.muted .ph { filter: grayscale(1); opacity: .7; }
 .tile.muted .label { color: var(--sub); }
 
-.label { position: relative; margin: 10px 10px 0; padding: 8px 9px 9px; border: 1px solid var(--label); }
+.label { position: relative; margin: 10px 10px 0; padding: 11px 13px 12px; border: 1px solid var(--label); }
 /* четыре стежка по углам бирки */
 .label::before {
   content: ""; position: absolute; inset: 3px; pointer-events: none;
   background:
-    /* порядок — по часовой стрелке: так их «прошивает» анимация */
-    linear-gradient(var(--stitch), var(--stitch)) left top / 1px 7px no-repeat,
-    linear-gradient(var(--stitch), var(--stitch)) right top / 1px 7px no-repeat,
-    linear-gradient(var(--stitch), var(--stitch)) right bottom / 1px 7px no-repeat,
-    linear-gradient(var(--stitch), var(--stitch)) left bottom / 1px 7px no-repeat;
+    /* Стежки по диагонали — биссектрисы углов. Каждый — квадрат 8×8 с полосой
+       по диагонали, прижатый к своему углу. Порядок — по часовой стрелке. */
+    linear-gradient(45deg, transparent 43%, var(--stitch) 43%, var(--stitch) 57%, transparent 57%) left top / 8px 8px no-repeat,
+    linear-gradient(-45deg, transparent 43%, var(--stitch) 43%, var(--stitch) 57%, transparent 57%) right top / 8px 8px no-repeat,
+    linear-gradient(45deg, transparent 43%, var(--stitch) 43%, var(--stitch) 57%, transparent 57%) right bottom / 8px 8px no-repeat,
+    linear-gradient(-45deg, transparent 43%, var(--stitch) 43%, var(--stitch) 57%, transparent 57%) left bottom / 8px 8px no-repeat;
 }
 .label .n { display: flex; justify-content: space-between; gap: 6px; }
 .label .t {
@@ -214,15 +215,16 @@ input { font: inherit; color: inherit; }
 /* бирка: рамка проявляется, стежки «прошиваются» после фото */
 .tile .label { transition: border-color .8s var(--ease) calc(var(--d, 0ms) + 250ms); }
 .tile:not(.in):not(.skel) .label { border-color: transparent; }
-.tile:not(.in):not(.skel) .label::before { background-size: 1px 0, 1px 0, 1px 0, 1px 0; }
+.tile:not(.in):not(.skel) .label::before { background-size: 0 0, 0 0, 0 0, 0 0; }
 /* стежки прошиваются по одному, по часовой стрелке, как иголкой */
 .tile.in .label::before { animation: sew 1.2s cubic-bezier(.6, 0, .3, 1) calc(var(--d, 0ms) + 500ms) both; }
 @keyframes sew {
-  0%   { background-size: 1px 0, 1px 0, 1px 0, 1px 0; }
-  25%  { background-size: 1px 7px, 1px 0, 1px 0, 1px 0; }
-  50%  { background-size: 1px 7px, 1px 7px, 1px 0, 1px 0; }
-  75%  { background-size: 1px 7px, 1px 7px, 1px 7px, 1px 0; }
-  100% { background-size: 1px 7px, 1px 7px, 1px 7px, 1px 7px; }
+  /* квадрат растёт от угла — диагональ «протягивается» из угла внутрь */
+  0%   { background-size: 0 0, 0 0, 0 0, 0 0; }
+  25%  { background-size: 8px 8px, 0 0, 0 0, 0 0; }
+  50%  { background-size: 8px 8px, 8px 8px, 0 0, 0 0; }
+  75%  { background-size: 8px 8px, 8px 8px, 8px 8px, 0 0; }
+  100% { background-size: 8px 8px, 8px 8px, 8px 8px, 8px 8px; }
 }
 
 /* фото: проявляется из лёгкого увеличения */
