@@ -127,8 +127,19 @@ def setup(tmp_path):
         17: block(17, product("Helmut Lang Jeans", "9.900"), photos=[17]),
     }
     web = FakeWeb(blocks)
-    cfg = Config(main_channel="shop", admin_username="mngr")
+    cfg = Config(main_channel="shop", admin_username="mngr", visible=("available", "transit", "reserved", "sold"))
     return web, cfg, tmp_path
+
+
+def test_default_showcase_has_only_available(setup):
+    web, _, d = setup
+    Sync(None, Config(main_channel="shop"), d, web).run()
+    cat = cat_json(d)
+    assert {i["name"] for i in cat["items"]} == {"Lock Ankle Boots", "Jeans"}  # без «в пути» и проданного
+    assert cat["archive"] == []
+    assert all(ids for ids in cat["posts"].values())
+    assert "shop/14" not in cat["posts"]  # ссылка на пост вещи «в пути» не ведёт в витрину
+    assert web.downloads == 3  # фото только для видимых вещей
 
 
 def cat_json(d):

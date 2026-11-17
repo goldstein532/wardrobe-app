@@ -4,7 +4,6 @@ import { back, go } from "./store";
 import { haptic } from "./telegram";
 import { BackControl, Grid, Sheet, SkeletonGrid, Tile, type SheetOption } from "./ui";
 
-type StatusFilter = "all" | "available" | "transit";
 type Sort = "new" | "cheap" | "expensive";
 type SheetKind = "category" | "brand" | "size" | "sort" | null;
 
@@ -43,7 +42,6 @@ export function CatalogScreen({
   favCount: number;
   onOpen: (id: number) => void;
 }) {
-  const [status, setStatus] = useState<StatusFilter>("all");
   const [category, setCategory] = useState<string | null>(null);
   const [brand, setBrand] = useState<string | null>(null);
   const [size, setSize] = useState<string | null>(null);
@@ -53,14 +51,13 @@ export function CatalogScreen({
   const [sheet, setSheet] = useState<SheetKind>(null);
   const closeSheet = useCallback(() => setSheet(null), []);
 
-  const items = data?.items ?? [];
-  const transitCount = items.filter((i) => i.status === "transit").length;
+  // В витрине — только вещи в наличии (в пути, бронь и проданное не показываем).
+  const items = useMemo(() => (data?.items ?? []).filter((i) => i.status === "available"), [data]);
 
   const shown = useMemo(() => {
     const q = query.trim().toLowerCase();
     const list = items.filter(
       (i) =>
-        (status === "all" || i.status === status || (status === "available" && i.status === "reserved")) &&
         (!category || i.category === category) &&
         (!brand || i.brand === brand) &&
         (!size || i.size === size) &&
@@ -72,11 +69,10 @@ export function CatalogScreen({
     if (sort === "cheap") list.sort((a, b) => (a.price ?? Infinity) - (b.price ?? Infinity));
     if (sort === "expensive") list.sort((a, b) => (b.price ?? -1) - (a.price ?? -1));
     return list;
-  }, [items, status, category, brand, size, sort, query]);
+  }, [items, category, brand, size, sort, query]);
 
-  const filtered = Boolean(category || brand || size || query || status !== "all");
+  const filtered = Boolean(category || brand || size || query);
   const reset = () => {
-    setStatus("all");
     setCategory(null);
     setBrand(null);
     setSize(null);
@@ -116,26 +112,10 @@ export function CatalogScreen({
         </div>
       )}
 
-      <nav className="tabs mono">
-        {(
-          [
-            ["all", "Все", items.length],
-            ["available", "В наличии", items.length - transitCount],
-            ["transit", "В пути", transitCount],
-          ] as const
-        ).map(([v, label, n]) => (
-          <button
-            key={v}
-            className={status === v ? "on" : ""}
-            onClick={() => {
-              haptic.select();
-              setStatus(v);
-            }}
-          >
-            {label} <sup>{String(n).padStart(2, "0")}</sup>
-          </button>
-        ))}
-      </nav>
+      <div className="stock mono">
+        <span>В наличии</span>
+        <span>{data ? String(items.length).padStart(2, "0") : "··"}</span>
+      </div>
 
       <nav className="filters mono">
         <button className={category ? "on" : ""} onClick={() => setSheet("category")}>
@@ -157,23 +137,6 @@ export function CatalogScreen({
           {shown.map((i) => (
             <Tile key={i.id} item={i} onOpen={onOpen} />
           ))}
-          {!filtered && data.archive.length > 0 && (
-            <button className="tile archive-tile" onClick={() => go("#/archive")}>
-              <div className="ph">
-                <div className="archive-mark">
-                  <span className="mono">Архив</span>
-                  <b>{String(data.archive.length).padStart(2, "0")}</b>
-                </div>
-              </div>
-              <div className="label">
-                <div className="n mono">
-                  <span>Проданное</span>
-                  <span>→</span>
-                </div>
-                <div className="t">Вещи, которые уже нашли владельцев</div>
-              </div>
-            </button>
-          )}
         </Grid>
       ) : (
         <div className="empty">

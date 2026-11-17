@@ -9,6 +9,7 @@ from wardrobe.sync import Config, Sync
 
 POSTS = Path(__file__).parent / "fixtures" / "posts"
 MAIN, EXPRESS, GROUP, ADMIN = -100111, -100222, -100333, 42
+ALL = ("available", "transit", "reserved", "sold")  # в этих тестах проверяем все статусы
 
 
 def load(name):
@@ -67,7 +68,8 @@ def channel_post(mid, text=None, uid=None, group=None, chat=MAIN, user="nasonchi
 def env(tmp_path):
     api = FakeAPI()
     cfg = Config(main_channel="nasonchikh_wardrobe", transit_channel="nasonchikh_express",
-                 admin_username="nasonchikh_mngr", admin_ids={ADMIN}, webapp_url="https://example.github.io/shop/")
+                 admin_username="nasonchikh_mngr", admin_ids={ADMIN}, webapp_url="https://example.github.io/shop/",
+                 visible=ALL)
     return api, cfg, tmp_path
 
 

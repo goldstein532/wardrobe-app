@@ -326,7 +326,12 @@ class Catalog:
         username, message_id = (main or refs)[-1]
         return f"https://t.me/{username}/{message_id}"
 
-    def export(self, photo_urls: Callable[[Photo], dict[str, Any]] | None = None) -> dict[str, Any]:
+    def export(
+        self,
+        photo_urls: Callable[[Photo], dict[str, Any]] | None = None,
+        visible: tuple[str, ...] | None = None,
+    ) -> dict[str, Any]:
+        """visible — какие статусы попадают в витрину (None — все; проданное идёт в archive)."""
         photo_urls = photo_urls or default_photo_urls
 
         def public(item: Item, full: bool) -> dict[str, Any]:
@@ -348,13 +353,14 @@ class Catalog:
                 )
             return data
 
-        visible = [i for i in self.items.values() if not i.hidden]
-        active = sorted((i for i in visible if i.status != Status.SOLD.value), key=lambda i: -i.created_at)
-        sold = sorted((i for i in visible if i.status == Status.SOLD.value), key=lambda i: -i.status_changed_at)
+        shown = [i for i in self.items.values() if not i.hidden and (visible is None or i.status in visible)]
+        active = sorted((i for i in shown if i.status != Status.SOLD.value), key=lambda i: -i.created_at)
+        sold = sorted((i for i in shown if i.status == Status.SOLD.value), key=lambda i: -i.status_changed_at)
+        shown_ids = {i.id for i in shown}
         # Для deep link startapp=post_<message_id>: "<канал>/<message_id>" → товары.
         posts: dict[str, list[int]] = {}
         for p in self.posts.values():
-            ids = self._post_items(p)
+            ids = [i for i in self._post_items(p) if i in shown_ids]
             if p.chat_username and ids:
                 for mid in p.message_ids:
                     posts[f"{p.chat_username}/{mid}"] = ids

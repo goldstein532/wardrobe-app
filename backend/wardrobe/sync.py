@@ -64,6 +64,8 @@ class Config:
     admin_ids: set[int] = field(default_factory=set)
     webapp_url: str | None = None
     source: str = "web"
+    # Какие статусы показывать в витрине. По просьбе заказчика — только «в наличии».
+    visible: tuple[str, ...] = ("available",)
 
     @classmethod
     def from_env(cls, env: dict[str, str] | None = None) -> "Config":
@@ -418,8 +420,8 @@ class Sync:
 
     def ensure_media(self) -> None:
         for item in self.cat.items.values():
-            if item.hidden:
-                continue
+            if item.hidden or item.status not in self.cfg.visible:
+                continue  # фото скачиваем только для того, что видно в витрине
             photos = item.photos[:1] if item.status == Status.SOLD.value else item.photos + item.extra_photos
             for p in photos:
                 if has_variants(self.media, p.file_unique_id):
@@ -434,7 +436,7 @@ class Sync:
 
     def write(self) -> None:
         self.site.mkdir(parents=True, exist_ok=True)
-        export = self.cat.export(default_photo_urls)
+        export = self.cat.export(default_photo_urls, visible=self.cfg.visible)
         export["meta"] = {"channel": self.cfg.main_channel, "admin_username": self.cfg.admin_username}
         path = self.site / "catalog.json"
         old = json.loads(path.read_text("utf-8")) if path.exists() else None
