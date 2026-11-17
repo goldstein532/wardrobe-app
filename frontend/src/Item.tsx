@@ -1,4 +1,4 @@
-import { useCallback, useLayoutEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useLayoutEffect, useMemo, useRef, useState, type CSSProperties } from "react";
 import type { Item } from "./types";
 import { back, price } from "./store";
 import { haptic, openUrl } from "./telegram";
@@ -48,6 +48,21 @@ export function ItemScreen({
   const hero = useRef<HTMLDivElement>(null);
   const body = useRef<HTMLDivElement>(null);
   const strip = useRef<HTMLDivElement>(null);
+  const frame = useRef(0);
+
+  // При прокрутке карточки фото уходит вверх медленнее текста — эффект глубины.
+  const parallax = useCallback(() => {
+    if (frame.current || reduced()) return;
+    frame.current = requestAnimationFrame(() => {
+      frame.current = 0;
+      const y = root.current?.scrollTop ?? 0;
+      const h = hero.current?.offsetHeight ?? 1;
+      if (y > h) return;
+      if (strip.current) strip.current.style.transform = `translate3d(0, ${y * 0.35}px, 0)`;
+      const dots = hero.current?.querySelector<HTMLElement>(".dots");
+      if (dots) dots.style.opacity = String(Math.max(0, 1 - y / 160));
+    });
+  }, []);
   const closing = useRef(false);
   const [index, setIndex] = useState(0);
   const [more, setMore] = useState(false);
@@ -122,7 +137,7 @@ export function ItemScreen({
   const longDesc = desc.length > 260;
 
   return (
-    <div className="item-layer" ref={root}>
+    <div className="item-layer" ref={root} onScroll={parallax}>
       <BackControl onBack={close} />
       <div className="hero" ref={hero}>
         <div
@@ -190,8 +205,8 @@ export function ItemScreen({
             <div className="spec">
               {rows
                 .filter(([, v]) => v)
-                .map(([k, v]) => (
-                  <div key={k}>
+                .map(([k, v], i) => (
+                  <div key={k} style={{ "--i": i } as CSSProperties}>
                     <span className="mono">{k}</span>
                     <span>{v}</span>
                   </div>

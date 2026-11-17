@@ -1,4 +1,4 @@
-import { useCallback, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import type { CatalogData, Item } from "./types";
 import { back, go } from "./store";
 import { haptic } from "./telegram";
@@ -31,6 +31,24 @@ function sizeOrder(s: string): number {
   if (!Number.isNaN(n)) return 100 + n;
   const i = LETTER.indexOf(s.toUpperCase());
   return i >= 0 ? i : 1000;
+}
+
+/** Число «набегает» от нуля, как счётчик на табло. */
+function CountUp({ to }: { to: number }) {
+  const [n, setN] = useState(0);
+  useEffect(() => {
+    if (window.matchMedia?.("(prefers-reduced-motion: reduce)").matches) return setN(to);
+    const start = performance.now();
+    let raf = 0;
+    const tick = (t: number) => {
+      const k = Math.min(1, (t - start) / 900);
+      setN(Math.round(to * (1 - Math.pow(1 - k, 3))));
+      if (k < 1) raf = requestAnimationFrame(tick);
+    };
+    raf = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(raf);
+  }, [to]);
+  return <>{String(n).padStart(2, "0")}</>;
 }
 
 export function CatalogScreen({
@@ -114,7 +132,7 @@ export function CatalogScreen({
 
       <div className="stock mono">
         <span>В наличии</span>
-        <span>{data ? String(items.length).padStart(2, "0") : "··"}</span>
+        <span>{data ? <CountUp to={items.length} /> : "··"}</span>
       </div>
 
       <nav className="filters mono">
@@ -133,9 +151,10 @@ export function CatalogScreen({
       {!data ? (
         <SkeletonGrid />
       ) : shown.length ? (
-        <Grid>
-          {shown.map((i) => (
-            <Tile key={i.id} item={i} onOpen={onOpen} />
+        // key: при смене фильтра или сортировки сетка заново появляется лесенкой
+        <Grid key={`${category}|${brand}|${size}|${sort}`}>
+          {shown.map((i, k) => (
+            <Tile key={i.id} item={i} onOpen={onOpen} index={k} />
           ))}
         </Grid>
       ) : (
@@ -194,8 +213,8 @@ export function ListScreen({
         <SkeletonGrid />
       ) : items.length ? (
         <Grid>
-          {items.map((i) => (
-            <Tile key={i.id} item={i} onOpen={onOpen} />
+          {items.map((i, k) => (
+            <Tile key={i.id} item={i} onOpen={onOpen} index={k} />
           ))}
         </Grid>
       ) : (

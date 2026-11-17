@@ -1,4 +1,4 @@
-import { useEffect, useState, type ReactNode } from "react";
+import { useEffect, useRef, useState, type CSSProperties, type ReactNode } from "react";
 import type { Item, PhotoRef } from "./types";
 import { price } from "./store";
 import { haptic, inTelegram, setBackButton, setBottomButtons, type ButtonSpec } from "./telegram";
@@ -23,14 +23,57 @@ export function Img({ photo, full, eager }: { photo?: PhotoRef; full?: boolean; 
   );
 }
 
+// ------------------------------------------------------------ появление при прокрутке
+
+/** true, когда элемент впервые показался на экране. */
+export function useReveal<T extends HTMLElement>() {
+  const ref = useRef<T>(null);
+  const [shown, setShown] = useState(false);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el || shown) return;
+    if (!("IntersectionObserver" in window)) {
+      setShown(true);
+      return;
+    }
+    const io = new IntersectionObserver(
+      ([e]) => {
+        if (e.isIntersecting) {
+          setShown(true);
+          io.disconnect();
+        }
+      },
+      { rootMargin: "0px 0px -6% 0px" },
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, [shown]);
+  return [ref, shown] as const;
+}
+
 // ------------------------------------------------------------ плитка-бирка
 
-export function Tile({ item, onOpen, muted }: { item: Item; onOpen: (id: number) => void; muted?: boolean }) {
+export function Tile({
+  item,
+  onOpen,
+  muted,
+  index = 0,
+}: {
+  item: Item;
+  onOpen: (id: number) => void;
+  muted?: boolean;
+  index?: number;
+}) {
   const transit = item.status === "transit";
   const sold = item.status === "sold";
+  const [ref, shown] = useReveal<HTMLButtonElement>();
+  // Лесенка: соседние колонки появляются с небольшим сдвигом, первые ряды — сверху вниз.
+  const delay = (index % 2) * 90 + (index < 6 ? Math.floor(index / 2) * 110 : 0);
   return (
     <button
-      className={`tile${muted || sold ? " muted" : ""}`}
+      ref={ref}
+      className={`tile${muted || sold ? " muted" : ""}${shown ? " in" : ""}`}
+      style={{ "--d": `${delay}ms` } as CSSProperties}
       data-tile={item.id}
       onClick={() => {
         haptic.tap();
@@ -111,10 +154,11 @@ export function Sheet({
           <button className="mono" onClick={onClose}>Закрыть</button>
         </div>
         <div className="sheet-list">
-          {options.map((o) => (
+          {options.map((o, i) => (
             <button
               key={o.value ?? "__all"}
               className={o.value === value ? "opt on" : "opt"}
+              style={{ "--i": Math.min(i, 12) } as CSSProperties}
               onClick={() => {
                 haptic.select();
                 onPick(o.value);
