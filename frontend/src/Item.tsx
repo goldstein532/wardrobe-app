@@ -24,7 +24,10 @@ function buyLink(item: Item, admin: string): string {
   const m = base.match(/^https:\/\/t\.me\/([A-Za-z0-9_]{5,})\/?$/);
   if (!m) return base;
   const what = [item.brand, item.name].filter(Boolean).join(" ");
-  const text = `Здравствуйте! Интересует N° ${item.no} — ${what}${item.size ? `, размер ${item.size}` : ""}`;
+  // Ссылка на пост в конце: Telegram покажет под сообщением карточку поста с фото.
+  const text =
+    `Здравствуйте! Интересует N° ${item.no} — ${what}${item.size ? `, размер ${item.size}` : ""}` +
+    (item.post_url ? `\n${item.post_url}` : "");
   return `https://t.me/${m[1]}?text=${encodeURIComponent(text)}`;
 }
 
