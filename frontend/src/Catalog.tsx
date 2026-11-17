@@ -3,6 +3,7 @@ import type { CatalogData, Item } from "./types";
 import { back, go } from "./store";
 import { haptic } from "./telegram";
 import { BackControl, Grid, Sheet, SkeletonGrid, Tile, type SheetOption } from "./ui";
+import logo from "./assets/logo.webp";
 
 type Sort = "new" | "cheap" | "expensive";
 type SheetKind = "category" | "brand" | "size" | "sort" | null;
@@ -99,22 +100,21 @@ export function CatalogScreen({
 
   return (
     <div className="screen">
-      <header className="brandbar">
-        <b>Nasonchikh</b>
-        <div className="actions mono">
-          <button
-            onClick={() => {
-              haptic.select();
-              setSearchOpen((v) => !v);
-            }}
-            aria-label="Поиск"
-          >
-            Поиск
-          </button>
-          <button onClick={() => go("#/favorites")} aria-label="Избранное">
-            ♡{favCount ? ` ${favCount}` : ""}
-          </button>
-        </div>
+      <header className="brandbar logo-bar">
+        <button
+          className="mono side left"
+          onClick={() => {
+            haptic.select();
+            setSearchOpen((v) => !v);
+          }}
+          aria-label="Поиск"
+        >
+          Поиск
+        </button>
+        <img className="logo" src={logo} alt="Nasonchikh Wardrobe" width={410} height={423} />
+        <button className="mono side right" onClick={() => go("#/favorites")} aria-label="Избранное">
+          ♡{favCount ? ` ${favCount}` : ""}
+        </button>
       </header>
 
       {searchOpen && (
