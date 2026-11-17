@@ -11838,7 +11838,7 @@
     1270,
     1271
    ],
-   "text": "Saint Laurent Court Classic SL-\n06 California Low 'Stars BY Hedi Slimane ➕\n\nОчень красивые кеды! Идеально подойдут на учебу\n\n•Size: 40\n•Cond: 9/10 \n•ОРИГИНАЛ, любые проверки✅\n\n•Price: 16.900₽\nСПБ/ДОСТАВКА\n\n КУПИТЬ/ЗАДАТЬ ВОПРОС\n\n#наличие\nДоп фото👇",
+   "text": "Saint Laurent Court Classic SL-\n06 California Low 'Stars BY Hedi Slimane ➕\n\nОчень красивые кеды! Идеально подойдут на учебу\n\n•Size: 40\n•Cond: 9/10 \n•ОРИГИНАЛ, любые проверки✅\n\n❗️SOLD ❗️\n\n•Price: 11.900₽\nСПБ/ДОСТАВКА\n\n КУПИТЬ/ЗАДАТЬ ВОПРОС\n\n#продано\nДоп фото👇",
    "entities": [
     {
      "type": "blockquote",
@@ -11847,7 +11847,7 @@
     },
     {
      "type": "text_link",
-     "offset": 206,
+     "offset": 217,
      "length": 21,
      "url": "https://t.me/nasonchikh_mngr"
     }
@@ -11901,7 +11901,7 @@
    "item_ids": [
     106
    ],
-   "last_status": "available",
+   "last_status": "sold",
    "retired": false
   },
   {
@@ -14756,6 +14756,30 @@
    "item_ids": [],
    "last_status": null,
    "retired": false
+  },
+  {
+   "key": "-1184099784:m1632",
+   "chat_id": -1184099784,
+   "chat_username": "nasonchikh_wardrobe",
+   "date": 1794903186,
+   "message_ids": [
+    1632
+   ],
+   "text": "Все, кто просил замеры футболок, отпишите @nasonchikh_mngr",
+   "entities": [
+    {
+     "type": "text_link",
+     "offset": 42,
+     "length": 16,
+     "url": "https://t.me/nasonchikh_mngr"
+    }
+   ],
+   "text_message_id": 1632,
+   "photos": [],
+   "alias_of": null,
+   "item_ids": [],
+   "last_status": null,
+   "retired": false
   }
  ],
  "msg_index": {
@@ -15671,7 +15695,8 @@
   "-3867956109:44": "-3867956109:m44",
   "-3867956109:50": "-3867956109:m50",
   "-1184099784:1627": "-1184099784:m1627",
-  "-1184099784:1628": "-1184099784:m1628"
+  "-1184099784:1628": "-1184099784:m1628",
+  "-1184099784:1632": "-1184099784:m1632"
  },
  "items": [
   {
@@ -22473,7 +22498,7 @@
    "part": 0,
    "status": "sold",
    "created_at": 1788726014,
-   "updated_at": 1794858401,
+   "updated_at": 1794911396,
    "hidden": false,
    "title": "Saint Laurent Court Classic SL",
    "brand": "Saint Laurent",
@@ -22485,7 +22510,7 @@
    "size_note": null,
    "condition": "9/10",
    "condition_note": null,
-   "price": 16900,
+   "price": 11900,
    "currency": "RUB",
    "authentic": true,
    "delivery": "СПБ/ДОСТАВКА",
