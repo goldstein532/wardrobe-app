@@ -1,5 +1,5 @@
 {
- "offset": 196436304,
+ "offset": 196436306,
  "threads": {},
  "pending": [
   {
@@ -1181,7 +1181,7 @@
  ],
  "web": {
   "nasonchikh_wardrobe": {
-   "cursor": 1085,
+   "cursor": 977,
    "full_done": true
   },
   "nasoncikh_express": {
