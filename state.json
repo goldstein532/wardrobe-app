@@ -1,6 +1,6 @@
 {
  "version": 1,
- "next_id": 135,
+ "next_id": 139,
  "main_username": "nasonchikh_wardrobe",
  "posts": [
   {
@@ -14804,6 +14804,371 @@
    "item_ids": [],
    "last_status": null,
    "retired": false
+  },
+  {
+   "key": "-1184099784:m1636",
+   "chat_id": -1184099784,
+   "chat_username": "nasonchikh_wardrobe",
+   "date": 1795010725,
+   "message_ids": [
+    1636
+   ],
+   "text": "В четверг-пятницу еще будет",
+   "entities": [],
+   "text_message_id": 1636,
+   "photos": [],
+   "alias_of": null,
+   "item_ids": [],
+   "last_status": null,
+   "retired": false
+  },
+  {
+   "key": "-1184099784:gw1637",
+   "chat_id": -1184099784,
+   "chat_username": "nasonchikh_wardrobe",
+   "date": 1795020960,
+   "message_ids": [
+    1637,
+    1638,
+    1639,
+    1640,
+    1641,
+    1642
+   ],
+   "text": "Celine Triomphe Mid Lace-Up Sneaker by Hedi Slimane ➕\n\nCELINE TRIOMPHE MID LACE-UP SNEAKER- спортивная классика в интерпретации Эди Слимана. Модель из периода его работы в Celine, когда дизайнер перенёс в Дом собственный взгляд на парижский гардероб, объединив винтажную спортивную эстетику, музыкальную культуру и минимализм.\nВ основе- силуэт классических баскетбольных high-top sneakers, переосмысленный через характерную для Слимана сдержанность.\n\n•Size: 43\n•Cond: 9.9/10 (ПОЛНЫЙ КП)\n•ОРИГИНАЛ, любые проверки✅\n\n•Price: 17.900₽\nСПБ/ДОСТАВКА\n\n КУПИТЬ/ЗАДАТЬ ВОПРОС\n\n#наличие\nДоп фото👇",
+   "entities": [
+    {
+     "type": "blockquote",
+     "offset": 55,
+     "length": 394
+    },
+    {
+     "type": "text_link",
+     "offset": 545,
+     "length": 21,
+     "url": "https://t.me/nasonchikh_mngr"
+    }
+   ],
+   "text_message_id": 1637,
+   "photos": [
+    {
+     "file_id": "https://cdn4.telesco.pe/file/KoU46pzA5Ojoo79d5s31-Pi5bmc0sCWhF7NY5KZimPbLuEAV2vw8FDExbJ4ffF-xFRU7tkzRiKRKT3HAF8edYuDe0nEh9iwh4nGTQMALkbw-Ovztf-q9Rq8f6IKxzOHMAnbREjEc-jsKc3IoEYYnVFbvNf-13ci5jpB4b-WmFmuh8so9eroUueAfaX2GcxyBouQbeiOAEO7Sv3GL82GBATPheg8qR4UlwUlPt1y7flW7odYBs9xGgYFjEto_drQoPyHrd9htVYQXm9zD2mhKCzvgq4faPQHZabSVqvuQ3i79zyzAPFleMZPWVmU5ibQIF6Li0ta3yB9VAc5hnU-U-w.jpg",
+     "file_unique_id": "nasonchikh_wardrobe-1637",
+     "width": 0,
+     "height": 0,
+     "message_id": 1637
+    },
+    {
+     "file_id": "https://cdn4.telesco.pe/file/heaieCDZBCDhf7bu1EnYjUjjZKDk0nxE8r22k5EkoVzI6yE7huZDQ8_7JJNunKZYxgWsNnoAYw6EHlhIN2N_u--fTOx-frIlxfQkoxpTtOztsKfuQM5wx6shlplzS6amYO8y9a1vMzM6v4cxSSqj4VR9DiCFJiAHoLWp2EBBb2Z5PwFpROHla2aoM5Asf0fyzgEcUpy8P0ilOoy6bCBJXXZvf8stEykxYMFf5rGm1EhmMa44q4RfDPjtkzRQmHi773a7ibFQcdqac0dejFx5heLtwg-6gSWKVeItsqKp4V5sNct6QrMnVYmU0b5AASlVvZ45RwccQ0Uaj_BrGL6lLg.jpg",
+     "file_unique_id": "nasonchikh_wardrobe-1638",
+     "width": 0,
+     "height": 0,
+     "message_id": 1638
+    },
+    {
+     "file_id": "https://cdn4.telesco.pe/file/aYjpbW2FgF_5unQUE17GeQ5QcoXjehvURgoEYv-U8VzSkaJ6gVLEW3F4TXbgr-K_EIKEB8jqwV0IuQCgocyhsSNocjDo2JcWslk-MhFnGUSn87yrwSN57aEm_H47s33Y2Y9O9Iko7Z5sQgPH6A6MHVw4jqgXPRwOUJT7Tw5RWXD1ujevcdEWylVbsKFnDU8OyAQc2zpMbhbe796bdXmVjKIS3xyAXO6Ptkqp_v01uZb-_3fqkHGdAFuByIWWeXJ8CPw-dsqEONpMhfR-jLCjhJ55rhfinJdFtHUtbACwc5y4WHcUJU5Cr_K_kIZq_trNJDz48NOKjg7dPXMdqK4DMQ.jpg",
+     "file_unique_id": "nasonchikh_wardrobe-1639",
+     "width": 0,
+     "height": 0,
+     "message_id": 1639
+    },
+    {
+     "file_id": "https://cdn4.telesco.pe/file/kz0FqHFP2YDgGIlghbXpudEZigh4wSv94M4huq8Jwi_5dvH0lE4Ygo-yVPlfkijhYO2XWPpba9Fk0v5NRnIURdp01i9QI9zuHCkj8OTreRFd4SkMe_wCkexRQMmpZo3ap7pVwwtEMdCmMaYy2shG4dAhrVkxLsmTAioCUfFdBYoDsGtUpaEkz0C40Z5LbroHlQhDLpF1uGvV68ttxw_TKl0VM4gDlN5p92tPcfryt0slmP2TBsKumVr9xtp8YKqyU44zVTU0koShzB0tyE8NgERC_vJbns01ciP2Jn8idQxhXzRGDI4TbIS1uKlmTybwTH1puKazIlyCsBsrGscj9A.jpg",
+     "file_unique_id": "nasonchikh_wardrobe-1640",
+     "width": 0,
+     "height": 0,
+     "message_id": 1640
+    },
+    {
+     "file_id": "https://cdn4.telesco.pe/file/ZOg_s9xDBL1xY2uyefCPo0e1ofNUKk7DDAyIZLqHKUsyralDI5d4Xu4I20SRZnm7VI-tpM40Caiwnm-bRxf2NICWkds-wsMEo2SL8q2xuh34xZZcojONjf4RPJ89fsL12E6Ol_PfCmvi53fRSeE0Uu43OEy83orR3_5efbI5SK0j00fjD3jWet6LbehOh1VRMvNchlMD-Ms4HCogl2HcnnjBnHGt_XmL5e2qFf4oa8fIGfL6379vcovGcckTqCmrdmfDSaQ5y9sJwjehmWsJ6y4lSr5fpUpFY3zqxCDCmROX-FLUuQQjs5rsYkxYiqOhp9UMhXV2zEVKM2_9UF5WtA.jpg",
+     "file_unique_id": "nasonchikh_wardrobe-1641",
+     "width": 0,
+     "height": 0,
+     "message_id": 1641
+    },
+    {
+     "file_id": "https://cdn4.telesco.pe/file/CkUfO4hr7pKFkhVJlR15WBOG1mfv_XCRjzi4qYkWpQjLW_LKVsSSU-xBcXq_KfSuZ7qSO2eIioAQTZ-4hKXk9koQS_1VZMTPz364BO5trtQyUSH53xMsKjdu2ohF0CJ7PkfYdMmzFBkO25t8zkSVOOaMklHjSkjvPwXKUJd-gHkrR3fYio_UbTqmzAWQrI4ZrJHLkgVQuYHKwToIbnvKzh2dhPsIfg7Jm81GBR5Y2pt4vlcbYMO9Cjuq9vuNtpwt9zJapGcT3ymQsfSai3ag9Wytqs2uMpV1p8gwlX0JExF3f6gkuvb0CqiMtlmXKwP__0nqY6P49DzUlIcfiQyefA.jpg",
+     "file_unique_id": "nasonchikh_wardrobe-1642",
+     "width": 0,
+     "height": 0,
+     "message_id": 1642
+    }
+   ],
+   "alias_of": null,
+   "item_ids": [
+    135
+   ],
+   "last_status": "available",
+   "retired": false
+  },
+  {
+   "key": "-1184099784:gw1644",
+   "chat_id": -1184099784,
+   "chat_username": "nasonchikh_wardrobe",
+   "date": 1795021080,
+   "message_ids": [
+    1644,
+    1645,
+    1646,
+    1647,
+    1648,
+    1649
+   ],
+   "text": "Saint Laurent Paris “Animal Print Signature” SS19 Logo Tee by Antony Vaccarello➕\n\nSAINT LAURENT 2018- графический язык Дома в интерпретации Энтони Ваккарелло. Футболка из коллекции 2018 года, когда Saint Laurent продолжал развивать собственную версию парижского рок-н-ролла, соединяя лаконичные формы с выразительной графикой и отсылками к музыкальной культуре.\n\n•Size: XS (M-L)\n•Cond: 9/10 \n•ОРИГИНАЛ, любые проверки✅\n\n•Price: 6.900₽\nСПБ/ДОСТАВКА\n\n КУПИТЬ/ЗАДАТЬ ВОПРОС\n\n#наличие\nДоп фото👇",
+   "entities": [
+    {
+     "type": "blockquote",
+     "offset": 82,
+     "length": 279
+    },
+    {
+     "type": "text_link",
+     "offset": 449,
+     "length": 21,
+     "url": "https://t.me/nasonchikh_mngr"
+    }
+   ],
+   "text_message_id": 1644,
+   "photos": [
+    {
+     "file_id": "https://cdn4.telesco.pe/file/iSXLsb2_x5KiN0D81UdDOEDRFXMuh5fAdxl1-TJiGuV_TXYq00lL91egjfv2pkBu8rpotvLSrTwqaJicZrjoxgOnMDTThG-8lNPlT07Uvlj6TsZU5C0ZMeq0OoeQgRfRUMB_HrJvB7gZEhTy5tMDJeDEBgRIGFKGlo50T2fzZG9oWYnvt22aH8kJtV_7shhz734zUmZb67TLn1wNV07CZI2yb7FOm2mO5bnLVAxezNYQi692lshFwlrJWRAqCv8rBaJdg2IcutGQxlYqtqH1dl9IhOedEiPw2uySKfpFbiekBAyH0uAhZsVz_kkfH9MlpIorsCOsgnbtaVkTcenc-g.jpg",
+     "file_unique_id": "nasonchikh_wardrobe-1644",
+     "width": 600,
+     "height": 800,
+     "message_id": 1644
+    },
+    {
+     "file_id": "https://cdn4.telesco.pe/file/RlQrCobmp4KrtJehRagTYViF5xbtRQFjVmlOjjI3PQRFrffQI7IMrNbxQaRmxlR0TbhHZtRWNV9ZBpvB9tiFMBuQ35yQzmFkr2JGV5B_j6RjeR6YG6Uqkb8oYr49ZBpDYSqeIKSOedfVnQYmjRKfeS2EVe3Cb11BjxECVPj9PTlBsLB00v7l1bPbA7nZ4gyjVktthaQBczn-9UGAP2y0-sYhhR-NuITFSnHazqWzvkJ7K0K82Y83RHMlu4lyLfa1oem3LWTQSJ71s5YBZQgtAblJgUhExgFOwGBdrlAxDZ6JrB-9T9xMyB2APp1-YNYVUn621nvv4IYAU6C3H0teMQ.jpg",
+     "file_unique_id": "nasonchikh_wardrobe-1645",
+     "width": 600,
+     "height": 800,
+     "message_id": 1645
+    },
+    {
+     "file_id": "https://cdn4.telesco.pe/file/Nlxy39f1YUEwxKPo1cg4cpDb1JADk91hWriSEXuEErciuiglKLTn0VGIw9OWgTm5LiZVdmeVKq58Y7Ok3AI1Gt9po5K56ET_AIqCY7CUI6WjOF9p5dq---6uMKim4Ivko4BA28YzcY4suZjtXob4YqqpJDI6aPU6Y6j9Sx7nrndnIGDQ1DjrE0scTkh3vow34TpNn8XD5XiChMSbzQnwNcx7j1JYi5WgEbDLG4nA_x0lAPCXE4TZpST3mTF4TvKfCsvdV7kj2Orgri7zdM-9tgyYM0SedkrxYkxcJvELvQOFrsB9a3rHpFYlKuHx3w2oiF-y7AhRLDmxc1jXmAqBWA.jpg",
+     "file_unique_id": "nasonchikh_wardrobe-1646",
+     "width": 600,
+     "height": 800,
+     "message_id": 1646
+    },
+    {
+     "file_id": "https://cdn4.telesco.pe/file/mSOsN6jSfoC2n8PcboUxfqCoT3r9C5JGvOzrzYNF9Y1n1yRJ4lXEfwl5pWGvkPNHOpk2_mdB4IATVznzsP617wGWxqlVCMHPqck3F2nAAG9SK-AGSFK96UM41KyWi0XMQp4y0Sr996Yl5ZQbhTn-I7jLNJ1KWlwloYoV2Efn--P-vDUuuBE6fnzXs36XtB6lLBg0ITyIsdd-7_CbhpCQPEkEZ-uzmz7vqG8ba1r5vXJD7Pz2xFyAAboH9OuKg-C73KxU3IpKInlnG4smqslVAsFs_k0ZXKoSOAFaEWigWvMyxfBOQHTsiccbMSUUXM2xS45pFM2fKDoNYbU1q0U_bQ.jpg",
+     "file_unique_id": "nasonchikh_wardrobe-1647",
+     "width": 600,
+     "height": 800,
+     "message_id": 1647
+    },
+    {
+     "file_id": "https://cdn4.telesco.pe/file/eKAJ7h1LxSu8qraerC7vRUPvoFZBW9_AZT81RUE8PUgjLqpQD-fuOH5isw_jKKn19Zr6NHOVUJMc4WWVMTXvssjKC2UibTborEME3EyF5Y1lggUcj22AK_lRA2O-nBpU1sq5ZiVp8WBHi333yAkZL_R_7f6xshf6ohhwdOsxyGzeNY4bB3_3j5yG7EU8GOtjLJ0H6_jVsFO93GlLLE4aJR67MkCxmonr26YDC_-0l0PtjoTJMBGPCEC1HyYUim-PsVGN-aPfdbaG58jxZs4g34zIrqYlwmeq2Fw_4hk6Dw---3y68sJUdvwIeKMSf7eSLqCvKMTGiGMXXzucZ7BPtg.jpg",
+     "file_unique_id": "nasonchikh_wardrobe-1648",
+     "width": 600,
+     "height": 800,
+     "message_id": 1648
+    },
+    {
+     "file_id": "https://cdn4.telesco.pe/file/GHA5Egvl4RuROtGX1L3DF2pOy-7Nn3OaKIU40_swUoqx45cLZniioMALzw-ugaHl-ct5TGBmILo0NhqiwvoWWA2NppQzPJ7nllMowOT5NGAX1Snsgx1tJ0qhv0c2mCYMFo5oCj48rDORj2IfEmGugCN0hgfehKaBrFWuKRL-i5-BRhg28nVDvYLiUHRDbZCyzTr3uABSkUx8wzvB1IAjTTEWwl02ewBhmMDXkfAlZIrIClBMypWqQu8cA4AgvElt6-8S8xxEeNA1ZzfGat6ms3JhzP8dPEgRuualDJyWZ8nnmRVhoLR6-ZkWnPjGu2FFmeVTG32dFqr0XpKK0XIP0g.jpg",
+     "file_unique_id": "nasonchikh_wardrobe-1649",
+     "width": 600,
+     "height": 800,
+     "message_id": 1649
+    }
+   ],
+   "alias_of": null,
+   "item_ids": [
+    136
+   ],
+   "last_status": "available",
+   "retired": false
+  },
+  {
+   "key": "-1184099784:gw1650",
+   "chat_id": -1184099784,
+   "chat_username": "nasonchikh_wardrobe",
+   "date": 1795021091,
+   "message_ids": [
+    1650,
+    1651,
+    1652,
+    1653,
+    1654,
+    1655
+   ],
+   "text": "Saint Laurent Paris “Waiting for Sunset” SS17 Tee by Anthony Vaccarello➕\n\nSAINT LAURENT 2017 “WAITING FOR SUNSET”- винтажная графика, превращённая в часть гардероба Дома. Футболка из коллекции Энтони Ваккарелло, в которой Saint Laurent обращается к эстетике старых открыток и романтике путешествий.\nГлавный элемент- принт Waiting For Sunset: пальмы, закатное настроение и надпись, напоминающая графику туристических открыток прошлых десятилетий.\n\n•Size: S \n•Cond: 9/10 \n•ОРИГИНАЛ, любые проверки✅\n\n•Price: 8.900₽\nСПБ/ДОСТАВКА\n\n КУПИТЬ/ЗАДАТЬ ВОПРОС\n\n#наличие\nДоп фото👇",
+   "entities": [
+    {
+     "type": "blockquote",
+     "offset": 74,
+     "length": 371
+    },
+    {
+     "type": "text_link",
+     "offset": 527,
+     "length": 21,
+     "url": "https://t.me/nasonchikh_mngr"
+    }
+   ],
+   "text_message_id": 1650,
+   "photos": [
+    {
+     "file_id": "https://cdn4.telesco.pe/file/vemOw2KcCHnbQRZbFKtj_1dyHFoJ0VoITGnzIF0W4nxCnw3mmbl2inAgoDBEMc4dd8ONsQoSQoFUfX9uRtcWh0pRQCMxWaI7FdvMfDruJ5L39xz6fxG7JOjAsKaVvSSjQBQymR4wPVXQz34l0Mhex5VMzkH0LUd0dyfXKPA8xgdz37gKOTQ1Nlxzhsvlw4uNF587BlsAnpPrnEVZOtgQm_5q3IV_mal1Aw52c-2z3tJi07mhH4PYbXwBngi1Wed4zE3k4rnj-LCrkNXHWanBw3gn4WlXXvR6LB1Lwu3wudHPt1ZE5ZGwdpX7n_yQ2oRJn5TJ5_33LIh8Kkn494clHA.jpg",
+     "file_unique_id": "nasonchikh_wardrobe-1650",
+     "width": 600,
+     "height": 800,
+     "message_id": 1650
+    },
+    {
+     "file_id": "https://cdn4.telesco.pe/file/RQTIj_p74XfNMrM-JECa7_STkqYHycA7oRCX3WDqv8WTwOUsG1Zb6_x5zaSx7a5vtYBhO-Yo25g1blX76U5PqEr8xUyyVvwND2nBtxXXVZR9XBPy24S-tFk0sg19d0LdRhyF4SKM8e9oqrlCUOoKInTZtnF3Bn_EiktLD3bLx4-43-_Ldxe9etbcMLEXf0m5_HPPyr4NREjFpl2agPbkKQVY3pcvbNSyq2SkY1hoMG0KYDt4isA2eGYEIw3Ud79_wavoC5bwSu_KiH3jg8Ja620OZtaKehuy8VVrT5vCcITITJXvcc4Pu8CheKMEcxqVYVJTN5eJ0r2V-dRcEIBbhQ.jpg",
+     "file_unique_id": "nasonchikh_wardrobe-1651",
+     "width": 600,
+     "height": 800,
+     "message_id": 1651
+    },
+    {
+     "file_id": "https://cdn4.telesco.pe/file/bzdTu7G952SvYvb4gx6xQmvybH3crg4YjI8Tt-vOoNBlDronwSmsSRoHPh2cDWh1yewmen40r9NEh6CO_LpkJOMjpT2tbyKry7fMKbiOeIHEHk12aiECInoQcyrjFOIMjKlN2je4Eajffunj09BXpok7xQFh5Qzl8WQDWRfqBZbQiW0WJeNIrKjVIAWG3qfLztOJDWrbmTDEmVqKFUb5FnLxljN5n404Yi2_9J5LpNHcYJ3y7Ox_ciw22x_V-sZVbAGq9U6dz-H0hDWGCTr62y-5OySHipqgwVarrj9Ppf-UyXxEsArAnO5N--PaiHeszydlXuS7aHYz5xEAKpCARQ.jpg",
+     "file_unique_id": "nasonchikh_wardrobe-1652",
+     "width": 600,
+     "height": 800,
+     "message_id": 1652
+    },
+    {
+     "file_id": "https://cdn4.telesco.pe/file/ogBsQ3zuo1tCOwmM1JBEV9KhwmfrqGucnpmgn1bWzuPAbMUrcPMcQr3tm3bIURR9xv0xZFuMMLZlZFdy63wB0L7EnrdP3DPkdOY1rknn5yE7FVFMtycLFmpNZKfpbQFC3dFJhsg8m2JJPST-Na-h4UWtuZ4YOd-1n9Ufyw_A_zBZgIuL7Tl9YS9y2TGrcKd7N34t-7_Vwpkgknko-GDmi9-ngDVKQuxBW_8FVkiJe1s3xWDTENYQrvgLyftELBn8zBdNPH6E3pbJ5v28q9Um0hBcxzED6JUQUeAGM8jOK69bc7WAOIi9LPa-e1cOYKMD5WfRqHXaAtTbqLgSaudYUg.jpg",
+     "file_unique_id": "nasonchikh_wardrobe-1653",
+     "width": 600,
+     "height": 800,
+     "message_id": 1653
+    },
+    {
+     "file_id": "https://cdn4.telesco.pe/file/rzs33RIKHbT4ZVKvx_DupVIa_2Rlb-kglHIxfzXQV0BA4bY8bwCyejXNFTowGZoXdQs72LPVss0j4bfdXchCF-q64WtIuBQ8SHbXDxeblRXMekgi3MjGgawwxoSDC5VFZVB98cqudnFeuJrRnH6-OAWOmFdOayfHWgChahzF2Zk2FsLtJNfusUelmpTokYxL79FjMb4vSoAXFd41fxQ2kYdcQsfY83pxYxHGesM3BxzHgQ7T619cb7YTqnIg7k4tmFfOlb0VlWEdhpwWcNYHOBc8J4x4nlc-6Xj_NWLoO9fKfHa6f54VAMHXRW7JPRpgDqE2xOXWZCaALBFEGSXqAA.jpg",
+     "file_unique_id": "nasonchikh_wardrobe-1654",
+     "width": 600,
+     "height": 800,
+     "message_id": 1654
+    },
+    {
+     "file_id": "https://cdn4.telesco.pe/file/e07hUFskDPRborMfdYlVs4-M4s-9v7Tri_QhAb5E_3fvPzW7u98OpofhE77-a0Jy5Zb3Cy-YtZJ2vudXJl51lt0fq5_5mshj5AlFm3Lg279ugoUmRB9vHo-mwHv367jFlyMPa9cmdfq8of7DHZiNglZ9Obl9GXak-PQukDFiVQjSo_4t3i1O1dUgJH9PXhhSowQS4J83C_OJcd-eJ4KjhGBjIJ2kRtgDmSFkO0_xMmKCcYNcgW8CZ_oquLspBtjjbUwHtOykjBGIKnQDJFNu1fDvxxZNkzfBQK8zs8S_pS4BH9fWeEd3uoiGTUfrBaIiy6oQkQ5IIN1oJuaBLYQI7Q.jpg",
+     "file_unique_id": "nasonchikh_wardrobe-1655",
+     "width": 600,
+     "height": 800,
+     "message_id": 1655
+    }
+   ],
+   "alias_of": null,
+   "item_ids": [
+    137
+   ],
+   "last_status": "available",
+   "retired": false
+  },
+  {
+   "key": "-1184099784:gw1656",
+   "chat_id": -1184099784,
+   "chat_username": "nasonchikh_wardrobe",
+   "date": 1795021144,
+   "message_ids": [
+    1656,
+    1657,
+    1658,
+    1659,
+    1660,
+    1661
+   ],
+   "text": "Saint Laurent Paris Distressed “Heaven” SS17 Tee by Anthony Vaccarello➕\n\nSAINT LAURENT 2017 “HEAVEN”- графика на стыке рок-н-ролла, винтажной эстетики и парижской моды. Футболка из периода Энтони Ваккарелло, когда Дом продолжал развивать музыкальную ДНК, обращаясь к визуальному языку рок-сцены и андеграундной культуры.\nСамо название Heaven добавляет принту романтичное, немного меланхоличное настроение. В сочетании с дистрессом получается характерная эстетика Saint Laurent- небрежная, музыкальная и слегка гранжевая.\n\n•Size: M (L-XL)\n•Cond: 9/10 \n•ОРИГИНАЛ, любые проверки✅\n\n•Price: 10.900₽\nСПБ/ДОСТАВКА\n\n КУПИТЬ/ЗАДАТЬ ВОПРОС\n\n#наличие\nДоп фото👇",
+   "entities": [
+    {
+     "type": "blockquote",
+     "offset": 73,
+     "length": 447
+    },
+    {
+     "type": "text_link",
+     "offset": 609,
+     "length": 21,
+     "url": "https://t.me/nasonchikh_mngr"
+    }
+   ],
+   "text_message_id": 1656,
+   "photos": [
+    {
+     "file_id": "https://cdn4.telesco.pe/file/S2ORBuLP8Mc5g2bDYb5YKHKPp7v8cxqYmpDUtQ4IdMzwUHGjuxHMChdhYyeShbC0FIO6XfSwNpTG6PNjcJbYJOhow1NyreyvYSuzom4ae88KXrPn-S4sSSJQgxUk1_a8CYddH7NtUDmi5D0p0wbEj97nKrvR4-1eVJqDAq5k_XZB2JEg5esSjsgBr2vv42mn51UU5-VTZgMZV57ROBUUXbxOIVKNEQR0mYAE_bDY36dLS3Gm62bdOx1INBXsF70H66GPU2xJb443fBGa2SnseRk4HMTgG3J0AfW98XvQCARwTeWK_aRO_Y_zhuftHJGVOsLU8XO92wU-WwFFwPT0hw.jpg",
+     "file_unique_id": "nasonchikh_wardrobe-1656",
+     "width": 600,
+     "height": 800,
+     "message_id": 1656
+    },
+    {
+     "file_id": "https://cdn4.telesco.pe/file/SPVNwAG94faIZkPPBjAVNZrLnLdQoTZKaYI7rDgQT99C-g9w7H6Ixvh4CJpw21Jic5tUaXUOzFV8cxYu1HozMxSXuYSDbcBsxhzjlLI604WQLMfv0bqMqp7UAgsQrsRT9RUW39T4tAhb-QhNH3UZX7TwFIsjRrl9oHCaNO3EXI6AM38EBXIOq3wtdLRH8haclmZa_GX0jYp9E1Wmym-9cq-8letjO5wVJoqmcAlBfHEa-u4RHzJf9zg6pn4_-ueUnvysK_qjfww6xzxnASGjUKrPhcetlopaI2KFa-3kr1iGtcucTFj4s4tEVEZJI33Swfuvz3tq0eJ8iC8iJyjCVg.jpg",
+     "file_unique_id": "nasonchikh_wardrobe-1657",
+     "width": 600,
+     "height": 800,
+     "message_id": 1657
+    },
+    {
+     "file_id": "https://cdn4.telesco.pe/file/T3CLLTQyKTD6zxC1wJd1d4k-FxfpXEKjrkxUeKUTWoGZI410IVUDFb14oRz1xnLP3b6EIO2ImmVgStqyyF9S2Bdm50DYKfjskAJFgMuXj5LbLtJ4lVgsZP4gNF0TzXmQTuRtl4Lt0tmcz56MQy7GdHxQVp1m7kf28P3YCj7qqnxyCzGBkd7JM4eTIM1fhuFmbno1ULei3rMvaN2s_fUSAGL2Mr9c9yHOhfWWYD3xFCxGxiJCaQVhtCM5iSE6qFiTGYhXs-xSPXzIntS-wajK8IW0BmWYVf-Qpwh8V8kK16xS4QEMorcnupogFpQ6Z5yvssA0qebzO8xhiwPyNtQDzw.jpg",
+     "file_unique_id": "nasonchikh_wardrobe-1658",
+     "width": 600,
+     "height": 800,
+     "message_id": 1658
+    },
+    {
+     "file_id": "https://cdn4.telesco.pe/file/vUKjAbtlP3VPPn1-TNwhJnr0mrGneP5874MMy8Io3yAgz9lkurwajtyq2Nm8sQosE8slPe4qcvNBdVY5orGHvFAOUWSGRwQhwmJJ8Er38KngywAqvkyu-KJDocp8HsKpM4EyrH6-wYwtGIAuTFPIbOEAnjGb3B8gUUS3-3HK7JmvVKF4sclcX9L3mXsN_zY9hc0dJdUgoo0UcYqJG6iPIAd39TTcPCAfr9PB7cmbvJotCJ6_in5ec4S5H89uOZCF0qxJwGInzSWNwTYcky_Zw65qkWaNY7gc_vDDUJzw7Nw6rtnRcJk-pCKW93kHYpwrgwKrnlruMUjbC8KOUuytSw.jpg",
+     "file_unique_id": "nasonchikh_wardrobe-1659",
+     "width": 600,
+     "height": 800,
+     "message_id": 1659
+    },
+    {
+     "file_id": "https://cdn4.telesco.pe/file/aaB0xVjUj29knIYsWxCf5xwSwcgwUKVoeqv-icrX_jYW4P4BUQamojZKS3nKwL24D4zOz1AmBXn4bC4mquf6z0bnkkbRQgEofzEAaDTDdsHtQuztxxQCTAPK3AcEj3qVPq5HitP8GXKp-_7LaU6iryNK2VYC5KrTqu0w0BOIgojvUSHolc0ukwOVqBVPygpWayIjghTsfFNEl4VHTVEntl3xKPNnm4DEpdyXNdzWroD_dELLAznLysaAPX26pYtu1U0LOxnQCpXNr2ULWEXoE02l3MtkoxBHPljhZt_JXO15mnVxcv9Rmfp0FXkGtX9-qf_muU9UBUpd_2Z-aM6vRA.jpg",
+     "file_unique_id": "nasonchikh_wardrobe-1660",
+     "width": 600,
+     "height": 800,
+     "message_id": 1660
+    },
+    {
+     "file_id": "https://cdn4.telesco.pe/file/bD98Mr774rvmSR86-I3PPy1D2s8FGcNxFWsLxWHkIpXNEP2t125O3UpYJpZUi_Oc0My2E59Scn5aL9OXNzFcxbiatfyONBJsYKexPScDnkZFtkt9qmpg5oX6Fyp_k8-cR-er6jRIu3-90UeWd90ybmq8JzE7GlqfFtE1fkQv8D90RcM_-1Cc_pm5WikIBpqB48zD5F3r9xpUoNnrGoVPM-jNfO-rhc7yOIRohD9N5NeRX1dKOZGM9Hhs6E7mIQGjUTzILcWuz2QLVSL_Iv2Lf0CnBaKyaqK18amAbn3aXf7sPBPDIzFFWYw6nl2yqAVKvQwjnxzpyStMbNd-Gtt_ew.jpg",
+     "file_unique_id": "nasonchikh_wardrobe-1661",
+     "width": 600,
+     "height": 800,
+     "message_id": 1661
+    }
+   ],
+   "alias_of": null,
+   "item_ids": [
+    138
+   ],
+   "last_status": "available",
+   "retired": false
+  },
+  {
+   "key": "-1184099784:m1662",
+   "chat_id": -1184099784,
+   "chat_username": "nasonchikh_wardrobe",
+   "date": 1795021605,
+   "message_ids": [
+    1662
+   ],
+   "text": "КАК У ФАКШИЗЫ",
+   "entities": [
+    {
+     "type": "text_link",
+     "offset": 6,
+     "length": 7,
+     "url": "https://t.me/fckshizy"
+    }
+   ],
+   "text_message_id": 1662,
+   "photos": [
+    {
+     "file_id": "https://cdn4.telesco.pe/file/jQNxjkIl7eNGNpoZNJZDdrlQtv85mKg9RsMjvZD_IFA8-We7owknsZSZFdkJz3GStmI71E1xriua8EG6eC5M37jPxi2XTDt3CX58qFzSab9ErzYuKGkwzZenel-5IgrfKg3BZPEO6LKO6ayLA00-myFyywFKtLlaceiPmtbbhhbMomJnRDm04l9PEEXEcMaSPl8I54blFcrsGBhyFaORQDD6SNYkuARd2OLZsomfiXIcSHC4zQREQVddBjNyGCppciVI98qASbgTcdsdzPbahfAXj6MXLlS9e-P8ytg5VU3xSWgJYncsC5CWCCBu9zLCJSNbk8djlEiJ19J0GO3A9Q.jpg",
+     "file_unique_id": "nasonchikh_wardrobe-1662",
+     "width": 0,
+     "height": 0,
+     "message_id": 1662
+    }
+   ],
+   "alias_of": null,
+   "item_ids": [],
+   "last_status": null,
+   "retired": false
   }
  ],
  "msg_index": {
@@ -15721,7 +16086,33 @@
   "-1184099784:1627": "-1184099784:m1627",
   "-1184099784:1628": "-1184099784:m1628",
   "-1184099784:1632": "-1184099784:m1632",
-  "-1184099784:1634": "-1184099784:m1634"
+  "-1184099784:1634": "-1184099784:m1634",
+  "-1184099784:1636": "-1184099784:m1636",
+  "-1184099784:1637": "-1184099784:gw1637",
+  "-1184099784:1638": "-1184099784:gw1637",
+  "-1184099784:1639": "-1184099784:gw1637",
+  "-1184099784:1640": "-1184099784:gw1637",
+  "-1184099784:1641": "-1184099784:gw1637",
+  "-1184099784:1642": "-1184099784:gw1637",
+  "-1184099784:1644": "-1184099784:gw1644",
+  "-1184099784:1645": "-1184099784:gw1644",
+  "-1184099784:1646": "-1184099784:gw1644",
+  "-1184099784:1647": "-1184099784:gw1644",
+  "-1184099784:1648": "-1184099784:gw1644",
+  "-1184099784:1649": "-1184099784:gw1644",
+  "-1184099784:1650": "-1184099784:gw1650",
+  "-1184099784:1651": "-1184099784:gw1650",
+  "-1184099784:1652": "-1184099784:gw1650",
+  "-1184099784:1653": "-1184099784:gw1650",
+  "-1184099784:1654": "-1184099784:gw1650",
+  "-1184099784:1655": "-1184099784:gw1650",
+  "-1184099784:1656": "-1184099784:gw1656",
+  "-1184099784:1657": "-1184099784:gw1656",
+  "-1184099784:1658": "-1184099784:gw1656",
+  "-1184099784:1659": "-1184099784:gw1656",
+  "-1184099784:1660": "-1184099784:gw1656",
+  "-1184099784:1661": "-1184099784:gw1656",
+  "-1184099784:1662": "-1184099784:m1662"
  },
  "items": [
   {
@@ -24591,6 +24982,310 @@
     ]
    ],
    "status_changed_at": 1794584226
+  },
+  {
+   "id": 135,
+   "post_key": "-1184099784:gw1637",
+   "part": 0,
+   "status": "reserved",
+   "created_at": 1795020960,
+   "updated_at": 1795024854,
+   "hidden": false,
+   "title": "Celine Triomphe Mid Lace-Up Sneaker by Hedi Slimane",
+   "brand": "Celine",
+   "name": "Triomphe Mid Lace-Up Sneaker by Hedi Slimane",
+   "season": null,
+   "category": "Обувь",
+   "description": "CELINE TRIOMPHE MID LACE-UP SNEAKER- спортивная классика в интерпретации Эди Слимана. Модель из периода его работы в Celine, когда дизайнер перенёс в Дом собственный взгляд на парижский гардероб, объединив винтажную спортивную эстетику, музыкальную культуру и минимализм.\nВ основе- силуэт классических баскетбольных high-top sneakers, переосмысленный через характерную для Слимана сдержанность.",
+   "size": "43",
+   "size_note": null,
+   "condition": "9.9/10",
+   "condition_note": "ПОЛНЫЙ КП",
+   "price": 17900,
+   "currency": "RUB",
+   "authentic": true,
+   "delivery": "СПБ/ДОСТАВКА",
+   "buy_link": "https://t.me/nasonchikh_mngr",
+   "photos": [
+    {
+     "file_id": "https://cdn4.telesco.pe/file/KoU46pzA5Ojoo79d5s31-Pi5bmc0sCWhF7NY5KZimPbLuEAV2vw8FDExbJ4ffF-xFRU7tkzRiKRKT3HAF8edYuDe0nEh9iwh4nGTQMALkbw-Ovztf-q9Rq8f6IKxzOHMAnbREjEc-jsKc3IoEYYnVFbvNf-13ci5jpB4b-WmFmuh8so9eroUueAfaX2GcxyBouQbeiOAEO7Sv3GL82GBATPheg8qR4UlwUlPt1y7flW7odYBs9xGgYFjEto_drQoPyHrd9htVYQXm9zD2mhKCzvgq4faPQHZabSVqvuQ3i79zyzAPFleMZPWVmU5ibQIF6Li0ta3yB9VAc5hnU-U-w.jpg",
+     "file_unique_id": "nasonchikh_wardrobe-1637",
+     "width": 0,
+     "height": 0,
+     "message_id": 1637
+    },
+    {
+     "file_id": "https://cdn4.telesco.pe/file/heaieCDZBCDhf7bu1EnYjUjjZKDk0nxE8r22k5EkoVzI6yE7huZDQ8_7JJNunKZYxgWsNnoAYw6EHlhIN2N_u--fTOx-frIlxfQkoxpTtOztsKfuQM5wx6shlplzS6amYO8y9a1vMzM6v4cxSSqj4VR9DiCFJiAHoLWp2EBBb2Z5PwFpROHla2aoM5Asf0fyzgEcUpy8P0ilOoy6bCBJXXZvf8stEykxYMFf5rGm1EhmMa44q4RfDPjtkzRQmHi773a7ibFQcdqac0dejFx5heLtwg-6gSWKVeItsqKp4V5sNct6QrMnVYmU0b5AASlVvZ45RwccQ0Uaj_BrGL6lLg.jpg",
+     "file_unique_id": "nasonchikh_wardrobe-1638",
+     "width": 0,
+     "height": 0,
+     "message_id": 1638
+    },
+    {
+     "file_id": "https://cdn4.telesco.pe/file/aYjpbW2FgF_5unQUE17GeQ5QcoXjehvURgoEYv-U8VzSkaJ6gVLEW3F4TXbgr-K_EIKEB8jqwV0IuQCgocyhsSNocjDo2JcWslk-MhFnGUSn87yrwSN57aEm_H47s33Y2Y9O9Iko7Z5sQgPH6A6MHVw4jqgXPRwOUJT7Tw5RWXD1ujevcdEWylVbsKFnDU8OyAQc2zpMbhbe796bdXmVjKIS3xyAXO6Ptkqp_v01uZb-_3fqkHGdAFuByIWWeXJ8CPw-dsqEONpMhfR-jLCjhJ55rhfinJdFtHUtbACwc5y4WHcUJU5Cr_K_kIZq_trNJDz48NOKjg7dPXMdqK4DMQ.jpg",
+     "file_unique_id": "nasonchikh_wardrobe-1639",
+     "width": 0,
+     "height": 0,
+     "message_id": 1639
+    },
+    {
+     "file_id": "https://cdn4.telesco.pe/file/kz0FqHFP2YDgGIlghbXpudEZigh4wSv94M4huq8Jwi_5dvH0lE4Ygo-yVPlfkijhYO2XWPpba9Fk0v5NRnIURdp01i9QI9zuHCkj8OTreRFd4SkMe_wCkexRQMmpZo3ap7pVwwtEMdCmMaYy2shG4dAhrVkxLsmTAioCUfFdBYoDsGtUpaEkz0C40Z5LbroHlQhDLpF1uGvV68ttxw_TKl0VM4gDlN5p92tPcfryt0slmP2TBsKumVr9xtp8YKqyU44zVTU0koShzB0tyE8NgERC_vJbns01ciP2Jn8idQxhXzRGDI4TbIS1uKlmTybwTH1puKazIlyCsBsrGscj9A.jpg",
+     "file_unique_id": "nasonchikh_wardrobe-1640",
+     "width": 0,
+     "height": 0,
+     "message_id": 1640
+    },
+    {
+     "file_id": "https://cdn4.telesco.pe/file/ZOg_s9xDBL1xY2uyefCPo0e1ofNUKk7DDAyIZLqHKUsyralDI5d4Xu4I20SRZnm7VI-tpM40Caiwnm-bRxf2NICWkds-wsMEo2SL8q2xuh34xZZcojONjf4RPJ89fsL12E6Ol_PfCmvi53fRSeE0Uu43OEy83orR3_5efbI5SK0j00fjD3jWet6LbehOh1VRMvNchlMD-Ms4HCogl2HcnnjBnHGt_XmL5e2qFf4oa8fIGfL6379vcovGcckTqCmrdmfDSaQ5y9sJwjehmWsJ6y4lSr5fpUpFY3zqxCDCmROX-FLUuQQjs5rsYkxYiqOhp9UMhXV2zEVKM2_9UF5WtA.jpg",
+     "file_unique_id": "nasonchikh_wardrobe-1641",
+     "width": 0,
+     "height": 0,
+     "message_id": 1641
+    },
+    {
+     "file_id": "https://cdn4.telesco.pe/file/CkUfO4hr7pKFkhVJlR15WBOG1mfv_XCRjzi4qYkWpQjLW_LKVsSSU-xBcXq_KfSuZ7qSO2eIioAQTZ-4hKXk9koQS_1VZMTPz364BO5trtQyUSH53xMsKjdu2ohF0CJ7PkfYdMmzFBkO25t8zkSVOOaMklHjSkjvPwXKUJd-gHkrR3fYio_UbTqmzAWQrI4ZrJHLkgVQuYHKwToIbnvKzh2dhPsIfg7Jm81GBR5Y2pt4vlcbYMO9Cjuq9vuNtpwt9zJapGcT3ymQsfSai3ag9Wytqs2uMpV1p8gwlX0JExF3f6gkuvb0CqiMtlmXKwP__0nqY6P49DzUlIcfiQyefA.jpg",
+     "file_unique_id": "nasonchikh_wardrobe-1642",
+     "width": 0,
+     "height": 0,
+     "message_id": 1642
+    }
+   ],
+   "extra_photos": [],
+   "refs": [
+    [
+     "nasonchikh_wardrobe",
+     1637
+    ]
+   ],
+   "status_changed_at": 1795024854
+  },
+  {
+   "id": 136,
+   "post_key": "-1184099784:gw1644",
+   "part": 0,
+   "status": "available",
+   "created_at": 1795021080,
+   "updated_at": 1795024854,
+   "hidden": false,
+   "title": "Saint Laurent Paris “Animal Print Signature” SS19 Logo Tee by Antony Vaccarello",
+   "brand": "Saint Laurent",
+   "name": "“Animal Print Signature” Logo Tee by Antony Vaccarello",
+   "season": "SS19",
+   "category": "Верх",
+   "description": "SAINT LAURENT 2018- графический язык Дома в интерпретации Энтони Ваккарелло. Футболка из коллекции 2018 года, когда Saint Laurent продолжал развивать собственную версию парижского рок-н-ролла, соединяя лаконичные формы с выразительной графикой и отсылками к музыкальной культуре.",
+   "size": "XS",
+   "size_note": "M-L",
+   "condition": "9/10",
+   "condition_note": null,
+   "price": 6900,
+   "currency": "RUB",
+   "authentic": true,
+   "delivery": "СПБ/ДОСТАВКА",
+   "buy_link": "https://t.me/nasonchikh_mngr",
+   "photos": [
+    {
+     "file_id": "https://cdn4.telesco.pe/file/iSXLsb2_x5KiN0D81UdDOEDRFXMuh5fAdxl1-TJiGuV_TXYq00lL91egjfv2pkBu8rpotvLSrTwqaJicZrjoxgOnMDTThG-8lNPlT07Uvlj6TsZU5C0ZMeq0OoeQgRfRUMB_HrJvB7gZEhTy5tMDJeDEBgRIGFKGlo50T2fzZG9oWYnvt22aH8kJtV_7shhz734zUmZb67TLn1wNV07CZI2yb7FOm2mO5bnLVAxezNYQi692lshFwlrJWRAqCv8rBaJdg2IcutGQxlYqtqH1dl9IhOedEiPw2uySKfpFbiekBAyH0uAhZsVz_kkfH9MlpIorsCOsgnbtaVkTcenc-g.jpg",
+     "file_unique_id": "nasonchikh_wardrobe-1644",
+     "width": 600,
+     "height": 800,
+     "message_id": 1644
+    },
+    {
+     "file_id": "https://cdn4.telesco.pe/file/RlQrCobmp4KrtJehRagTYViF5xbtRQFjVmlOjjI3PQRFrffQI7IMrNbxQaRmxlR0TbhHZtRWNV9ZBpvB9tiFMBuQ35yQzmFkr2JGV5B_j6RjeR6YG6Uqkb8oYr49ZBpDYSqeIKSOedfVnQYmjRKfeS2EVe3Cb11BjxECVPj9PTlBsLB00v7l1bPbA7nZ4gyjVktthaQBczn-9UGAP2y0-sYhhR-NuITFSnHazqWzvkJ7K0K82Y83RHMlu4lyLfa1oem3LWTQSJ71s5YBZQgtAblJgUhExgFOwGBdrlAxDZ6JrB-9T9xMyB2APp1-YNYVUn621nvv4IYAU6C3H0teMQ.jpg",
+     "file_unique_id": "nasonchikh_wardrobe-1645",
+     "width": 600,
+     "height": 800,
+     "message_id": 1645
+    },
+    {
+     "file_id": "https://cdn4.telesco.pe/file/Nlxy39f1YUEwxKPo1cg4cpDb1JADk91hWriSEXuEErciuiglKLTn0VGIw9OWgTm5LiZVdmeVKq58Y7Ok3AI1Gt9po5K56ET_AIqCY7CUI6WjOF9p5dq---6uMKim4Ivko4BA28YzcY4suZjtXob4YqqpJDI6aPU6Y6j9Sx7nrndnIGDQ1DjrE0scTkh3vow34TpNn8XD5XiChMSbzQnwNcx7j1JYi5WgEbDLG4nA_x0lAPCXE4TZpST3mTF4TvKfCsvdV7kj2Orgri7zdM-9tgyYM0SedkrxYkxcJvELvQOFrsB9a3rHpFYlKuHx3w2oiF-y7AhRLDmxc1jXmAqBWA.jpg",
+     "file_unique_id": "nasonchikh_wardrobe-1646",
+     "width": 600,
+     "height": 800,
+     "message_id": 1646
+    },
+    {
+     "file_id": "https://cdn4.telesco.pe/file/mSOsN6jSfoC2n8PcboUxfqCoT3r9C5JGvOzrzYNF9Y1n1yRJ4lXEfwl5pWGvkPNHOpk2_mdB4IATVznzsP617wGWxqlVCMHPqck3F2nAAG9SK-AGSFK96UM41KyWi0XMQp4y0Sr996Yl5ZQbhTn-I7jLNJ1KWlwloYoV2Efn--P-vDUuuBE6fnzXs36XtB6lLBg0ITyIsdd-7_CbhpCQPEkEZ-uzmz7vqG8ba1r5vXJD7Pz2xFyAAboH9OuKg-C73KxU3IpKInlnG4smqslVAsFs_k0ZXKoSOAFaEWigWvMyxfBOQHTsiccbMSUUXM2xS45pFM2fKDoNYbU1q0U_bQ.jpg",
+     "file_unique_id": "nasonchikh_wardrobe-1647",
+     "width": 600,
+     "height": 800,
+     "message_id": 1647
+    },
+    {
+     "file_id": "https://cdn4.telesco.pe/file/eKAJ7h1LxSu8qraerC7vRUPvoFZBW9_AZT81RUE8PUgjLqpQD-fuOH5isw_jKKn19Zr6NHOVUJMc4WWVMTXvssjKC2UibTborEME3EyF5Y1lggUcj22AK_lRA2O-nBpU1sq5ZiVp8WBHi333yAkZL_R_7f6xshf6ohhwdOsxyGzeNY4bB3_3j5yG7EU8GOtjLJ0H6_jVsFO93GlLLE4aJR67MkCxmonr26YDC_-0l0PtjoTJMBGPCEC1HyYUim-PsVGN-aPfdbaG58jxZs4g34zIrqYlwmeq2Fw_4hk6Dw---3y68sJUdvwIeKMSf7eSLqCvKMTGiGMXXzucZ7BPtg.jpg",
+     "file_unique_id": "nasonchikh_wardrobe-1648",
+     "width": 600,
+     "height": 800,
+     "message_id": 1648
+    },
+    {
+     "file_id": "https://cdn4.telesco.pe/file/GHA5Egvl4RuROtGX1L3DF2pOy-7Nn3OaKIU40_swUoqx45cLZniioMALzw-ugaHl-ct5TGBmILo0NhqiwvoWWA2NppQzPJ7nllMowOT5NGAX1Snsgx1tJ0qhv0c2mCYMFo5oCj48rDORj2IfEmGugCN0hgfehKaBrFWuKRL-i5-BRhg28nVDvYLiUHRDbZCyzTr3uABSkUx8wzvB1IAjTTEWwl02ewBhmMDXkfAlZIrIClBMypWqQu8cA4AgvElt6-8S8xxEeNA1ZzfGat6ms3JhzP8dPEgRuualDJyWZ8nnmRVhoLR6-ZkWnPjGu2FFmeVTG32dFqr0XpKK0XIP0g.jpg",
+     "file_unique_id": "nasonchikh_wardrobe-1649",
+     "width": 600,
+     "height": 800,
+     "message_id": 1649
+    }
+   ],
+   "extra_photos": [],
+   "refs": [
+    [
+     "nasonchikh_wardrobe",
+     1644
+    ]
+   ],
+   "status_changed_at": 1795024854
+  },
+  {
+   "id": 137,
+   "post_key": "-1184099784:gw1650",
+   "part": 0,
+   "status": "available",
+   "created_at": 1795021091,
+   "updated_at": 1795024854,
+   "hidden": false,
+   "title": "Saint Laurent Paris “Waiting for Sunset” SS17 Tee by Anthony Vaccarello",
+   "brand": "Saint Laurent",
+   "name": "“Waiting for Sunset” Tee by Anthony Vaccarello",
+   "season": "SS17",
+   "category": "Верх",
+   "description": "SAINT LAURENT 2017 “WAITING FOR SUNSET”- винтажная графика, превращённая в часть гардероба Дома. Футболка из коллекции Энтони Ваккарелло, в которой Saint Laurent обращается к эстетике старых открыток и романтике путешествий.\nГлавный элемент- принт Waiting For Sunset: пальмы, закатное настроение и надпись, напоминающая графику туристических открыток прошлых десятилетий.",
+   "size": "S",
+   "size_note": null,
+   "condition": "9/10",
+   "condition_note": null,
+   "price": 8900,
+   "currency": "RUB",
+   "authentic": true,
+   "delivery": "СПБ/ДОСТАВКА",
+   "buy_link": "https://t.me/nasonchikh_mngr",
+   "photos": [
+    {
+     "file_id": "https://cdn4.telesco.pe/file/vemOw2KcCHnbQRZbFKtj_1dyHFoJ0VoITGnzIF0W4nxCnw3mmbl2inAgoDBEMc4dd8ONsQoSQoFUfX9uRtcWh0pRQCMxWaI7FdvMfDruJ5L39xz6fxG7JOjAsKaVvSSjQBQymR4wPVXQz34l0Mhex5VMzkH0LUd0dyfXKPA8xgdz37gKOTQ1Nlxzhsvlw4uNF587BlsAnpPrnEVZOtgQm_5q3IV_mal1Aw52c-2z3tJi07mhH4PYbXwBngi1Wed4zE3k4rnj-LCrkNXHWanBw3gn4WlXXvR6LB1Lwu3wudHPt1ZE5ZGwdpX7n_yQ2oRJn5TJ5_33LIh8Kkn494clHA.jpg",
+     "file_unique_id": "nasonchikh_wardrobe-1650",
+     "width": 600,
+     "height": 800,
+     "message_id": 1650
+    },
+    {
+     "file_id": "https://cdn4.telesco.pe/file/RQTIj_p74XfNMrM-JECa7_STkqYHycA7oRCX3WDqv8WTwOUsG1Zb6_x5zaSx7a5vtYBhO-Yo25g1blX76U5PqEr8xUyyVvwND2nBtxXXVZR9XBPy24S-tFk0sg19d0LdRhyF4SKM8e9oqrlCUOoKInTZtnF3Bn_EiktLD3bLx4-43-_Ldxe9etbcMLEXf0m5_HPPyr4NREjFpl2agPbkKQVY3pcvbNSyq2SkY1hoMG0KYDt4isA2eGYEIw3Ud79_wavoC5bwSu_KiH3jg8Ja620OZtaKehuy8VVrT5vCcITITJXvcc4Pu8CheKMEcxqVYVJTN5eJ0r2V-dRcEIBbhQ.jpg",
+     "file_unique_id": "nasonchikh_wardrobe-1651",
+     "width": 600,
+     "height": 800,
+     "message_id": 1651
+    },
+    {
+     "file_id": "https://cdn4.telesco.pe/file/bzdTu7G952SvYvb4gx6xQmvybH3crg4YjI8Tt-vOoNBlDronwSmsSRoHPh2cDWh1yewmen40r9NEh6CO_LpkJOMjpT2tbyKry7fMKbiOeIHEHk12aiECInoQcyrjFOIMjKlN2je4Eajffunj09BXpok7xQFh5Qzl8WQDWRfqBZbQiW0WJeNIrKjVIAWG3qfLztOJDWrbmTDEmVqKFUb5FnLxljN5n404Yi2_9J5LpNHcYJ3y7Ox_ciw22x_V-sZVbAGq9U6dz-H0hDWGCTr62y-5OySHipqgwVarrj9Ppf-UyXxEsArAnO5N--PaiHeszydlXuS7aHYz5xEAKpCARQ.jpg",
+     "file_unique_id": "nasonchikh_wardrobe-1652",
+     "width": 600,
+     "height": 800,
+     "message_id": 1652
+    },
+    {
+     "file_id": "https://cdn4.telesco.pe/file/ogBsQ3zuo1tCOwmM1JBEV9KhwmfrqGucnpmgn1bWzuPAbMUrcPMcQr3tm3bIURR9xv0xZFuMMLZlZFdy63wB0L7EnrdP3DPkdOY1rknn5yE7FVFMtycLFmpNZKfpbQFC3dFJhsg8m2JJPST-Na-h4UWtuZ4YOd-1n9Ufyw_A_zBZgIuL7Tl9YS9y2TGrcKd7N34t-7_Vwpkgknko-GDmi9-ngDVKQuxBW_8FVkiJe1s3xWDTENYQrvgLyftELBn8zBdNPH6E3pbJ5v28q9Um0hBcxzED6JUQUeAGM8jOK69bc7WAOIi9LPa-e1cOYKMD5WfRqHXaAtTbqLgSaudYUg.jpg",
+     "file_unique_id": "nasonchikh_wardrobe-1653",
+     "width": 600,
+     "height": 800,
+     "message_id": 1653
+    },
+    {
+     "file_id": "https://cdn4.telesco.pe/file/rzs33RIKHbT4ZVKvx_DupVIa_2Rlb-kglHIxfzXQV0BA4bY8bwCyejXNFTowGZoXdQs72LPVss0j4bfdXchCF-q64WtIuBQ8SHbXDxeblRXMekgi3MjGgawwxoSDC5VFZVB98cqudnFeuJrRnH6-OAWOmFdOayfHWgChahzF2Zk2FsLtJNfusUelmpTokYxL79FjMb4vSoAXFd41fxQ2kYdcQsfY83pxYxHGesM3BxzHgQ7T619cb7YTqnIg7k4tmFfOlb0VlWEdhpwWcNYHOBc8J4x4nlc-6Xj_NWLoO9fKfHa6f54VAMHXRW7JPRpgDqE2xOXWZCaALBFEGSXqAA.jpg",
+     "file_unique_id": "nasonchikh_wardrobe-1654",
+     "width": 600,
+     "height": 800,
+     "message_id": 1654
+    },
+    {
+     "file_id": "https://cdn4.telesco.pe/file/e07hUFskDPRborMfdYlVs4-M4s-9v7Tri_QhAb5E_3fvPzW7u98OpofhE77-a0Jy5Zb3Cy-YtZJ2vudXJl51lt0fq5_5mshj5AlFm3Lg279ugoUmRB9vHo-mwHv367jFlyMPa9cmdfq8of7DHZiNglZ9Obl9GXak-PQukDFiVQjSo_4t3i1O1dUgJH9PXhhSowQS4J83C_OJcd-eJ4KjhGBjIJ2kRtgDmSFkO0_xMmKCcYNcgW8CZ_oquLspBtjjbUwHtOykjBGIKnQDJFNu1fDvxxZNkzfBQK8zs8S_pS4BH9fWeEd3uoiGTUfrBaIiy6oQkQ5IIN1oJuaBLYQI7Q.jpg",
+     "file_unique_id": "nasonchikh_wardrobe-1655",
+     "width": 600,
+     "height": 800,
+     "message_id": 1655
+    }
+   ],
+   "extra_photos": [],
+   "refs": [
+    [
+     "nasonchikh_wardrobe",
+     1650
+    ]
+   ],
+   "status_changed_at": 1795024854
+  },
+  {
+   "id": 138,
+   "post_key": "-1184099784:gw1656",
+   "part": 0,
+   "status": "available",
+   "created_at": 1795021144,
+   "updated_at": 1795024854,
+   "hidden": false,
+   "title": "Saint Laurent Paris Distressed “Heaven” SS17 Tee by Anthony Vaccarello",
+   "brand": "Saint Laurent",
+   "name": "Distressed “Heaven” Tee by Anthony Vaccarello",
+   "season": "SS17",
+   "category": "Верх",
+   "description": "SAINT LAURENT 2017 “HEAVEN”- графика на стыке рок-н-ролла, винтажной эстетики и парижской моды. Футболка из периода Энтони Ваккарелло, когда Дом продолжал развивать музыкальную ДНК, обращаясь к визуальному языку рок-сцены и андеграундной культуры.\nСамо название Heaven добавляет принту романтичное, немного меланхоличное настроение. В сочетании с дистрессом получается характерная эстетика Saint Laurent- небрежная, музыкальная и слегка гранжевая.",
+   "size": "M",
+   "size_note": "L-XL",
+   "condition": "9/10",
+   "condition_note": null,
+   "price": 10900,
+   "currency": "RUB",
+   "authentic": true,
+   "delivery": "СПБ/ДОСТАВКА",
+   "buy_link": "https://t.me/nasonchikh_mngr",
+   "photos": [
+    {
+     "file_id": "https://cdn4.telesco.pe/file/S2ORBuLP8Mc5g2bDYb5YKHKPp7v8cxqYmpDUtQ4IdMzwUHGjuxHMChdhYyeShbC0FIO6XfSwNpTG6PNjcJbYJOhow1NyreyvYSuzom4ae88KXrPn-S4sSSJQgxUk1_a8CYddH7NtUDmi5D0p0wbEj97nKrvR4-1eVJqDAq5k_XZB2JEg5esSjsgBr2vv42mn51UU5-VTZgMZV57ROBUUXbxOIVKNEQR0mYAE_bDY36dLS3Gm62bdOx1INBXsF70H66GPU2xJb443fBGa2SnseRk4HMTgG3J0AfW98XvQCARwTeWK_aRO_Y_zhuftHJGVOsLU8XO92wU-WwFFwPT0hw.jpg",
+     "file_unique_id": "nasonchikh_wardrobe-1656",
+     "width": 600,
+     "height": 800,
+     "message_id": 1656
+    },
+    {
+     "file_id": "https://cdn4.telesco.pe/file/SPVNwAG94faIZkPPBjAVNZrLnLdQoTZKaYI7rDgQT99C-g9w7H6Ixvh4CJpw21Jic5tUaXUOzFV8cxYu1HozMxSXuYSDbcBsxhzjlLI604WQLMfv0bqMqp7UAgsQrsRT9RUW39T4tAhb-QhNH3UZX7TwFIsjRrl9oHCaNO3EXI6AM38EBXIOq3wtdLRH8haclmZa_GX0jYp9E1Wmym-9cq-8letjO5wVJoqmcAlBfHEa-u4RHzJf9zg6pn4_-ueUnvysK_qjfww6xzxnASGjUKrPhcetlopaI2KFa-3kr1iGtcucTFj4s4tEVEZJI33Swfuvz3tq0eJ8iC8iJyjCVg.jpg",
+     "file_unique_id": "nasonchikh_wardrobe-1657",
+     "width": 600,
+     "height": 800,
+     "message_id": 1657
+    },
+    {
+     "file_id": "https://cdn4.telesco.pe/file/T3CLLTQyKTD6zxC1wJd1d4k-FxfpXEKjrkxUeKUTWoGZI410IVUDFb14oRz1xnLP3b6EIO2ImmVgStqyyF9S2Bdm50DYKfjskAJFgMuXj5LbLtJ4lVgsZP4gNF0TzXmQTuRtl4Lt0tmcz56MQy7GdHxQVp1m7kf28P3YCj7qqnxyCzGBkd7JM4eTIM1fhuFmbno1ULei3rMvaN2s_fUSAGL2Mr9c9yHOhfWWYD3xFCxGxiJCaQVhtCM5iSE6qFiTGYhXs-xSPXzIntS-wajK8IW0BmWYVf-Qpwh8V8kK16xS4QEMorcnupogFpQ6Z5yvssA0qebzO8xhiwPyNtQDzw.jpg",
+     "file_unique_id": "nasonchikh_wardrobe-1658",
+     "width": 600,
+     "height": 800,
+     "message_id": 1658
+    },
+    {
+     "file_id": "https://cdn4.telesco.pe/file/vUKjAbtlP3VPPn1-TNwhJnr0mrGneP5874MMy8Io3yAgz9lkurwajtyq2Nm8sQosE8slPe4qcvNBdVY5orGHvFAOUWSGRwQhwmJJ8Er38KngywAqvkyu-KJDocp8HsKpM4EyrH6-wYwtGIAuTFPIbOEAnjGb3B8gUUS3-3HK7JmvVKF4sclcX9L3mXsN_zY9hc0dJdUgoo0UcYqJG6iPIAd39TTcPCAfr9PB7cmbvJotCJ6_in5ec4S5H89uOZCF0qxJwGInzSWNwTYcky_Zw65qkWaNY7gc_vDDUJzw7Nw6rtnRcJk-pCKW93kHYpwrgwKrnlruMUjbC8KOUuytSw.jpg",
+     "file_unique_id": "nasonchikh_wardrobe-1659",
+     "width": 600,
+     "height": 800,
+     "message_id": 1659
+    },
+    {
+     "file_id": "https://cdn4.telesco.pe/file/aaB0xVjUj29knIYsWxCf5xwSwcgwUKVoeqv-icrX_jYW4P4BUQamojZKS3nKwL24D4zOz1AmBXn4bC4mquf6z0bnkkbRQgEofzEAaDTDdsHtQuztxxQCTAPK3AcEj3qVPq5HitP8GXKp-_7LaU6iryNK2VYC5KrTqu0w0BOIgojvUSHolc0ukwOVqBVPygpWayIjghTsfFNEl4VHTVEntl3xKPNnm4DEpdyXNdzWroD_dELLAznLysaAPX26pYtu1U0LOxnQCpXNr2ULWEXoE02l3MtkoxBHPljhZt_JXO15mnVxcv9Rmfp0FXkGtX9-qf_muU9UBUpd_2Z-aM6vRA.jpg",
+     "file_unique_id": "nasonchikh_wardrobe-1660",
+     "width": 600,
+     "height": 800,
+     "message_id": 1660
+    },
+    {
+     "file_id": "https://cdn4.telesco.pe/file/bD98Mr774rvmSR86-I3PPy1D2s8FGcNxFWsLxWHkIpXNEP2t125O3UpYJpZUi_Oc0My2E59Scn5aL9OXNzFcxbiatfyONBJsYKexPScDnkZFtkt9qmpg5oX6Fyp_k8-cR-er6jRIu3-90UeWd90ybmq8JzE7GlqfFtE1fkQv8D90RcM_-1Cc_pm5WikIBpqB48zD5F3r9xpUoNnrGoVPM-jNfO-rhc7yOIRohD9N5NeRX1dKOZGM9Hhs6E7mIQGjUTzILcWuz2QLVSL_Iv2Lf0CnBaKyaqK18amAbn3aXf7sPBPDIzFFWYw6nl2yqAVKvQwjnxzpyStMbNd-Gtt_ew.jpg",
+     "file_unique_id": "nasonchikh_wardrobe-1661",
+     "width": 600,
+     "height": 800,
+     "message_id": 1661
+    }
+   ],
+   "extra_photos": [],
+   "refs": [
+    [
+     "nasonchikh_wardrobe",
+     1656
+    ]
+   ],
+   "status_changed_at": 1795024854
   }
  ]
 }
