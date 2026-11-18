@@ -1,15 +1,23 @@
-# Каждые 5 минут: забрать новые посты у бота → обновить каталог и фото → опубликовать витрину.
+# Каждые ~5 минут: забрать новые посты → обновить каталог и фото → опубликовать витрину.
+# Расписание GitHub ненадёжно (запуски «*/5» на деле бывают раз в несколько часов), поэтому
+# каждый прогон в конце сам запускает следующий (задача next). Расписание — запасной перезапуск цепочки.
 # Данные (state.json, catalog.json, фото) живут в отдельной ветке `data`, чтобы не засорять код.
 name: sync
 
 on:
   schedule:
-    - cron: "*/5 * * * *"
+    - cron: "*/10 * * * *"
   workflow_dispatch:
+    inputs:
+      chain:
+        description: "Запуск из цепочки (служебное)"
+        type: boolean
+        default: false
   push:
     branches: [main]
 
 permissions:
+  actions: write   # чтобы запустить следующий прогон цепочки
   contents: write
   pages: write
   id-token: write
@@ -73,7 +81,8 @@ jobs:
       - name: Нужно ли публиковать
         id: need
         run: |
-          if [ "${{ steps.sync.outputs.changed }}" = "true" ] || [ "${{ github.event_name }}" != "schedule" ]; then
+          # Публикуем, если каталог изменился, после правок кода и при ручном запуске.
+          if [ "${{ steps.sync.outputs.changed }}" = "true" ] || [ "${{ github.event_name }}" = "push" ]              || { [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.chain }}" != "true" ]; }; then
             echo "deploy=true" >> "$GITHUB_OUTPUT"
           fi
 
@@ -108,3 +117,18 @@ jobs:
     steps:
       - id: deploy
         uses: actions/deploy-pages@v4
+
+  # Следующий прогон через ~4 минуты. Если запусков в очереди окажется два (цепочка + расписание),
+  # concurrency оставит один — цепочки не размножаются.
+  next:
+    needs: [sync, deploy]
+    if: ${{ always() && needs.sync.result != 'cancelled' }}  # и после ошибки: сбой t.me не должен рвать цепочку
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Пауза и запуск следующего прогона
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          sleep 240
+          gh workflow run sync.yml --repo "${{ github.repository }}" --ref "${{ github.ref_name }}" -f chain=true
