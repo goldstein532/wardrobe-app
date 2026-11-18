@@ -16146,7 +16146,9 @@
      5
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 2,
@@ -16201,7 +16203,9 @@
      9
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 3,
@@ -16256,7 +16260,9 @@
      12
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 4,
@@ -16311,7 +16317,9 @@
      15
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 5,
@@ -16366,7 +16374,9 @@
      22
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 6,
@@ -16421,7 +16431,9 @@
      25
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 7,
@@ -16476,7 +16488,9 @@
      28
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 8,
@@ -16531,7 +16545,9 @@
      36
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 9,
@@ -16586,7 +16602,9 @@
      45
     ]
    ],
-   "status_changed_at": 1794794239
+   "status_changed_at": 1794794239,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 10,
@@ -16641,7 +16659,9 @@
      57
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 11,
@@ -16696,7 +16716,9 @@
      67
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 12,
@@ -16751,7 +16773,9 @@
      71
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 13,
@@ -16806,7 +16830,9 @@
      75
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 14,
@@ -16861,7 +16887,9 @@
      78
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 15,
@@ -16916,7 +16944,9 @@
      94
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 16,
@@ -16971,7 +17001,9 @@
      102
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 17,
@@ -17012,7 +17044,9 @@
      110
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 18,
@@ -17067,7 +17101,9 @@
      126
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 19,
@@ -17122,7 +17158,9 @@
      151
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 20,
@@ -17177,7 +17215,9 @@
      170
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 21,
@@ -17232,7 +17272,9 @@
      176
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 22,
@@ -17287,7 +17329,9 @@
      186
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 23,
@@ -17342,7 +17386,9 @@
      198
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 24,
@@ -17397,7 +17443,9 @@
      204
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 25,
@@ -17452,7 +17500,9 @@
      214
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 26,
@@ -17507,7 +17557,9 @@
      219
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 27,
@@ -17555,7 +17607,9 @@
      227
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 28,
@@ -17603,7 +17657,9 @@
      241
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 29,
@@ -17658,7 +17714,9 @@
      271
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 30,
@@ -17713,7 +17771,9 @@
      278
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 31,
@@ -17768,7 +17828,9 @@
      288
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 32,
@@ -17823,7 +17885,9 @@
      299
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 33,
@@ -17878,7 +17942,9 @@
      305
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 34,
@@ -17933,7 +17999,9 @@
      347
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 35,
@@ -17981,7 +18049,9 @@
      380
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 36,
@@ -18029,7 +18099,9 @@
      382
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 37,
@@ -18077,7 +18149,9 @@
      385
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 38,
@@ -18125,7 +18199,9 @@
      390
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 39,
@@ -18173,7 +18249,9 @@
      392
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 40,
@@ -18221,7 +18299,9 @@
      443
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 41,
@@ -18269,7 +18349,9 @@
      472
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 42,
@@ -18324,7 +18406,9 @@
      513
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 43,
@@ -18400,7 +18484,9 @@
      519
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 44,
@@ -18476,7 +18562,9 @@
      535
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 45,
@@ -18517,7 +18605,9 @@
      557
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 46,
@@ -18593,7 +18683,9 @@
      561
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 47,
@@ -18626,7 +18718,9 @@
      567
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 48,
@@ -18667,7 +18761,9 @@
      570
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 49,
@@ -18743,7 +18839,9 @@
      589
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 50,
@@ -18819,7 +18917,9 @@
      595
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 51,
@@ -18895,7 +18995,9 @@
      601
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 52,
@@ -18928,7 +19030,9 @@
      629
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 53,
@@ -19004,7 +19108,9 @@
      644
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 54,
@@ -19080,7 +19186,9 @@
      651
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 55,
@@ -19156,7 +19264,9 @@
      657
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 56,
@@ -19232,7 +19342,9 @@
      663
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 57,
@@ -19308,7 +19420,9 @@
      678
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 58,
@@ -19384,7 +19498,9 @@
      695
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 59,
@@ -19417,7 +19533,9 @@
      702
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 60,
@@ -19493,7 +19611,9 @@
      716
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 61,
@@ -19569,7 +19689,9 @@
      722
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 62,
@@ -19645,7 +19767,9 @@
      728
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 63,
@@ -19721,7 +19845,9 @@
      734
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 64,
@@ -19797,7 +19923,9 @@
      742
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 65,
@@ -19873,7 +20001,9 @@
      748
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 66,
@@ -19949,7 +20079,9 @@
      754
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 67,
@@ -20018,7 +20150,9 @@
      761
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 68,
@@ -20094,7 +20228,9 @@
      780
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 69,
@@ -20170,7 +20306,9 @@
      796
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 70,
@@ -20246,7 +20384,9 @@
      811
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 71,
@@ -20322,7 +20462,9 @@
      833
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 72,
@@ -20398,7 +20540,9 @@
      845
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 73,
@@ -20474,7 +20618,9 @@
      853
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 74,
@@ -20550,7 +20696,9 @@
      863
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 75,
@@ -20626,7 +20774,9 @@
      892
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 76,
@@ -20702,7 +20852,9 @@
      898
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 77,
@@ -20778,7 +20930,9 @@
      905
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 78,
@@ -20854,7 +21008,9 @@
      916
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 79,
@@ -20930,7 +21086,9 @@
      922
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 80,
@@ -21006,7 +21164,9 @@
      936
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 81,
@@ -21082,7 +21242,9 @@
      942
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 82,
@@ -21158,7 +21320,9 @@
      949
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 83,
@@ -21234,7 +21398,9 @@
      977
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 84,
@@ -21310,7 +21476,9 @@
      991
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 85,
@@ -21386,7 +21554,9 @@
      1004
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 86,
@@ -21462,7 +21632,9 @@
      1012
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 87,
@@ -21538,7 +21710,9 @@
      1058
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 88,
@@ -21614,7 +21788,9 @@
      1065
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 89,
@@ -21690,7 +21866,9 @@
      1071
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 90,
@@ -21766,7 +21944,9 @@
      1077
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 91,
@@ -21842,7 +22022,9 @@
      1085
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 92,
@@ -21918,7 +22100,9 @@
      1091
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 93,
@@ -21994,7 +22178,9 @@
      1110
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 94,
@@ -22070,7 +22256,9 @@
      1119
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 95,
@@ -22146,7 +22334,9 @@
      1125
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 96,
@@ -22222,7 +22412,9 @@
      1131
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 97,
@@ -22298,7 +22490,9 @@
      1137
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 98,
@@ -22374,7 +22568,9 @@
      1150
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 99,
@@ -22450,7 +22646,9 @@
      1176
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 100,
@@ -22526,7 +22724,9 @@
      1194
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 101,
@@ -22602,7 +22802,9 @@
      1200
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 102,
@@ -22678,7 +22880,9 @@
      1210
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 103,
@@ -22754,7 +22958,9 @@
      1237
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 104,
@@ -22830,7 +23036,9 @@
      1243
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 105,
@@ -22906,7 +23114,9 @@
      1260
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 106,
@@ -22982,7 +23192,9 @@
      1266
     ]
    ],
-   "status_changed_at": 1794858401
+   "status_changed_at": 1794858401,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 107,
@@ -23058,7 +23270,9 @@
      1272
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 108,
@@ -23134,7 +23348,9 @@
      1312
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 109,
@@ -23210,7 +23426,9 @@
      1318
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 110,
@@ -23286,7 +23504,9 @@
      1324
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 111,
@@ -23362,7 +23582,9 @@
      1330
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 112,
@@ -23438,7 +23660,9 @@
      1338
     ]
    ],
-   "status_changed_at": 1794942245
+   "status_changed_at": 1794942245,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 113,
@@ -23514,7 +23738,9 @@
      1375
     ]
    ],
-   "status_changed_at": 1794858401
+   "status_changed_at": 1794858401,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 114,
@@ -23590,7 +23816,9 @@
      1383
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 115,
@@ -23666,7 +23894,9 @@
      1389
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 116,
@@ -23742,7 +23972,9 @@
      1395
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 117,
@@ -23818,7 +24050,9 @@
      1401
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 118,
@@ -23894,7 +24128,9 @@
      1426
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 119,
@@ -23970,7 +24206,9 @@
      1432
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 120,
@@ -24046,7 +24284,9 @@
      1443
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 121,
@@ -24122,7 +24362,9 @@
      1455
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 122,
@@ -24198,7 +24440,9 @@
      1486
     ]
    ],
-   "status_changed_at": 1794858401
+   "status_changed_at": 1794858401,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 123,
@@ -24274,7 +24518,9 @@
      1492
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 124,
@@ -24350,7 +24596,9 @@
      1504
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 125,
@@ -24426,7 +24674,9 @@
      1510
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 126,
@@ -24502,7 +24752,9 @@
      1516
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 127,
@@ -24578,7 +24830,9 @@
      1539
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 128,
@@ -24654,7 +24908,9 @@
      1564
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 129,
@@ -24730,7 +24986,9 @@
      1570
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 130,
@@ -24806,7 +25064,9 @@
      1576
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 131,
@@ -24882,7 +25142,9 @@
      1582
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 132,
@@ -24915,7 +25177,9 @@
      18
     ]
    ],
-   "status_changed_at": 1794516233
+   "status_changed_at": 1794516233,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 133,
@@ -24948,7 +25212,9 @@
      6
     ]
    ],
-   "status_changed_at": 1794584226
+   "status_changed_at": 1794584226,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 134,
@@ -24981,7 +25247,9 @@
      7
     ]
    ],
-   "status_changed_at": 1794584226
+   "status_changed_at": 1794584226,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 135,
@@ -25057,7 +25325,9 @@
      1637
     ]
    ],
-   "status_changed_at": 1795024854
+   "status_changed_at": 1795024854,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 136,
@@ -25133,7 +25403,9 @@
      1644
     ]
    ],
-   "status_changed_at": 1795024854
+   "status_changed_at": 1795024854,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 137,
@@ -25209,7 +25481,9 @@
      1650
     ]
    ],
-   "status_changed_at": 1795024854
+   "status_changed_at": 1795024854,
+   "sale_price": null,
+   "sale_at": 0
   },
   {
    "id": 138,
@@ -25285,7 +25559,9 @@
      1656
     ]
    ],
-   "status_changed_at": 1795024854
+   "status_changed_at": 1795024854,
+   "sale_price": null,
+   "sale_at": 0
   }
  ]
 }
