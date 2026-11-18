@@ -259,3 +259,7 @@ input { font: inherit; color: inherit; }
 .logo-bar .side.right { right: 16px; }
 @keyframes logo-in { from { opacity: 0; transform: scale(.92); filter: blur(6px); } to { opacity: 1; transform: none; filter: none; } }
 @media (prefers-reduced-motion: reduce) { .logo-bar .logo { animation: none; } }
+
+/* ------------------------------------------------------------ скидка */
+.old { color: var(--sub); text-decoration: line-through; text-decoration-thickness: 1px; margin-right: 4px; }
+.label .p .old { font-size: 11px; }

@@ -373,3 +373,37 @@ def plan_items(post: ParsedPost, photo_count: int) -> tuple[list[ItemDraft], boo
     else:
         drafts = [ItemDraft(i, s, all_photos) for i, s in enumerate(post.sizes)]
     return drafts, True
+
+
+# ---------------------------------------------------------------- скидка ответом на пост
+
+_DISCOUNT_TAG_RE = re.compile(r"#скидк[аи]\b", re.IGNORECASE)
+_MONEY_RE = re.compile(r"(\d{1,3}(?:[ .,  ]\d{3})+|\d+)\s*([кk])?\s*(?:₽|р\b|руб|rub)?", re.IGNORECASE)
+_PERCENT_RE = re.compile(r"(\d{1,2})\s*%")
+
+
+def is_discount(text: str | None) -> bool:
+    return bool(_DISCOUNT_TAG_RE.search(text or ""))
+
+
+def discount(text: str | None, old_price: int | None = None) -> int | None:
+    """Новая цена из ответа на пост с #скидка: «Скидка 14.900₽ #скидка» → 14900.
+    Если в ответе несколько сумм («34.900 → 28.900»), новая — последняя. «-20%» считается от old_price.
+    Возвращает None, если это не скидка (нет #скидка, нет цены или цена не ниже старой)."""
+    text = text or ""
+    if not _DISCOUNT_TAG_RE.search(text):
+        return None
+    body = _HASHTAG_RE.sub(" ", text)
+    amounts = []
+    for m in _MONEY_RE.finditer(body):
+        n = int(re.sub(r"\D", "", m.group(1))) * (1000 if m.group(2) else 1)
+        if n >= 100:
+            amounts.append(n)
+    price = amounts[-1] if amounts else None
+    if price is None and old_price:
+        pm = _PERCENT_RE.search(body)
+        if pm and 0 < int(pm.group(1)) < 100:
+            price = round(old_price * (100 - int(pm.group(1))) / 100 / 100) * 100
+    if price is None or (old_price and price >= old_price):
+        return None
+    return price

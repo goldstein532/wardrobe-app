@@ -1,8 +1,8 @@
 import { useCallback, useLayoutEffect, useMemo, useRef, useState, type CSSProperties } from "react";
 import type { Item } from "./types";
-import { back, price } from "./store";
+import { back } from "./store";
 import { haptic, openUrl } from "./telegram";
-import { BackControl, BottomButtons, Img } from "./ui";
+import { BackControl, BottomButtons, Img, Price } from "./ui";
 
 const EASE = "cubic-bezier(.2,.8,.2,1)";
 const reduced = () => window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
@@ -193,7 +193,11 @@ export function ItemScreen({
           </div>
           {item.brand && <h3>{item.brand}</h3>}
           <h1 className="name">{item.name ?? item.title}</h1>
-          {!sold && <div className="price">{price(item.price)}</div>}
+          {!sold && (
+            <div className="price">
+              <Price item={item} />
+            </div>
+          )}
           {item.status === "transit" && (
             <p className="note mono">Вещь едет в магазин. Можно забронировать заранее.</p>
           )}

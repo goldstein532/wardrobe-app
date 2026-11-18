@@ -86,14 +86,15 @@
    "size_note": null,
    "condition": "9.9/10",
    "condition_note": null,
-   "price": 17900,
+   "price": 14900,
    "currency": "RUB",
    "authentic": true,
    "delivery": "СПБ/ДОСТАВКА",
    "buy_url": null,
    "extra_photos": [],
    "created_at": 1731060000,
-   "status_changed_at": 1731060000
+   "status_changed_at": 1731060000,
+   "old_price": 17900
   },
   {
    "id": 4,

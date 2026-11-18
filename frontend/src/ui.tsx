@@ -1,6 +1,16 @@
 import { useEffect, useRef, useState, type CSSProperties, type ReactNode } from "react";
 import type { Item, PhotoRef } from "./types";
 import { price } from "./store";
+
+/** Цена; при скидке — старая зачёркнута, рядом новая. */
+export function Price({ item }: { item: Item }) {
+  if (!item.old_price) return <>{price(item.price)}</>;
+  return (
+    <>
+      <s className="old">{price(item.old_price)}</s> <span className="sale">{price(item.price)}</span>
+    </>
+  );
+}
 import { haptic, inTelegram, setBackButton, setBottomButtons, type ButtonSpec } from "./telegram";
 
 // ------------------------------------------------------------ фото
@@ -94,7 +104,7 @@ export function Tile({
         </div>
         {!sold && (
           <div className="p">
-            {price(item.price)}
+            <Price item={item} />
             {(transit || item.status === "reserved") && item.size ? ` · ${item.size}` : ""}
           </div>
         )}

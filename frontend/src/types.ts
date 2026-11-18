@@ -25,6 +25,8 @@ export interface Item {
   condition?: string | null;
   condition_note?: string | null;
   price?: number | null;
+  /** Цена до скидки (ответ на пост с #скидка) — показываем зачёркнутой. */
+  old_price?: number | null;
   currency?: string;
   authentic?: boolean;
   delivery?: string | null;

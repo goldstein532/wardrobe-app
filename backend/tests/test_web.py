@@ -251,3 +251,42 @@ def test_older_reply_does_not_override_newer(setup):
     web.blocks[20] = block(20, "снова в наличии", reply_to=12)  # 20 → 5 ноября, SOLD (16) → 1 ноября
     Sync(None, cfg, d, web).run()
     assert {i["name"]: i["status"] for i in cat_json(d)["items"]}["Geobasket"] == "available"
+
+
+# ------------------------------------------------------------ скидка ответом на пост
+
+from wardrobe.parser import discount  # noqa: E402
+
+
+@pytest.mark.parametrize("text, old, new", [
+    ("СКИДКА\n•Price: 7.900₽\n#скидка", 9900, 7900),
+    ("Скидка! Новый прайс 7 900 ₽ #скидка", 9900, 7900),
+    ("9.900₽ → 7.900₽\n#скидка", 9900, 7900),
+    ("скидка 8к #скидка", 9900, 8000),
+    ("-20% #скидка", 9900, 7900),
+    ("Скидка 7.900₽", 9900, None),          # без #скидка не считаем
+    ("#скидка скоро будут", 9900, None),     # без цены
+    ("#скидка 12.900₽", 9900, None),         # не дешевле старой
+])
+def test_discount_parse(text, old, new):
+    assert discount(text, old_price=old) == new
+
+
+def test_discount_reply_shows_old_and_new_price(setup):
+    web, _, d = setup
+    web.blocks[18] = block(18, "СКИДКА\n•Price: 7.900₽\n#скидка", reply_to=17)
+    Sync(None, Config(main_channel="shop"), d, web).run()
+    jeans = next(i for i in cat_json(d)["items"] if i["name"] == "Jeans")
+    assert (jeans["price"], jeans["old_price"]) == (7900, 9900)
+    assert jeans["status"] == "available"
+    # повторный прогон ничего не меняет, правка поста не сбрасывает скидку
+    web.blocks[17] = block(17, product("Helmut Lang Jeans", "9.900") + "\nДоп фото", photos=[17])
+    Sync(None, Config(main_channel="shop"), d, web).run()
+    jeans = next(i for i in cat_json(d)["items"] if i["name"] == "Jeans")
+    assert (jeans["price"], jeans["old_price"]) == (7900, 9900)
+
+
+def test_items_without_discount_have_no_old_price(setup):
+    web, _, d = setup
+    Sync(None, Config(main_channel="shop"), d, web).run()
+    assert all("old_price" not in i for i in cat_json(d)["items"])

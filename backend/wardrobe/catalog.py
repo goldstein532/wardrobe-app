@@ -91,6 +91,8 @@ class Item:
     extra_photos: list[Photo] = field(default_factory=list)
     refs: list[list[Any]] = field(default_factory=list)  # [[chat_username, message_id], ...]
     status_changed_at: int = 0
+    sale_price: int | None = None  # цена со скидкой (ответ на пост с #скидка)
+    sale_at: int = 0               # дата ответа со скидкой: применяем только более новые
 
     @property
     def no(self) -> str:
@@ -288,6 +290,14 @@ class Catalog:
         item.status_changed_at = item.updated_at = now
         return Event("status", item_id, status.value, prev)
 
+    def set_discount(self, item_id: int, price: int, at: int, now: int) -> Event | None:
+        """Скидка из ответа на пост. Более старый ответ не перебивает более новый."""
+        item = self.items[item_id]
+        if at < item.sale_at or item.sale_price == price:
+            return None
+        item.sale_price, item.sale_at, item.updated_at = price, at, now
+        return Event("updated", item_id, status=item.status)
+
     def hide(self, item_id: int, now: int) -> Event | None:
         item = self.items[item_id]
         if item.hidden:
@@ -351,6 +361,7 @@ class Catalog:
                     extra_photos=[photo_urls(p) for p in item.extra_photos],
                     created_at=item.created_at, status_changed_at=item.status_changed_at,
                 )
+                data.update(_sale(item))
             return data
 
         shown = [i for i in self.items.values() if not i.hidden and (visible is None or i.status in visible)]
@@ -413,3 +424,10 @@ def default_photo_urls(p: Photo) -> dict[str, Any]:
         "full": f"media/{p.file_unique_id}-full.webp",
         "w": p.width, "h": p.height,
     }
+
+
+def _sale(item: Item) -> dict[str, Any]:
+    """Скидка: в витрину уходит новая цена, старая — для зачёркивания."""
+    if item.sale_price and item.price and item.sale_price < item.price:
+        return {"price": item.sale_price, "old_price": item.price}
+    return {}

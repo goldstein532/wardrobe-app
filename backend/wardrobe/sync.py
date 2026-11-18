@@ -29,7 +29,7 @@ from typing import Any, Protocol
 from .adapters import automatic_forward, channel_message, comment_thread, largest_photo
 from .catalog import Catalog, Event, Item, Message, default_photo_urls
 from .media import build_variants, has_variants
-from .parser import Status, reply_status
+from .parser import Status, discount, is_discount, reply_status
 from .web import WebClient, WebPost, chat_id_for, parse_page
 
 STATUS_WORDS = {
@@ -173,7 +173,7 @@ class Sync:
         posts.sort(key=lambda p: (p.date, p.message_id))
         replies: list[WebPost] = []
         for p in posts:
-            if p.reply_to and reply_status(p.text):
+            if p.reply_to and (reply_status(p.text) or is_discount(p.text)):
                 replies.append(p)
                 continue
             if not p.text and not p.photos:
@@ -246,6 +246,13 @@ class Sync:
             items = self.cat.items_for_message(chat_id_for(r.channel), r.reply_to or 0)
             if not items:
                 continue  # исходный пост ещё не в каталоге — попробуем при следующем проходе
+            if reply_status(r.text) is None:  # ответ со скидкой
+                for i in items:
+                    price = discount(r.text, old_price=i.price)
+                    if price and self.cat.set_discount(i.id, price, r.date, self.now):
+                        self.log(f"{key}: скидка N° {i.no}: {i.price} → {price}")
+                done.add(key)
+                continue
             status = reply_status(r.text)
             # Ответы применяем по порядку: старый «SOLD», найденный позже, не перебивает более новый «снова в наличии».
             dates = self.meta["reply_dates"]
