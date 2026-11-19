@@ -19855,7 +19855,7 @@
    "part": 0,
    "status": "available",
    "created_at": 1779297507,
-   "updated_at": 1794516233,
+   "updated_at": 1795067411,
    "hidden": false,
    "title": "Hysteric Glamour Zip Hoodie",
    "brand": "Hysteric Glamour",
@@ -19924,8 +19924,8 @@
     ]
    ],
    "status_changed_at": 1794516233,
-   "sale_price": null,
-   "sale_at": 0
+   "sale_price": 12900,
+   "sale_at": 1795067193
   },
   {
    "id": 65,
