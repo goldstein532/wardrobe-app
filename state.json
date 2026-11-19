@@ -15169,6 +15169,30 @@
    "item_ids": [],
    "last_status": null,
    "retired": false
+  },
+  {
+   "key": "-1184099784:m1664",
+   "chat_id": -1184099784,
+   "chat_username": "nasonchikh_wardrobe",
+   "date": 1795077525,
+   "message_ids": [
+    1664
+   ],
+   "text": "СКИНЬТЕ ПЖ У КОГО МОЖНО ГТА 6 КУПИТЬ (Американский аккаунт)\n@nasonchikh_mngr",
+   "entities": [
+    {
+     "type": "text_link",
+     "offset": 60,
+     "length": 16,
+     "url": "https://t.me/nasonchikh_mngr"
+    }
+   ],
+   "text_message_id": 1664,
+   "photos": [],
+   "alias_of": null,
+   "item_ids": [],
+   "last_status": null,
+   "retired": false
   }
  ],
  "msg_index": {
@@ -16112,7 +16136,8 @@
   "-1184099784:1659": "-1184099784:gw1656",
   "-1184099784:1660": "-1184099784:gw1656",
   "-1184099784:1661": "-1184099784:gw1656",
-  "-1184099784:1662": "-1184099784:m1662"
+  "-1184099784:1662": "-1184099784:m1662",
+  "-1184099784:1664": "-1184099784:m1664"
  },
  "items": [
   {
