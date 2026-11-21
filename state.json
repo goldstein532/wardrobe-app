@@ -14835,7 +14835,7 @@
     1641,
     1642
    ],
-   "text": "Celine Triomphe Mid Lace-Up Sneaker by Hedi Slimane ➕\n\nCELINE TRIOMPHE MID LACE-UP SNEAKER- спортивная классика в интерпретации Эди Слимана. Модель из периода его работы в Celine, когда дизайнер перенёс в Дом собственный взгляд на парижский гардероб, объединив винтажную спортивную эстетику, музыкальную культуру и минимализм.\nВ основе- силуэт классических баскетбольных high-top sneakers, переосмысленный через характерную для Слимана сдержанность.\n\n•Size: 43\n•Cond: 9.9/10 (ПОЛНЫЙ КП)\n•ОРИГИНАЛ, любые проверки✅\n\n•Price: 17.900₽\nСПБ/ДОСТАВКА\n\n КУПИТЬ/ЗАДАТЬ ВОПРОС\n\n#наличие\nДоп фото👇",
+   "text": "Celine Triomphe Mid Lace-Up Sneaker by Hedi Slimane ➕\n\nCELINE TRIOMPHE MID LACE-UP SNEAKER- спортивная классика в интерпретации Эди Слимана. Модель из периода его работы в Celine, когда дизайнер перенёс в Дом собственный взгляд на парижский гардероб, объединив винтажную спортивную эстетику, музыкальную культуру и минимализм.\nВ основе- силуэт классических баскетбольных high-top sneakers, переосмысленный через характерную для Слимана сдержанность.\n\n•Size: 43\n•Cond: 9.9/10 (ПОЛНЫЙ КП)\n•ОРИГИНАЛ, любые проверки✅\n\n❗️SOLD ❗️\n\n•Price: 15.500₽\nСПБ/ДОСТАВКА\n\n КУПИТЬ/ЗАДАТЬ ВОПРОС\n\n#продано\nДоп фото👇",
    "entities": [
     {
      "type": "blockquote",
@@ -14844,7 +14844,7 @@
     },
     {
      "type": "text_link",
-     "offset": 545,
+     "offset": 556,
      "length": 21,
      "url": "https://t.me/nasonchikh_mngr"
     }
@@ -14898,7 +14898,7 @@
    "item_ids": [
     135
    ],
-   "last_status": "available",
+   "last_status": "sold",
    "retired": false
   },
   {
@@ -25280,9 +25280,9 @@
    "id": 128,
    "post_key": "-1184099784:gw1564",
    "part": 0,
-   "status": "available",
+   "status": "reserved",
    "created_at": 1794085474,
-   "updated_at": 1794516233,
+   "updated_at": 1795277432,
    "hidden": false,
    "title": "Converse & Mastermind Japan Chuck Taylor All Star",
    "brand": "Converse",
@@ -25350,7 +25350,7 @@
      1564
     ]
    ],
-   "status_changed_at": 1794516233,
+   "status_changed_at": 1795277432,
    "sale_price": null,
    "sale_at": 0
   },
@@ -25697,9 +25697,9 @@
    "id": 135,
    "post_key": "-1184099784:gw1637",
    "part": 0,
-   "status": "reserved",
+   "status": "sold",
    "created_at": 1795020960,
-   "updated_at": 1795024854,
+   "updated_at": 1795277432,
    "hidden": false,
    "title": "Celine Triomphe Mid Lace-Up Sneaker by Hedi Slimane",
    "brand": "Celine",
@@ -25711,7 +25711,7 @@
    "size_note": null,
    "condition": "9.9/10",
    "condition_note": "ПОЛНЫЙ КП",
-   "price": 17900,
+   "price": 15500,
    "currency": "RUB",
    "authentic": true,
    "delivery": "СПБ/ДОСТАВКА",
@@ -25767,7 +25767,7 @@
      1637
     ]
    ],
-   "status_changed_at": 1795024854,
+   "status_changed_at": 1795277432,
    "sale_price": null,
    "sale_at": 0
   },
