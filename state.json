@@ -15583,6 +15583,30 @@
    "item_ids": [],
    "last_status": null,
    "retired": false
+  },
+  {
+   "key": "-1184099784:m1700",
+   "chat_id": -1184099784,
+   "chat_username": "nasonchikh_wardrobe",
+   "date": 1795370136,
+   "message_ids": [
+    1700
+   ],
+   "text": "nasonchikh wardrobe pinned «»",
+   "entities": [
+    {
+     "type": "text_link",
+     "offset": 0,
+     "length": 19,
+     "url": "https://t.me/nasonchikh_wardrobe"
+    }
+   ],
+   "text_message_id": 1700,
+   "photos": [],
+   "alias_of": null,
+   "item_ids": [],
+   "last_status": null,
+   "retired": false
   }
  ],
  "msg_index": {
@@ -16554,7 +16578,8 @@
   "-1184099784:1690": "-1184099784:gw1687",
   "-1184099784:1691": "-1184099784:gw1687",
   "-1184099784:1692": "-1184099784:gw1687",
-  "-1184099784:1695": "-1184099784:m1695"
+  "-1184099784:1695": "-1184099784:m1695",
+  "-1184099784:1700": "-1184099784:m1700"
  },
  "items": [
   {
