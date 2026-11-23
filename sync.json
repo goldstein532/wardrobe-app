@@ -1273,11 +1273,35 @@
    "prev_status": "available",
    "other_id": null,
    "ts": 1795277432
+  },
+  {
+   "kind": "created",
+   "item_id": 142,
+   "status": "available",
+   "prev_status": null,
+   "other_id": null,
+   "ts": 1795423396
+  },
+  {
+   "kind": "created",
+   "item_id": 143,
+   "status": "available",
+   "prev_status": null,
+   "other_id": null,
+   "ts": 1795423396
+  },
+  {
+   "kind": "created",
+   "item_id": 144,
+   "status": "available",
+   "prev_status": null,
+   "other_id": null,
+   "ts": 1795423396
   }
  ],
  "web": {
   "nasonchikh_wardrobe": {
-   "cursor": 568,
+   "cursor": 186,
    "full_done": true
   },
   "nasoncikh_express": {
