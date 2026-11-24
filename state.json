@@ -15796,7 +15796,7 @@
     1718,
     1719
    ],
-   "text": "Saint Laurent Paris FW14 D02  Denim Jeans by Hedi  Slimane ➕\n\nSAINT LAURENT 2014- деним эпохи Эди Слимана, ставший частью новой рок-н-ролльной эстетики Дома. Джинсы из коллекции 2014 года, периода, когда Слиман окончательно закрепил собственный визуальный язык Saint Laurent: узкие силуэты, винтажная музыкальная культура и отсылки к гардеробу рок-музыкантов.\n•Size: 31 (L)\n•Cond: 9/10 \n•ОРИГИНАЛ, любые проверки✅\n\n•Price: 17.900₽\nСПБ/ДОСТАВКА\n\n КУПИТЬ/ЗАДАТЬ ВОПРОС\n\n#наличие\nДоп фото👇",
+   "text": "Saint Laurent Paris FW14 D02  Denim Jeans by Hedi  Slimane ➕\n\nSAINT LAURENT 2014- деним эпохи Эди Слимана, ставший частью новой рок-н-ролльной эстетики Дома. Джинсы из коллекции 2014 года, периода, когда Слиман окончательно закрепил собственный визуальный язык Saint Laurent: узкие силуэты, винтажная музыкальная культура и отсылки к гардеробу рок-музыкантов.\n•Size: 31 (L)\n•Cond: 9/10 \n•ОРИГИНАЛ, любые проверки✅\n\n❗️SOLD ❗️\n\n•Price: 17.500₽\nСПБ/ДОСТАВКА\n\n КУПИТЬ/ЗАДАТЬ ВОПРОС\n\n#продано\nДоп фото👇",
    "entities": [
     {
      "type": "blockquote",
@@ -15805,7 +15805,7 @@
     },
     {
      "type": "text_link",
-     "offset": 445,
+     "offset": 456,
      "length": 21,
      "url": "https://t.me/nasonchikh_mngr"
     }
@@ -15859,7 +15859,7 @@
    "item_ids": [
     144
    ],
-   "last_status": "available",
+   "last_status": "sold",
    "retired": false
   }
  ],
@@ -26697,9 +26697,9 @@
    "id": 144,
    "post_key": "-1184099784:gw1714",
    "part": 0,
-   "status": "available",
+   "status": "sold",
    "created_at": 1795423343,
-   "updated_at": 1795423396,
+   "updated_at": 1795524455,
    "hidden": false,
    "title": "Saint Laurent Paris FW14 D02 Denim Jeans by Hedi Slimane",
    "brand": "Saint Laurent",
@@ -26711,7 +26711,7 @@
    "size_note": "L",
    "condition": "9/10",
    "condition_note": null,
-   "price": 17900,
+   "price": 17500,
    "currency": "RUB",
    "authentic": true,
    "delivery": "СПБ/ДОСТАВКА",
@@ -26767,7 +26767,7 @@
      1714
     ]
    ],
-   "status_changed_at": 1795423396,
+   "status_changed_at": 1795524455,
    "sale_price": null,
    "sale_at": 0
   }

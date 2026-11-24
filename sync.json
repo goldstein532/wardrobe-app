@@ -1305,11 +1305,19 @@
    "prev_status": "reserved",
    "other_id": null,
    "ts": 1795456122
+  },
+  {
+   "kind": "status",
+   "item_id": 144,
+   "status": "sold",
+   "prev_status": "available",
+   "other_id": null,
+   "ts": 1795524455
   }
  ],
  "web": {
   "nasonchikh_wardrobe": {
-   "cursor": 214,
+   "cursor": null,
    "full_done": true
   },
   "nasoncikh_express": {
@@ -1375,6 +1383,7 @@
   "nasonchikh_wardrobe/1697",
   "nasonchikh_wardrobe/1698",
   "nasonchikh_wardrobe/1720",
+  "nasonchikh_wardrobe/1721",
   "nasonchikh_wardrobe/181",
   "nasonchikh_wardrobe/182",
   "nasonchikh_wardrobe/190",
@@ -1456,7 +1465,8 @@
   "112": 1794933839,
   "135": 1795277311,
   "141": 1795456063,
-  "128": 1795277330
+  "128": 1795277330,
+  "144": 1795524367
  },
  "rescan": 2
 }
