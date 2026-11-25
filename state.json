@@ -25578,9 +25578,9 @@
    "id": 128,
    "post_key": "-1184099784:gw1564",
    "part": 0,
-   "status": "reserved",
+   "status": "sold",
    "created_at": 1794085474,
-   "updated_at": 1795277432,
+   "updated_at": 1795649644,
    "hidden": false,
    "title": "Converse & Mastermind Japan Chuck Taylor All Star",
    "brand": "Converse",
@@ -25648,7 +25648,7 @@
      1564
     ]
    ],
-   "status_changed_at": 1795277432,
+   "status_changed_at": 1795649644,
    "sale_price": null,
    "sale_at": 0
   },
